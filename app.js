@@ -16,6 +16,8 @@ const levels = library.levels?.length
       count: books.filter((book) => book.level === level).length,
     }));
 const LEVEL_FILTERS = ["L1", "L2", "L3", "L4", "L5"];
+const ACCESS_PASSWORD_HASH = "635b5a00815ee51779764bf0a631f627cee354d1a4de48d4de09b59dd8555290";
+const ACCESS_PASSWORD_FALLBACK = "WVhSMjAyNg==";
 
 const KNOWLEDGE_TOPICS = [
   {
@@ -116,6 +118,11 @@ const FALLBACK_TYPE = {
 };
 
 const els = {
+  authGate: document.querySelector("#authGate"),
+  pageShell: document.querySelector("#pageShell"),
+  passwordForm: document.querySelector("#passwordForm"),
+  passwordInput: document.querySelector("#passwordInput"),
+  passwordError: document.querySelector("#passwordError"),
   heroStats: document.querySelector("#heroStats"),
   levelTabs: document.querySelector("#levelTabs"),
   searchInput: document.querySelector("#searchInput"),
@@ -216,6 +223,49 @@ function createNode(tag, className, text) {
   if (className) node.className = className;
   if (text !== undefined) node.textContent = text;
   return node;
+}
+
+async function hashText(text) {
+  const data = new TextEncoder().encode(text);
+  const digest = await crypto.subtle.digest("SHA-256", data);
+  return [...new Uint8Array(digest)].map((byte) => byte.toString(16).padStart(2, "0")).join("");
+}
+
+async function passwordIsValid(password) {
+  if (window.crypto?.subtle && window.TextEncoder) {
+    return (await hashText(password)) === ACCESS_PASSWORD_HASH;
+  }
+  return password === atob(ACCESS_PASSWORD_FALLBACK);
+}
+
+function unlockPage() {
+  document.body.classList.remove("is-locked");
+  els.pageShell?.removeAttribute("aria-hidden");
+  if (els.authGate) els.authGate.hidden = true;
+  if (els.passwordInput) els.passwordInput.value = "";
+}
+
+function initAccessGate() {
+  els.passwordInput?.focus();
+  els.passwordInput?.addEventListener("input", () => {
+    if (els.passwordError) els.passwordError.hidden = true;
+  });
+  els.passwordForm?.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const password = els.passwordInput?.value || "";
+    passwordIsValid(password)
+      .then((isValid) => {
+        if (isValid) {
+          unlockPage();
+          return;
+        }
+        if (els.passwordError) els.passwordError.hidden = false;
+        els.passwordInput?.select();
+      })
+      .catch(() => {
+        if (els.passwordError) els.passwordError.hidden = false;
+      });
+  });
 }
 
 function renderHeroStats() {
@@ -479,5 +529,6 @@ els.resetButton.addEventListener("click", resetFilters);
 
 window.addEventListener("scroll", markActiveNav, { passive: true });
 
+initAccessGate();
 renderHeroStats();
 render();

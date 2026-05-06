@@ -6,8 +6,21 @@
     <title>阅星人学识地图</title>
     <link rel="stylesheet" href="./styles.css" />
   </head>
-  <body>
-    <div class="page-shell">
+  <body class="is-locked">
+    <section class="auth-gate" id="authGate" aria-label="访问验证">
+      <form class="auth-card" id="passwordForm">
+        <p class="auth-kicker">阅星人学识地图</p>
+        <h2>请输入访问密码</h2>
+        <label class="auth-field" for="passwordInput">
+          <span>访问密码</span>
+          <input id="passwordInput" type="password" autocomplete="current-password" />
+        </label>
+        <p class="auth-error" id="passwordError" role="alert" hidden>密码不正确，请重新输入。</p>
+        <button type="submit">进入页面</button>
+      </form>
+    </section>
+
+    <div class="page-shell" id="pageShell" aria-hidden="true">
       <header class="hero">
         <div class="hero__content">
           <h1>阅星人学识地图</h1>
