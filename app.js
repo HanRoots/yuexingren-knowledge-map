@@ -15,6 +15,7 @@ const levels = library.levels?.length
       id: level,
       count: books.filter((book) => book.level === level).length,
     }));
+const LEVEL_FILTERS = ["L1", "L2", "L3", "L4", "L5"];
 
 const KNOWLEDGE_TOPICS = [
   {
@@ -236,11 +237,11 @@ function renderHeroStats() {
 }
 
 function renderLevelTabs() {
-  const tabs = [{ id: "all", count: books.length }, ...levels];
+  const tabs = [{ id: "all" }, ...LEVEL_FILTERS.map((id) => ({ id }))];
   els.levelTabs.replaceChildren(
     ...tabs.map((level) => {
       const label = level.id === "all" ? "全部" : level.id;
-      const button = createNode("button", "", `${label} ${level.count}`);
+      const button = createNode("button", "", label);
       button.type = "button";
       button.classList.toggle("is-active", state.level === level.id);
       button.addEventListener("click", () => {
