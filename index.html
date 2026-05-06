@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>阅星人学识地图</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <div class="hero__content">
+          <h1>阅星人学识地图</h1>
+          <div class="hero__stats" id="heroStats" aria-label="L1-L5 书目统计"></div>
+        </div>
+      </header>
+
+      <section class="toolbar" aria-label="书目筛选">
+        <div class="level-tabs" id="levelTabs" aria-label="级别筛选"></div>
+        <label class="search-box" for="searchInput">
+          <span class="search-box__icon" aria-hidden="true"></span>
+          <input id="searchInput" type="search" placeholder="搜索书名 / 学识 / 类型关键词" autocomplete="off" />
+        </label>
+        <label class="select-box" for="knowledgeSelect">
+          <span>学识</span>
+          <select id="knowledgeSelect"></select>
+        </label>
+        <label class="select-box" for="typeSelect">
+          <span>类型</span>
+          <select id="typeSelect"></select>
+        </label>
+        <a class="reset-button" id="resetButton" href="./index.html" role="button">重置</a>
+      </section>
+
+      <main class="layout">
+        <aside class="book-rail" aria-label="学识书目目录">
+          <div class="book-rail__top">
+            <p>学识目录</p>
+            <strong id="railCount">0 本</strong>
+          </div>
+          <nav class="book-nav" id="bookNav"></nav>
+        </aside>
+
+        <section class="content-panel">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Curriculum Map</p>
+              <h2>学识主题总览</h2>
+            </div>
+            <p id="resultSummary" class="result-summary"></p>
+          </div>
+
+          <div class="topic-board" id="topicBoard" aria-label="学识主题概览"></div>
+          <div class="topic-cloud" id="topicCloud" aria-label="学识主题标签"></div>
+          <div class="type-cloud" id="typeCloud" aria-label="书籍类型标签"></div>
+          <div class="book-grid" id="bookGrid"></div>
+          <div class="empty-state" id="emptyState" hidden>
+            <strong>没有匹配的书目</strong>
+            <span>换一个关键词或学识主题试试。</span>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="./data.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
