@@ -2324,15 +2324,16 @@ window.LEVEL_LIBRARY = {
     },
     {
       "level": "L5",
-      "title": "《飞来树》赵丽宏",
-      "valueGoals": "",
-      "knowledgeGoals": "",
-      "abilityGoals": "",
+      "title": "《飞来树》",
+      "valueGoals": "通过阅读书中描绘不同地域（如江南水乡、异国都市、自然奇观）的篇章，提取关键信息，感受并初步理解文化、自然的多样性，丰富对“世界各地”的认知。",
+      "knowledgeGoals": "1.精准识别并深入赏析静态描写与动态描写的片段，分析其如何营造画面感、烘托氛围、传递作者情感\n2.能对比动静手法的不同运用效果（深化）\n3.掌握句子中动词的赏析方法（变形）",
+      "abilityGoals": "概括能力、鉴赏能力、理解能力、表达能力、认读能力、迁移运用、逻辑能力、检索能力",
       "id": "l5-book-20",
       "index": 162,
       "levelIndex": 20,
       "bookTypes": [
-        "prose"
+        "prose",
+        "culture"
       ]
     },
     {
