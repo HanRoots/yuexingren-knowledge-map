@@ -2284,7 +2284,7 @@ window.LEVEL_LIBRARY = {
     },
     {
       "level": "L5",
-      "title": "《骆驼祥子》（待完成）",
+      "title": "《骆驼祥子》（计划新增）",
       "valueGoals": "",
       "knowledgeGoals": "",
       "abilityGoals": "",
@@ -2337,7 +2337,7 @@ window.LEVEL_LIBRARY = {
     },
     {
       "level": "L5",
-      "title": "《阿Q正传》（待完成）",
+      "title": "《阿Q正传》（计划新增）",
       "valueGoals": "",
       "knowledgeGoals": "",
       "abilityGoals": "",
@@ -2350,7 +2350,7 @@ window.LEVEL_LIBRARY = {
     },
     {
       "level": "L5",
-      "title": "《天蓝色的彼岸》（待完成）",
+      "title": "《天蓝色的彼岸》（计划新增）",
       "valueGoals": "",
       "knowledgeGoals": "",
       "abilityGoals": "",
@@ -2364,7 +2364,7 @@ window.LEVEL_LIBRARY = {
     },
     {
       "level": "L5",
-      "title": "《茶馆》（待完成）",
+      "title": "《茶馆》（计划新增）",
       "valueGoals": "",
       "knowledgeGoals": "",
       "abilityGoals": "",
