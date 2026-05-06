@@ -2142,8 +2142,7 @@ window.LEVEL_LIBRARY = {
       "index": 148,
       "levelIndex": 6,
       "bookTypes": [
-        "classic",
-        "novel"
+        "classic"
       ]
     },
     {
