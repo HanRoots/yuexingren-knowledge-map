@@ -2332,8 +2332,7 @@ window.LEVEL_LIBRARY = {
       "index": 162,
       "levelIndex": 20,
       "bookTypes": [
-        "prose",
-        "culture"
+        "prose"
       ]
     },
     {
