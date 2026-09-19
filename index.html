@@ -75,7 +75,23 @@
           <span>类型</span>
           <select id="typeSelect"></select>
         </label>
+        <button class="edit-mode-button" id="editModeButton" type="button" aria-pressed="false">
+          编辑内容
+        </button>
         <a class="reset-button" id="resetButton" href="./index.html" role="button">重置</a>
+      </section>
+
+      <section class="edit-panel" id="editPanel" aria-label="本地编辑工具" hidden>
+        <div>
+          <strong>本地编辑模式</strong>
+          <span>修改仅保存在当前浏览器，可导出 JSON 文件备份。</span>
+        </div>
+        <div class="edit-panel__actions">
+          <button class="edit-panel__publish" id="publishEditsButton" type="button">发布到云端</button>
+          <button id="exportEditsButton" type="button">导出修改</button>
+          <button id="clearEditsButton" type="button">恢复线上内容</button>
+        </div>
+        <p class="edit-status" id="editStatus" aria-live="polite"></p>
       </section>
 
       <main class="layout">
@@ -107,6 +123,48 @@
         </section>
       </main>
     </div>
+
+    <dialog class="publish-dialog" id="publishDialog">
+      <form class="publish-form" id="publishForm">
+        <div class="publish-form__heading">
+          <div>
+            <p>GitHub Pages</p>
+            <h2>发布书目修改</h2>
+          </div>
+          <button class="publish-dialog__close" id="closePublishDialogButton" type="button" aria-label="关闭">
+            ×
+          </button>
+        </div>
+        <p class="publish-form__description">
+          修改将提交到 HanRoots/yuexingren-knowledge-map 的 main 分支，并自动触发页面部署。
+        </p>
+        <label class="publish-field" for="githubTokenInput">
+          <span>GitHub 细粒度令牌</span>
+          <input
+            id="githubTokenInput"
+            type="password"
+            autocomplete="off"
+            required
+            placeholder="github_pat_..."
+          />
+          <small>
+            令牌仅用于本次发布，不会保存。权限只需 Contents: Read and write。
+            <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noreferrer">
+              创建细粒度令牌
+            </a>
+          </small>
+        </label>
+        <label class="publish-field" for="commitMessageInput">
+          <span>更新说明</span>
+          <input id="commitMessageInput" type="text" value="Update book content from page editor" required />
+        </label>
+        <p class="publish-error" id="publishError" role="alert" hidden></p>
+        <div class="publish-form__actions">
+          <button id="cancelPublishButton" type="button">取消</button>
+          <button class="publish-submit" id="confirmPublishButton" type="submit">确认发布</button>
+        </div>
+      </form>
+    </dialog>
 
     <script src="./data.js"></script>
     <script src="./app.js"></script>

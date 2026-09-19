@@ -117,6 +117,14 @@ const FALLBACK_TYPE = {
   description: "暂未归入单一书籍类型",
 };
 
+const LOCAL_EDITS_STORAGE_KEY = "yuexingren:knowledge-map:local-edits:v1";
+const EDITABLE_BOOK_FIELDS = ["title", "knowledgeGoals", "valueGoals", "abilityGoals", "bookTypes"];
+const GITHUB_OWNER = "HanRoots";
+const GITHUB_REPOSITORY = "yuexingren-knowledge-map";
+const GITHUB_BRANCH = "main";
+const GITHUB_DATA_PATH = "data.js";
+const GITHUB_API_VERSION = "2026-03-10";
+
 const els = {
   authGate: document.querySelector("#authGate"),
   pageShell: document.querySelector("#pageShell"),
@@ -128,7 +136,21 @@ const els = {
   searchInput: document.querySelector("#searchInput"),
   knowledgeSelect: document.querySelector("#knowledgeSelect"),
   typeSelect: document.querySelector("#typeSelect"),
+  editModeButton: document.querySelector("#editModeButton"),
   resetButton: document.querySelector("#resetButton"),
+  editPanel: document.querySelector("#editPanel"),
+  publishEditsButton: document.querySelector("#publishEditsButton"),
+  exportEditsButton: document.querySelector("#exportEditsButton"),
+  clearEditsButton: document.querySelector("#clearEditsButton"),
+  editStatus: document.querySelector("#editStatus"),
+  publishDialog: document.querySelector("#publishDialog"),
+  publishForm: document.querySelector("#publishForm"),
+  githubTokenInput: document.querySelector("#githubTokenInput"),
+  commitMessageInput: document.querySelector("#commitMessageInput"),
+  publishError: document.querySelector("#publishError"),
+  confirmPublishButton: document.querySelector("#confirmPublishButton"),
+  closePublishDialogButton: document.querySelector("#closePublishDialogButton"),
+  cancelPublishButton: document.querySelector("#cancelPublishButton"),
   railCount: document.querySelector("#railCount"),
   bookNav: document.querySelector("#bookNav"),
   resultSummary: document.querySelector("#resultSummary"),
@@ -144,7 +166,210 @@ const state = {
   topic: "all",
   type: "all",
   level: "all",
+  editMode: false,
+  editingBookId: null,
 };
+
+let localEdits = readLocalEdits();
+
+function sanitizeBookEdit(value) {
+  if (!value || typeof value !== "object" || Array.isArray(value)) return null;
+  const edit = {};
+  EDITABLE_BOOK_FIELDS.forEach((field) => {
+    if (field === "bookTypes") {
+      if (Array.isArray(value.bookTypes)) {
+        edit.bookTypes = value.bookTypes.filter((typeId) => TYPE_BY_ID.has(typeId));
+      }
+      return;
+    }
+    if (typeof value[field] === "string") edit[field] = value[field];
+  });
+  return Object.keys(edit).length ? edit : null;
+}
+
+function readLocalEdits() {
+  try {
+    const raw = window.localStorage.getItem(LOCAL_EDITS_STORAGE_KEY);
+    if (!raw) return {};
+    const parsed = JSON.parse(raw);
+    if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) return {};
+    return Object.fromEntries(
+      Object.entries(parsed)
+        .map(([bookId, value]) => [bookId, sanitizeBookEdit(value)])
+        .filter(([, value]) => value)
+    );
+  } catch {
+    return {};
+  }
+}
+
+function applyLocalEdits() {
+  books.forEach((book) => {
+    const edit = localEdits[book.id];
+    if (!edit) return;
+    Object.assign(book, edit);
+  });
+}
+
+function saveBookEdit(book) {
+  localEdits[book.id] = {
+    title: book.title,
+    knowledgeGoals: book.knowledgeGoals,
+    valueGoals: book.valueGoals,
+    abilityGoals: book.abilityGoals,
+    bookTypes: Array.isArray(book.bookTypes) ? [...book.bookTypes] : [],
+  };
+  window.localStorage.setItem(LOCAL_EDITS_STORAGE_KEY, JSON.stringify(localEdits));
+}
+
+function setEditStatus(message) {
+  if (els.editStatus) els.editStatus.textContent = message;
+}
+
+function exportLocalEdits() {
+  const editedBooks = Object.entries(localEdits).map(([id, edit]) => ({ id, ...edit }));
+  if (!editedBooks.length) {
+    setEditStatus("当前没有可导出的修改。");
+    return;
+  }
+
+  const payload = {
+    format: "yuexingren-knowledge-map-local-edits",
+    version: 1,
+    exportedAt: new Date().toISOString(),
+    books: editedBooks,
+  };
+  const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = `阅星人学识地图-本地修改-${new Date().toISOString().slice(0, 10)}.json`;
+  document.body.append(link);
+  link.click();
+  link.remove();
+  URL.revokeObjectURL(url);
+  setEditStatus(`已导出 ${editedBooks.length} 本书的修改。`);
+}
+
+function clearLocalEdits() {
+  if (!Object.keys(localEdits).length) {
+    setEditStatus("当前没有本地修改。");
+    return;
+  }
+  if (!window.confirm("确定恢复线上内容吗？当前浏览器中的全部本地修改将被清除。")) return;
+  window.localStorage.removeItem(LOCAL_EDITS_STORAGE_KEY);
+  window.location.reload();
+}
+
+function openPublishDialog() {
+  if (!Object.keys(localEdits).length) {
+    setEditStatus("请先保存至少一本书的修改。");
+    return;
+  }
+  if (els.publishError) {
+    els.publishError.hidden = true;
+    els.publishError.textContent = "";
+  }
+  els.publishDialog?.showModal();
+  els.githubTokenInput?.focus();
+}
+
+function closePublishDialog() {
+  if (els.githubTokenInput) els.githubTokenInput.value = "";
+  if (els.publishError) {
+    els.publishError.hidden = true;
+    els.publishError.textContent = "";
+  }
+  els.publishDialog?.close();
+}
+
+function encodeBase64(text) {
+  const bytes = new TextEncoder().encode(text);
+  let binary = "";
+  const chunkSize = 0x8000;
+  for (let index = 0; index < bytes.length; index += chunkSize) {
+    binary += String.fromCharCode(...bytes.subarray(index, index + chunkSize));
+  }
+  return window.btoa(binary);
+}
+
+function buildDataFileContent() {
+  return `window.LEVEL_LIBRARY = ${JSON.stringify(library, null, 2)};\n`;
+}
+
+function githubErrorMessage(status, responseMessage) {
+  if (status === 401) return "令牌无效或已经过期，请重新生成后再试。";
+  if (status === 403) return "令牌没有 Contents 写入权限，或 GitHub 暂时限制了请求。";
+  if (status === 404) return "没有找到目标仓库，或令牌未获准访问该仓库。";
+  if (status === 409) return "云端文件刚刚发生变化，请刷新页面后重新编辑并发布。";
+  if (status === 422) return "GitHub 拒绝了本次提交，请检查更新说明后重试。";
+  return responseMessage ? `发布失败：${responseMessage}` : `发布失败（HTTP ${status}）。`;
+}
+
+async function githubRequest(url, token, options = {}) {
+  const response = await fetch(url, {
+    ...options,
+    headers: {
+      Accept: "application/vnd.github+json",
+      Authorization: `Bearer ${token}`,
+      "X-GitHub-Api-Version": GITHUB_API_VERSION,
+      ...options.headers,
+    },
+  });
+  const payload = await response.json().catch(() => ({}));
+  if (!response.ok) throw new Error(githubErrorMessage(response.status, payload.message));
+  return payload;
+}
+
+async function publishToGitHub(token, message) {
+  const apiUrl = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPOSITORY}/contents/${GITHUB_DATA_PATH}`;
+  const currentFile = await githubRequest(`${apiUrl}?ref=${encodeURIComponent(GITHUB_BRANCH)}`, token);
+  const result = await githubRequest(apiUrl, token, {
+    method: "PUT",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      message,
+      content: encodeBase64(buildDataFileContent()),
+      sha: currentFile.sha,
+      branch: GITHUB_BRANCH,
+    }),
+  });
+  return result.commit;
+}
+
+async function handlePublishSubmit(event) {
+  event.preventDefault();
+  const token = els.githubTokenInput?.value.trim() || "";
+  const message = els.commitMessageInput?.value.trim() || "Update book content from page editor";
+  if (!token) return;
+
+  if (els.publishError) {
+    els.publishError.hidden = true;
+    els.publishError.textContent = "";
+  }
+  if (els.confirmPublishButton) {
+    els.confirmPublishButton.disabled = true;
+    els.confirmPublishButton.textContent = "正在发布…";
+  }
+
+  try {
+    const commit = await publishToGitHub(token, message);
+    closePublishDialog();
+    const shortSha = commit?.sha ? commit.sha.slice(0, 7) : "";
+    setEditStatus(`已提交到 GitHub${shortSha ? `（${shortSha}）` : ""}，页面通常会在几分钟内更新。`);
+  } catch (error) {
+    if (els.publishError) {
+      els.publishError.textContent = error instanceof Error ? error.message : "发布失败，请稍后重试。";
+      els.publishError.hidden = false;
+    }
+  } finally {
+    if (els.githubTokenInput) els.githubTokenInput.value = "";
+    if (els.confirmPublishButton) {
+      els.confirmPublishButton.disabled = false;
+      els.confirmPublishButton.textContent = "确认发布";
+    }
+  }
+}
 
 function splitAbilities(text) {
   return String(text || "")
@@ -436,29 +661,140 @@ function renderGoalRow(label, body, mode = "text") {
   return row;
 }
 
+function createEditorField(labelText, name, value, options = {}) {
+  const label = createNode("label", "editor-field");
+  label.append(createNode("span", "editor-field__label", labelText));
+  const field = createNode(options.multiline ? "textarea" : "input", "editor-field__control");
+  field.name = name;
+  field.value = value || "";
+  if (options.multiline) field.rows = options.rows || 6;
+  if (options.required) field.required = true;
+  if (options.hint) label.append(createNode("small", "editor-field__hint", options.hint));
+  label.insertBefore(field, label.querySelector("small"));
+  return label;
+}
+
+function renderBookTypeEditor(book) {
+  const fieldset = createNode("fieldset", "editor-types");
+  fieldset.append(createNode("legend", "editor-field__label", "书籍类型"));
+  const options = createNode("div", "editor-types__options");
+  const selectedTypes = new Set(Array.isArray(book.bookTypes) ? book.bookTypes : []);
+
+  BOOK_TYPES.forEach((type) => {
+    const label = createNode("label", "editor-type-option");
+    const checkbox = createNode("input");
+    checkbox.type = "checkbox";
+    checkbox.name = "bookTypes";
+    checkbox.value = type.id;
+    checkbox.checked = selectedTypes.has(type.id);
+    label.append(checkbox, createNode("span", "", type.name));
+    options.append(label);
+  });
+
+  fieldset.append(options);
+  return fieldset;
+}
+
+function scrollToBook(bookId) {
+  window.requestAnimationFrame(() => {
+    document.getElementById(bookId)?.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+}
+
+function renderBookEditor(book) {
+  const form = createNode("form", "book-editor");
+  form.append(createEditorField("书名", "title", book.title, { required: true }));
+  form.append(createEditorField("学识目标", "knowledgeGoals", book.knowledgeGoals, { multiline: true, rows: 9 }));
+  form.append(createEditorField("价值观", "valueGoals", book.valueGoals, { multiline: true, rows: 6 }));
+  form.append(
+    createEditorField("能力目标", "abilityGoals", book.abilityGoals, {
+      multiline: true,
+      rows: 4,
+      hint: "多个能力目标可使用顿号、逗号或换行分隔。",
+    })
+  );
+  form.append(renderBookTypeEditor(book));
+
+  const actions = createNode("div", "book-editor__actions");
+  const cancelButton = createNode("button", "book-editor__cancel", "取消");
+  cancelButton.type = "button";
+  cancelButton.addEventListener("click", () => {
+    state.editingBookId = null;
+    render();
+    scrollToBook(book.id);
+  });
+  const saveButton = createNode("button", "book-editor__save", "保存修改");
+  saveButton.type = "submit";
+  actions.append(cancelButton, saveButton);
+  form.append(actions);
+
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const formData = new FormData(form);
+    const title = String(formData.get("title") || "").trim();
+    if (!title) return;
+
+    book.title = title;
+    book.knowledgeGoals = String(formData.get("knowledgeGoals") || "").trim();
+    book.valueGoals = String(formData.get("valueGoals") || "").trim();
+    book.abilityGoals = String(formData.get("abilityGoals") || "").trim();
+    book.bookTypes = formData.getAll("bookTypes").map(String).filter((typeId) => TYPE_BY_ID.has(typeId));
+    saveBookEdit(book);
+    state.editingBookId = null;
+    setEditStatus(`已在当前浏览器保存《${book.title.replace(/[《》]/g, "")}》的修改。`);
+    render();
+    scrollToBook(book.id);
+  });
+
+  return form;
+}
+
 function renderBookCard(book) {
   const card = createNode("article", "book-card");
   card.id = book.id;
+  card.classList.toggle("book-card--editable", state.editMode);
+  card.classList.toggle("book-card--editing", state.editingBookId === book.id);
 
   const header = createNode("div", "book-card__header");
   const title = createNode("div", "book-title");
   title.append(createNode("span", "", `${book.level} · No.${String(book.levelIndex).padStart(2, "0")}`));
   title.append(createNode("h3", "", book.title));
+  if (localEdits[book.id]) title.append(createNode("small", "local-edit-note", "已本地修改"));
   title.append(renderTypePills(book));
   title.append(renderTopicPills(book));
 
+  const meta = createNode("div", "book-card__meta");
   const count = createNode("div", "goal-count");
   count.append(createNode("strong", "", getBookTopics(book).length));
   count.append(createNode("small", "", "学识主题"));
-  header.append(title, count);
+  meta.append(count);
+  if (state.editMode) {
+    const editButton = createNode(
+      "button",
+      "book-edit-button",
+      state.editingBookId === book.id ? "取消编辑" : "编辑此书"
+    );
+    editButton.type = "button";
+    editButton.addEventListener("click", () => {
+      state.editingBookId = state.editingBookId === book.id ? null : book.id;
+      render();
+      scrollToBook(book.id);
+    });
+    meta.append(editButton);
+  }
+  header.append(title, meta);
 
-  const goals = createNode("div", "goal-list");
-  goals.append(renderGoalRow("学识目标", book.knowledgeGoals, "knowledge"));
-  goals.append(renderGoalRow("价值观", book.valueGoals, "value"));
-  goals.append(renderGoalRow("书籍类型", getBookTypes(book).map((type) => type.name), "type"));
-  goals.append(renderGoalRow("能力目标", book.abilityGoals, "ability"));
-
-  card.append(header, goals);
+  card.append(header);
+  if (state.editingBookId === book.id) {
+    card.append(renderBookEditor(book));
+  } else {
+    const goals = createNode("div", "goal-list");
+    goals.append(renderGoalRow("学识目标", book.knowledgeGoals, "knowledge"));
+    goals.append(renderGoalRow("价值观", book.valueGoals, "value"));
+    goals.append(renderGoalRow("书籍类型", getBookTypes(book).map((type) => type.name), "type"));
+    goals.append(renderGoalRow("能力目标", book.abilityGoals, "ability"));
+    card.append(goals);
+  }
   return card;
 }
 
@@ -469,6 +805,19 @@ function markActiveNav() {
   els.bookNav.querySelectorAll("button").forEach((button) => {
     button.classList.toggle("is-active", button.dataset.target === activeId);
   });
+}
+
+function renderEditControls() {
+  const editCount = Object.keys(localEdits).length;
+  document.body.classList.toggle("is-editing", state.editMode);
+  if (els.editModeButton) {
+    els.editModeButton.textContent = state.editMode ? "退出编辑" : "编辑内容";
+    els.editModeButton.setAttribute("aria-pressed", String(state.editMode));
+  }
+  if (els.editPanel) els.editPanel.hidden = !state.editMode;
+  if (els.publishEditsButton) els.publishEditsButton.disabled = editCount === 0;
+  if (els.exportEditsButton) els.exportEditsButton.disabled = editCount === 0;
+  if (els.clearEditsButton) els.clearEditsButton.disabled = editCount === 0;
 }
 
 function render() {
@@ -485,6 +834,9 @@ function render() {
   }
 
   const filteredBooks = levelBooks.filter(matchesBook);
+  if (state.editingBookId && !filteredBooks.some((book) => book.id === state.editingBookId)) {
+    state.editingBookId = null;
+  }
   const topicName = state.topic === "all" ? "全部学识主题" : topicById.get(state.topic)?.name || "学识主题";
   const typeName = state.type === "all" ? "全部书籍类型" : typeById.get(state.type)?.name || "书籍类型";
   const levelName = state.level === "all" ? "全部级别" : state.level;
@@ -498,6 +850,7 @@ function render() {
   renderTopicBoard(topicStats);
   renderTopicCloud(topicStats);
   renderTypeCloud(typeStats);
+  renderEditControls();
   markActiveNav();
 }
 
@@ -512,6 +865,23 @@ els.knowledgeSelect.addEventListener("change", (event) => {
 
 els.typeSelect.addEventListener("change", (event) => {
   setType(event.target.value);
+});
+
+els.editModeButton?.addEventListener("click", () => {
+  state.editMode = !state.editMode;
+  state.editingBookId = null;
+  setEditStatus(state.editMode ? "请选择一本书开始编辑。" : "");
+  render();
+});
+
+els.publishEditsButton?.addEventListener("click", openPublishDialog);
+els.exportEditsButton?.addEventListener("click", exportLocalEdits);
+els.clearEditsButton?.addEventListener("click", clearLocalEdits);
+els.publishForm?.addEventListener("submit", handlePublishSubmit);
+els.closePublishDialogButton?.addEventListener("click", closePublishDialog);
+els.cancelPublishButton?.addEventListener("click", closePublishDialog);
+els.publishDialog?.addEventListener("close", () => {
+  if (els.githubTokenInput) els.githubTokenInput.value = "";
 });
 
 function resetFilters(event) {
@@ -529,6 +899,7 @@ els.resetButton.addEventListener("click", resetFilters);
 
 window.addEventListener("scroll", markActiveNav, { passive: true });
 
+applyLocalEdits();
 initAccessGate();
 renderHeroStats();
 render();
