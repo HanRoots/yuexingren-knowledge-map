@@ -15,7 +15,7 @@ const levels = library.levels?.length
       id: level,
       count: books.filter((book) => book.level === level).length,
     }));
-const LEVEL_FILTERS = ["L1", "L2", "L3", "L4", "L5"];
+const LEVEL_FILTERS = ["L1", "L2", "L3", "L4", "L5", "L6"];
 const ACCESS_PASSWORD_HASH = "635b5a00815ee51779764bf0a631f627cee354d1a4de48d4de09b59dd8555290";
 const ACCESS_PASSWORD_FALLBACK = "WVhSMjAyNg==";
 
@@ -171,6 +171,8 @@ const els = {
   typeCloud: document.querySelector("#typeCloud"),
   bookGrid: document.querySelector("#bookGrid"),
   emptyState: document.querySelector("#emptyState"),
+  emptyStateTitle: document.querySelector("#emptyStateTitle"),
+  emptyStateHint: document.querySelector("#emptyStateHint"),
 };
 
 const state = {
@@ -1126,7 +1128,14 @@ function render() {
   const typeName = state.type === "all" ? "全部书籍类型" : typeById.get(state.type)?.name || "书籍类型";
   const levelName = state.level === "all" ? "全部级别" : state.level;
   els.resultSummary.textContent = `显示 ${filteredBooks.length} / ${levelBooks.length} 本 · ${levelName} · ${topicName} · ${typeName}`;
+  const emptyLevel = state.level !== "all" && levelBooks.length === 0;
   els.emptyState.hidden = filteredBooks.length > 0;
+  if (els.emptyStateTitle) els.emptyStateTitle.textContent = emptyLevel ? `${state.level} 暂无书目` : "没有匹配的书目";
+  if (els.emptyStateHint) {
+    els.emptyStateHint.textContent = emptyLevel
+      ? "进入编辑模式后，可以点击“新增书目”添加内容。"
+      : "换一个关键词或学识主题试试。";
+  }
   els.bookGrid.replaceChildren(...filteredBooks.map(renderBookCard));
   renderLevelTabs();
   renderKnowledgeSelect(topicStats);

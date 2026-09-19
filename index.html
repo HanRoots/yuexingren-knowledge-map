@@ -51,7 +51,7 @@
             </div>
           </div>
           <h1>阅星人学识地图</h1>
-          <div class="hero__stats" id="heroStats" aria-label="L1-L5 书目统计"></div>
+          <div class="hero__stats" id="heroStats" aria-label="L1-L6 书目统计"></div>
         </div>
         <div class="hero__visual" aria-hidden="true">
           <img
@@ -118,8 +118,8 @@
           <div class="type-cloud" id="typeCloud" aria-label="书籍类型标签"></div>
           <div class="book-grid" id="bookGrid"></div>
           <div class="empty-state" id="emptyState" hidden>
-            <strong>没有匹配的书目</strong>
-            <span>换一个关键词或学识主题试试。</span>
+            <strong id="emptyStateTitle">没有匹配的书目</strong>
+            <span id="emptyStateHint">换一个关键词或学识主题试试。</span>
           </div>
         </section>
       </main>
@@ -187,6 +187,7 @@
               <option value="L3">L3</option>
               <option value="L4">L4</option>
               <option value="L5">L5</option>
+              <option value="L6">L6</option>
             </select>
           </label>
           <label class="publish-field" for="addBookPosition">

@@ -20,6 +20,10 @@ window.LEVEL_LIBRARY = {
     {
       "id": "L5",
       "count": 23
+    },
+    {
+      "id": "L6",
+      "count": 0
     }
   ],
   "total": 169,

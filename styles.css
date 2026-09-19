@@ -360,7 +360,7 @@ body.is-locked .page-shell {
 
 .level-tabs {
   display: grid;
-  grid-template-columns: repeat(6, minmax(58px, 1fr));
+  grid-template-columns: repeat(7, minmax(48px, 1fr));
   gap: 5px;
   min-width: 0;
   padding: 4px;
@@ -1577,8 +1577,12 @@ input.editor-field__control {
 
 @media (max-width: 430px) {
   .level-tabs {
-    overflow-x: auto;
-    grid-template-columns: repeat(6, 62px);
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+  }
+
+  .level-tabs button {
+    padding: 0 5px;
+    font-size: 12px;
   }
 
   .hero {
