@@ -174,6 +174,7 @@ body.is-locked .page-shell {
 .book-editor input:focus,
 .book-editor textarea:focus,
 .editor-type-option input:focus-visible,
+.editor-auto-option input:focus-visible,
 .publish-form input:focus,
 .publish-form select:focus,
 .publish-form textarea:focus,
@@ -1086,6 +1087,33 @@ input.editor-field__control {
   box-shadow: 0 0 0 3px rgba(15, 105, 216, 0.14);
 }
 
+.editor-type-option.is-disabled {
+  cursor: not-allowed;
+}
+
+.editor-type-option.is-disabled span {
+  opacity: 0.5;
+}
+
+.editor-auto-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: max-content;
+  margin-top: 10px;
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.editor-auto-option input {
+  width: 17px;
+  height: 17px;
+  margin: 0;
+  accent-color: var(--navy);
+}
+
 .book-editor__actions {
   display: flex;
   justify-content: flex-end;
@@ -1297,6 +1325,7 @@ input.editor-field__control {
   gap: 14px;
 }
 
+.add-book-topics,
 .add-book-types {
   padding-top: 2px;
 }

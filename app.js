@@ -94,6 +94,8 @@ const FALLBACK_TOPIC = {
   description: "综合运用阅读理解和表达方法",
   keywords: [],
 };
+const ALL_KNOWLEDGE_TOPICS = [...KNOWLEDGE_TOPICS, FALLBACK_TOPIC];
+const TOPIC_BY_ID = new Map(ALL_KNOWLEDGE_TOPICS.map((topic) => [topic.id, topic]));
 
 const BOOK_TYPES = [
   { id: "picture", name: "图画绘本", description: "以图像叙事和图文共读为主" },
@@ -121,7 +123,14 @@ const LOCAL_EDITS_STORAGE_KEY = "yuexingren:knowledge-map:local-edits:v1";
 const LOCAL_ADDED_BOOKS_STORAGE_KEY = "yuexingren:knowledge-map:added-books:v1";
 const LOCAL_REMOVED_BOOKS_STORAGE_KEY = "yuexingren:knowledge-map:removed-books:v1";
 const LOCAL_BOOK_ORDER_STORAGE_KEY = "yuexingren:knowledge-map:book-order:v1";
-const EDITABLE_BOOK_FIELDS = ["title", "knowledgeGoals", "valueGoals", "abilityGoals", "bookTypes"];
+const EDITABLE_BOOK_FIELDS = [
+  "title",
+  "knowledgeGoals",
+  "valueGoals",
+  "abilityGoals",
+  "knowledgeTopics",
+  "bookTypes",
+];
 const GITHUB_OWNER = "HanRoots";
 const GITHUB_REPOSITORY = "yuexingren-knowledge-map";
 const GITHUB_BRANCH = "main";
@@ -160,6 +169,7 @@ const els = {
   addBookLevel: document.querySelector("#addBookLevel"),
   addBookPosition: document.querySelector("#addBookPosition"),
   addBookTitle: document.querySelector("#addBookTitle"),
+  addBookTopicOptions: document.querySelector("#addBookTopicOptions"),
   addBookTypeOptions: document.querySelector("#addBookTypeOptions"),
   closeAddBookDialogButton: document.querySelector("#closeAddBookDialogButton"),
   cancelAddBookButton: document.querySelector("#cancelAddBookButton"),
@@ -195,6 +205,14 @@ function sanitizeBookEdit(value) {
   if (!value || typeof value !== "object" || Array.isArray(value)) return null;
   const edit = {};
   EDITABLE_BOOK_FIELDS.forEach((field) => {
+    if (field === "knowledgeTopics") {
+      if (Array.isArray(value.knowledgeTopics)) {
+        edit.knowledgeTopics = [...new Set(value.knowledgeTopics.filter((topicId) => TOPIC_BY_ID.has(topicId)))];
+      } else if (value.knowledgeTopics === null) {
+        edit.knowledgeTopics = null;
+      }
+      return;
+    }
     if (field === "bookTypes") {
       if (Array.isArray(value.bookTypes)) {
         edit.bookTypes = value.bookTypes.filter((typeId) => TYPE_BY_ID.has(typeId));
@@ -236,6 +254,11 @@ function sanitizeAddedBook(value) {
   if (!value || typeof value !== "object" || Array.isArray(value)) return null;
   if (typeof value.id !== "string" || !value.id || !LEVEL_FILTERS.includes(value.level)) return null;
   if (typeof value.title !== "string" || !value.title.trim()) return null;
+  const knowledgeTopics = Array.isArray(value.knowledgeTopics)
+    ? [...new Set(value.knowledgeTopics.filter((topicId) => TOPIC_BY_ID.has(topicId)))]
+    : value.knowledgeTopics === null
+      ? null
+      : undefined;
   return {
     level: value.level,
     title: value.title.trim(),
@@ -249,6 +272,7 @@ function sanitizeAddedBook(value) {
     bookTypes: Array.isArray(value.bookTypes)
       ? [...new Set(value.bookTypes.filter((typeId) => TYPE_BY_ID.has(typeId)))]
       : [],
+    ...(knowledgeTopics !== undefined ? { knowledgeTopics } : {}),
   };
 }
 
@@ -289,7 +313,13 @@ function normalizeBookCollection() {
 
 function applyLocalChanges() {
   localAddedBooks.forEach((book) => {
-    if (!books.some((item) => item.id === book.id)) books.push({ ...book, bookTypes: [...book.bookTypes] });
+    if (!books.some((item) => item.id === book.id)) {
+      books.push({
+        ...book,
+        bookTypes: [...book.bookTypes],
+        ...(Array.isArray(book.knowledgeTopics) ? { knowledgeTopics: [...book.knowledgeTopics] } : {}),
+      });
+    }
   });
 
   if (localRemovedBookIds.size) {
@@ -340,6 +370,7 @@ function saveBookEdit(book) {
     knowledgeGoals: book.knowledgeGoals,
     valueGoals: book.valueGoals,
     abilityGoals: book.abilityGoals,
+    knowledgeTopics: Array.isArray(book.knowledgeTopics) ? [...book.knowledgeTopics] : null,
     bookTypes: Array.isArray(book.bookTypes) ? [...book.bookTypes] : [],
   };
   window.localStorage.setItem(LOCAL_EDITS_STORAGE_KEY, JSON.stringify(localEdits));
@@ -412,6 +443,21 @@ function closePublishDialog() {
     els.publishError.textContent = "";
   }
   els.publishDialog?.close();
+}
+
+function renderAddBookTopicOptions() {
+  if (!els.addBookTopicOptions) return;
+  els.addBookTopicOptions.replaceChildren(
+    ...ALL_KNOWLEDGE_TOPICS.map((topic) => {
+      const label = createNode("label", "editor-type-option");
+      const checkbox = createNode("input");
+      checkbox.type = "checkbox";
+      checkbox.name = "knowledgeTopics";
+      checkbox.value = topic.id;
+      label.append(checkbox, createNode("span", "", topic.name));
+      return label;
+    })
+  );
 }
 
 function renderAddBookTypeOptions() {
@@ -503,6 +549,11 @@ function handleAddBookSubmit(event) {
     levelIndex: 0,
     bookTypes: formData.getAll("bookTypes").map(String).filter((typeId) => TYPE_BY_ID.has(typeId)),
   };
+  const selectedTopics = formData
+    .getAll("knowledgeTopics")
+    .map(String)
+    .filter((topicId) => TOPIC_BY_ID.has(topicId));
+  if (selectedTopics.length) book.knowledgeTopics = selectedTopics;
 
   books.splice(getBookInsertIndex(level, position), 0, book);
   localAddedBooks.push(book);
@@ -648,6 +699,10 @@ function topicMatches(book, topic) {
 }
 
 function getBookTopics(book) {
+  if (Array.isArray(book.knowledgeTopics)) {
+    const selectedTopics = book.knowledgeTopics.map((topicId) => TOPIC_BY_ID.get(topicId)).filter(Boolean);
+    return selectedTopics.length ? selectedTopics : [FALLBACK_TOPIC];
+  }
   const matched = KNOWLEDGE_TOPICS.filter((topic) => topicMatches(book, topic));
   return matched.length ? matched : [FALLBACK_TOPIC];
 }
@@ -663,8 +718,7 @@ function getLevelBooks() {
 }
 
 function buildTopicStats(sourceBooks) {
-  const allTopics = [...KNOWLEDGE_TOPICS, FALLBACK_TOPIC];
-  return allTopics
+  return ALL_KNOWLEDGE_TOPICS
     .map((topic) => ({
       ...topic,
       count: sourceBooks.filter((book) => getBookTopics(book).some((item) => item.id === topic.id)).length,
@@ -938,6 +992,45 @@ function createEditorField(labelText, name, value, options = {}) {
   return label;
 }
 
+function renderKnowledgeTopicEditor(book) {
+  const fieldset = createNode("fieldset", "editor-types editor-topics");
+  fieldset.append(createNode("legend", "editor-field__label", "学识主题"));
+
+  const automatic = !Array.isArray(book.knowledgeTopics);
+  const autoLabel = createNode("label", "editor-auto-option");
+  const autoCheckbox = createNode("input");
+  autoCheckbox.type = "checkbox";
+  autoCheckbox.name = "autoKnowledgeTopics";
+  autoCheckbox.value = "auto";
+  autoCheckbox.checked = automatic;
+  autoLabel.append(autoCheckbox, createNode("span", "", "根据学识目标自动识别"));
+  fieldset.append(autoLabel);
+
+  const options = createNode("div", "editor-types__options");
+  const selectedTopics = new Set(getBookTopics(book).map((topic) => topic.id));
+  ALL_KNOWLEDGE_TOPICS.forEach((topic) => {
+    const label = createNode("label", "editor-type-option");
+    const checkbox = createNode("input");
+    checkbox.type = "checkbox";
+    checkbox.name = "knowledgeTopics";
+    checkbox.value = topic.id;
+    checkbox.checked = selectedTopics.has(topic.id);
+    checkbox.disabled = automatic;
+    label.classList.toggle("is-disabled", automatic);
+    label.append(checkbox, createNode("span", "", topic.name));
+    options.append(label);
+  });
+
+  autoCheckbox.addEventListener("change", () => {
+    options.querySelectorAll("input").forEach((checkbox) => {
+      checkbox.disabled = autoCheckbox.checked;
+      checkbox.closest("label")?.classList.toggle("is-disabled", autoCheckbox.checked);
+    });
+  });
+  fieldset.append(options);
+  return fieldset;
+}
+
 function renderBookTypeEditor(book) {
   const fieldset = createNode("fieldset", "editor-types");
   fieldset.append(createNode("legend", "editor-field__label", "书籍类型"));
@@ -987,6 +1080,7 @@ function renderBookEditor(book) {
       hint: "多个能力目标可使用顿号、逗号或换行分隔。",
     })
   );
+  form.append(renderKnowledgeTopicEditor(book));
   form.append(renderBookTypeEditor(book));
 
   const actions = createNode("div", "book-editor__actions");
@@ -1014,6 +1108,9 @@ function renderBookEditor(book) {
     book.knowledgeGoals = String(formData.get("knowledgeGoals") || "").trim();
     book.valueGoals = String(formData.get("valueGoals") || "").trim();
     book.abilityGoals = String(formData.get("abilityGoals") || "").trim();
+    book.knowledgeTopics = formData.has("autoKnowledgeTopics")
+      ? null
+      : formData.getAll("knowledgeTopics").map(String).filter((topicId) => TOPIC_BY_ID.has(topicId));
     book.bookTypes = formData.getAll("bookTypes").map(String).filter((typeId) => TYPE_BY_ID.has(typeId));
     saveBookEdit(book);
     state.editingBookId = null;
@@ -1199,6 +1296,7 @@ els.resetButton.addEventListener("click", resetFilters);
 window.addEventListener("scroll", markActiveNav, { passive: true });
 
 applyLocalChanges();
+renderAddBookTopicOptions();
 renderAddBookTypeOptions();
 initAccessGate();
 renderHeroStats();
