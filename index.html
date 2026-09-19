@@ -4,27 +4,60 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>阅星人学识地图</title>
+    <link rel="stylesheet" href="./assets/yuexingren/yuexingren-theme.css" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body class="is-locked">
     <section class="auth-gate" id="authGate" aria-label="访问验证">
-      <form class="auth-card" id="passwordForm">
-        <p class="auth-kicker">阅星人学识地图</p>
-        <h2>请输入访问密码</h2>
-        <label class="auth-field" for="passwordInput">
-          <span>访问密码</span>
-          <input id="passwordInput" type="password" autocomplete="current-password" />
-        </label>
-        <p class="auth-error" id="passwordError" role="alert" hidden>密码不正确，请重新输入。</p>
-        <button type="submit">进入页面</button>
-      </form>
+      <div class="auth-panel">
+        <div class="auth-intro" aria-hidden="true">
+          <img
+            class="auth-intro__logo"
+            src="./assets/yuexingren/yuexingren-logo.png"
+            alt=""
+          />
+          <img
+            class="auth-intro__illustration"
+            src="./assets/yuexingren/reading-workspace-illustration.png"
+            alt=""
+          />
+        </div>
+
+        <form class="auth-card" id="passwordForm">
+          <img
+            class="auth-card__mark"
+            src="./assets/yuexingren/yuexingren-logo-mark.png"
+            alt="阅星人读书社"
+          />
+          <p class="auth-kicker">阅星人学识地图</p>
+          <h2>访问验证</h2>
+          <label class="auth-field" for="passwordInput">
+            <span>访问密码</span>
+            <input id="passwordInput" type="password" autocomplete="current-password" />
+          </label>
+          <p class="auth-error" id="passwordError" role="alert" hidden>密码不正确，请重新输入。</p>
+          <button type="submit">进入学识地图</button>
+        </form>
+      </div>
     </section>
 
     <div class="page-shell" id="pageShell" aria-hidden="true">
       <header class="hero">
         <div class="hero__content">
+          <div class="brand-lockup">
+            <img src="./assets/yuexingren/yuexingren-logo-mark.png" alt="" />
+            <div>
+              <strong>阅星人读书社</strong>
+            </div>
+          </div>
           <h1>阅星人学识地图</h1>
           <div class="hero__stats" id="heroStats" aria-label="L1-L5 书目统计"></div>
+        </div>
+        <div class="hero__visual" aria-hidden="true">
+          <img
+            src="./assets/yuexingren/reading-workspace-illustration.png"
+            alt=""
+          />
         </div>
       </header>
 
