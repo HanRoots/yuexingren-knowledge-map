@@ -183,6 +183,7 @@ const state = {
 };
 
 const baseBookIds = new Set(books.map((book) => book.id));
+const baseBookOrder = books.map((book) => book.id);
 let localEdits = readLocalEdits();
 let localAddedBooks = readLocalAddedBooks();
 let localRemovedBookIds = new Set(readStringArray(LOCAL_REMOVED_BOOKS_STORAGE_KEY));
@@ -312,7 +313,7 @@ function persistStructuralChanges() {
   localBookOrder = books.map((book) => book.id);
   window.localStorage.setItem(LOCAL_ADDED_BOOKS_STORAGE_KEY, JSON.stringify(localAddedBooks));
   window.localStorage.setItem(LOCAL_REMOVED_BOOKS_STORAGE_KEY, JSON.stringify([...localRemovedBookIds]));
-  if (localAddedBooks.length || localRemovedBookIds.size) {
+  if (bookOrderDiffersFromBase()) {
     window.localStorage.setItem(LOCAL_BOOK_ORDER_STORAGE_KEY, JSON.stringify(localBookOrder));
   } else {
     localBookOrder = [];
@@ -320,8 +321,15 @@ function persistStructuralChanges() {
   }
 }
 
+function bookOrderDiffersFromBase() {
+  if (books.length !== baseBookOrder.length) return true;
+  return books.some((book, index) => book.id !== baseBookOrder[index]);
+}
+
 function hasLocalChanges() {
-  return Boolean(Object.keys(localEdits).length || localAddedBooks.length || localRemovedBookIds.size);
+  return Boolean(
+    Object.keys(localEdits).length || localAddedBooks.length || localRemovedBookIds.size || bookOrderDiffersFromBase()
+  );
 }
 
 function saveBookEdit(book) {
@@ -456,6 +464,19 @@ function getBookInsertIndex(level, position) {
   const levelRank = LEVEL_FILTERS.indexOf(level);
   const nextLevelBook = books.find((book) => LEVEL_FILTERS.indexOf(book.level) > levelRank);
   return nextLevelBook ? books.indexOf(nextLevelBook) : books.length;
+}
+
+function moveBookWithinLevel(book, requestedPosition) {
+  const levelCount = books.filter((item) => item.level === book.level).length;
+  const position = Math.min(Math.max(requestedPosition, 1), levelCount);
+  if (position === book.levelIndex) return false;
+  const currentIndex = books.indexOf(book);
+  if (currentIndex < 0) return false;
+  books.splice(currentIndex, 1);
+  books.splice(getBookInsertIndex(book.level, position), 0, book);
+  normalizeBookCollection();
+  persistStructuralChanges();
+  return true;
 }
 
 function handleAddBookSubmit(event) {
@@ -904,6 +925,10 @@ function createEditorField(labelText, name, value, options = {}) {
   const field = createNode(options.multiline ? "textarea" : "input", "editor-field__control");
   field.name = name;
   field.value = value || "";
+  if (!options.multiline && options.type) field.type = options.type;
+  if (options.min !== undefined) field.min = String(options.min);
+  if (options.max !== undefined) field.max = String(options.max);
+  if (options.step !== undefined) field.step = String(options.step);
   if (options.multiline) field.rows = options.rows || 6;
   if (options.required) field.required = true;
   if (options.hint) label.append(createNode("small", "editor-field__hint", options.hint));
@@ -941,6 +966,16 @@ function scrollToBook(bookId) {
 function renderBookEditor(book) {
   const form = createNode("form", "book-editor");
   form.append(createEditorField("书名", "title", book.title, { required: true }));
+  const positionField = createEditorField("本级序号", "levelIndex", book.levelIndex, {
+    type: "number",
+    required: true,
+    min: 1,
+    max: books.filter((item) => item.level === book.level).length,
+    step: 1,
+    hint: `输入 1-${books.filter((item) => item.level === book.level).length}，保存后自动调整前后书目的编号。`,
+  });
+  positionField.classList.add("editor-field--position");
+  form.append(positionField);
   form.append(createEditorField("学识目标", "knowledgeGoals", book.knowledgeGoals, { multiline: true, rows: 9 }));
   form.append(createEditorField("价值观", "valueGoals", book.valueGoals, { multiline: true, rows: 6 }));
   form.append(
@@ -970,6 +1005,8 @@ function renderBookEditor(book) {
     const formData = new FormData(form);
     const title = String(formData.get("title") || "").trim();
     if (!title) return;
+    const requestedPosition = Number.parseInt(String(formData.get("levelIndex") || ""), 10);
+    const moved = Number.isFinite(requestedPosition) ? moveBookWithinLevel(book, requestedPosition) : false;
 
     book.title = title;
     book.knowledgeGoals = String(formData.get("knowledgeGoals") || "").trim();
@@ -978,7 +1015,11 @@ function renderBookEditor(book) {
     book.bookTypes = formData.getAll("bookTypes").map(String).filter((typeId) => TYPE_BY_ID.has(typeId));
     saveBookEdit(book);
     state.editingBookId = null;
-    setEditStatus(`已在当前浏览器保存《${book.title.replace(/[《》]/g, "")}》的修改。`);
+    setEditStatus(
+      moved
+        ? `已保存《${book.title.replace(/[《》]/g, "")}》，并调整为 ${book.level} 第 ${book.levelIndex} 位。`
+        : `已在当前浏览器保存《${book.title.replace(/[《》]/g, "")}》的修改。`
+    );
     render();
     scrollToBook(book.id);
   });

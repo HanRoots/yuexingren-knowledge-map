@@ -993,9 +993,14 @@ body.is-locked .page-shell {
 }
 
 .editor-field:first-child,
+.editor-field--position,
 .editor-types,
 .book-editor__actions {
   grid-column: 1 / -1;
+}
+
+.editor-field--position {
+  max-width: 260px;
 }
 
 .editor-field__label {
@@ -1559,9 +1564,14 @@ input.editor-field__control {
 
   .editor-field,
   .editor-field:first-child,
+  .editor-field--position,
   .editor-types,
   .book-editor__actions {
     grid-column: 1;
+  }
+
+  .editor-field--position {
+    max-width: none;
   }
 }
 
