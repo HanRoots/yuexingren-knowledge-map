@@ -118,6 +118,9 @@ const FALLBACK_TYPE = {
 };
 
 const LOCAL_EDITS_STORAGE_KEY = "yuexingren:knowledge-map:local-edits:v1";
+const LOCAL_ADDED_BOOKS_STORAGE_KEY = "yuexingren:knowledge-map:added-books:v1";
+const LOCAL_REMOVED_BOOKS_STORAGE_KEY = "yuexingren:knowledge-map:removed-books:v1";
+const LOCAL_BOOK_ORDER_STORAGE_KEY = "yuexingren:knowledge-map:book-order:v1";
 const EDITABLE_BOOK_FIELDS = ["title", "knowledgeGoals", "valueGoals", "abilityGoals", "bookTypes"];
 const GITHUB_OWNER = "HanRoots";
 const GITHUB_REPOSITORY = "yuexingren-knowledge-map";
@@ -139,6 +142,7 @@ const els = {
   editModeButton: document.querySelector("#editModeButton"),
   resetButton: document.querySelector("#resetButton"),
   editPanel: document.querySelector("#editPanel"),
+  addBookButton: document.querySelector("#addBookButton"),
   publishEditsButton: document.querySelector("#publishEditsButton"),
   exportEditsButton: document.querySelector("#exportEditsButton"),
   clearEditsButton: document.querySelector("#clearEditsButton"),
@@ -151,6 +155,14 @@ const els = {
   confirmPublishButton: document.querySelector("#confirmPublishButton"),
   closePublishDialogButton: document.querySelector("#closePublishDialogButton"),
   cancelPublishButton: document.querySelector("#cancelPublishButton"),
+  addBookDialog: document.querySelector("#addBookDialog"),
+  addBookForm: document.querySelector("#addBookForm"),
+  addBookLevel: document.querySelector("#addBookLevel"),
+  addBookPosition: document.querySelector("#addBookPosition"),
+  addBookTitle: document.querySelector("#addBookTitle"),
+  addBookTypeOptions: document.querySelector("#addBookTypeOptions"),
+  closeAddBookDialogButton: document.querySelector("#closeAddBookDialogButton"),
+  cancelAddBookButton: document.querySelector("#cancelAddBookButton"),
   railCount: document.querySelector("#railCount"),
   bookNav: document.querySelector("#bookNav"),
   resultSummary: document.querySelector("#resultSummary"),
@@ -170,7 +182,11 @@ const state = {
   editingBookId: null,
 };
 
+const baseBookIds = new Set(books.map((book) => book.id));
 let localEdits = readLocalEdits();
+let localAddedBooks = readLocalAddedBooks();
+let localRemovedBookIds = new Set(readStringArray(LOCAL_REMOVED_BOOKS_STORAGE_KEY));
+let localBookOrder = readStringArray(LOCAL_BOOK_ORDER_STORAGE_KEY);
 
 function sanitizeBookEdit(value) {
   if (!value || typeof value !== "object" || Array.isArray(value)) return null;
@@ -203,12 +219,109 @@ function readLocalEdits() {
   }
 }
 
+function readStringArray(storageKey) {
+  try {
+    const parsed = JSON.parse(window.localStorage.getItem(storageKey) || "[]");
+    if (!Array.isArray(parsed)) return [];
+    return [...new Set(parsed.filter((value) => typeof value === "string" && value))];
+  } catch {
+    return [];
+  }
+}
+
+function sanitizeAddedBook(value) {
+  if (!value || typeof value !== "object" || Array.isArray(value)) return null;
+  if (typeof value.id !== "string" || !value.id || !LEVEL_FILTERS.includes(value.level)) return null;
+  if (typeof value.title !== "string" || !value.title.trim()) return null;
+  return {
+    level: value.level,
+    title: value.title.trim(),
+    valueGoals: typeof value.valueGoals === "string" ? value.valueGoals : "",
+    knowledgeGoals: typeof value.knowledgeGoals === "string" ? value.knowledgeGoals : "",
+    abilityGoals: typeof value.abilityGoals === "string" ? value.abilityGoals : "",
+    abilityInferred: false,
+    id: value.id,
+    index: Number.isFinite(value.index) ? value.index : 0,
+    levelIndex: Number.isFinite(value.levelIndex) ? value.levelIndex : 0,
+    bookTypes: Array.isArray(value.bookTypes)
+      ? [...new Set(value.bookTypes.filter((typeId) => TYPE_BY_ID.has(typeId)))]
+      : [],
+  };
+}
+
+function readLocalAddedBooks() {
+  try {
+    const parsed = JSON.parse(window.localStorage.getItem(LOCAL_ADDED_BOOKS_STORAGE_KEY) || "[]");
+    if (!Array.isArray(parsed)) return [];
+    return parsed.map(sanitizeAddedBook).filter(Boolean);
+  } catch {
+    return [];
+  }
+}
+
 function applyLocalEdits() {
   books.forEach((book) => {
     const edit = localEdits[book.id];
     if (!edit) return;
     Object.assign(book, edit);
   });
+}
+
+function normalizeBookCollection() {
+  const levelCounts = new Map();
+  books.forEach((book, index) => {
+    const levelIndex = (levelCounts.get(book.level) || 0) + 1;
+    levelCounts.set(book.level, levelIndex);
+    book.index = index + 1;
+    book.levelIndex = levelIndex;
+  });
+  library.total = books.length;
+  levels.splice(
+    0,
+    levels.length,
+    ...LEVEL_FILTERS.map((id) => ({ id, count: levelCounts.get(id) || 0 }))
+  );
+  library.levels = levels;
+}
+
+function applyLocalChanges() {
+  localAddedBooks.forEach((book) => {
+    if (!books.some((item) => item.id === book.id)) books.push({ ...book, bookTypes: [...book.bookTypes] });
+  });
+
+  if (localRemovedBookIds.size) {
+    const remainingBooks = books.filter((book) => !localRemovedBookIds.has(book.id));
+    books.splice(0, books.length, ...remainingBooks);
+  }
+
+  if (localBookOrder.length) {
+    const orderById = new Map(localBookOrder.map((bookId, index) => [bookId, index]));
+    const currentOrder = new Map(books.map((book, index) => [book.id, index]));
+    books.sort((first, second) => {
+      const firstOrder = orderById.get(first.id) ?? localBookOrder.length + currentOrder.get(first.id);
+      const secondOrder = orderById.get(second.id) ?? localBookOrder.length + currentOrder.get(second.id);
+      return firstOrder - secondOrder;
+    });
+  }
+
+  applyLocalEdits();
+  normalizeBookCollection();
+}
+
+function persistStructuralChanges() {
+  localBookOrder = books.map((book) => book.id);
+  window.localStorage.setItem(LOCAL_ADDED_BOOKS_STORAGE_KEY, JSON.stringify(localAddedBooks));
+  window.localStorage.setItem(LOCAL_REMOVED_BOOKS_STORAGE_KEY, JSON.stringify([...localRemovedBookIds]));
+  if (localAddedBooks.length || localRemovedBookIds.size) {
+    window.localStorage.setItem(LOCAL_BOOK_ORDER_STORAGE_KEY, JSON.stringify(localBookOrder));
+  } else {
+    localBookOrder = [];
+    window.localStorage.removeItem(LOCAL_BOOK_ORDER_STORAGE_KEY);
+  }
+}
+
+function hasLocalChanges() {
+  return Boolean(Object.keys(localEdits).length || localAddedBooks.length || localRemovedBookIds.size);
 }
 
 function saveBookEdit(book) {
@@ -228,16 +341,19 @@ function setEditStatus(message) {
 
 function exportLocalEdits() {
   const editedBooks = Object.entries(localEdits).map(([id, edit]) => ({ id, ...edit }));
-  if (!editedBooks.length) {
+  if (!hasLocalChanges()) {
     setEditStatus("当前没有可导出的修改。");
     return;
   }
 
   const payload = {
     format: "yuexingren-knowledge-map-local-edits",
-    version: 1,
+    version: 2,
     exportedAt: new Date().toISOString(),
     books: editedBooks,
+    addedBooks: localAddedBooks,
+    removedBookIds: [...localRemovedBookIds],
+    bookOrder: localBookOrder,
   };
   const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
   const url = URL.createObjectURL(blob);
@@ -248,22 +364,27 @@ function exportLocalEdits() {
   link.click();
   link.remove();
   URL.revokeObjectURL(url);
-  setEditStatus(`已导出 ${editedBooks.length} 本书的修改。`);
+  setEditStatus(
+    `已导出 ${editedBooks.length} 项内容修改、${localAddedBooks.length} 本新增书目和 ${localRemovedBookIds.size} 本删除书目。`
+  );
 }
 
 function clearLocalEdits() {
-  if (!Object.keys(localEdits).length) {
+  if (!hasLocalChanges()) {
     setEditStatus("当前没有本地修改。");
     return;
   }
-  if (!window.confirm("确定恢复线上内容吗？当前浏览器中的全部本地修改将被清除。")) return;
+  if (!window.confirm("确定恢复线上内容吗？当前浏览器中的内容修改、新增和删除记录都将被清除。")) return;
   window.localStorage.removeItem(LOCAL_EDITS_STORAGE_KEY);
+  window.localStorage.removeItem(LOCAL_ADDED_BOOKS_STORAGE_KEY);
+  window.localStorage.removeItem(LOCAL_REMOVED_BOOKS_STORAGE_KEY);
+  window.localStorage.removeItem(LOCAL_BOOK_ORDER_STORAGE_KEY);
   window.location.reload();
 }
 
 function openPublishDialog() {
-  if (!Object.keys(localEdits).length) {
-    setEditStatus("请先保存至少一本书的修改。");
+  if (!hasLocalChanges()) {
+    setEditStatus("请先保存内容修改、新增书目或删除书目。");
     return;
   }
   if (els.publishError) {
@@ -281,6 +402,122 @@ function closePublishDialog() {
     els.publishError.textContent = "";
   }
   els.publishDialog?.close();
+}
+
+function renderAddBookTypeOptions() {
+  if (!els.addBookTypeOptions) return;
+  els.addBookTypeOptions.replaceChildren(
+    ...BOOK_TYPES.map((type) => {
+      const label = createNode("label", "editor-type-option");
+      const checkbox = createNode("input");
+      checkbox.type = "checkbox";
+      checkbox.name = "bookTypes";
+      checkbox.value = type.id;
+      label.append(checkbox, createNode("span", "", type.name));
+      return label;
+    })
+  );
+}
+
+function updateAddBookPosition() {
+  if (!els.addBookLevel || !els.addBookPosition) return;
+  const levelCount = books.filter((book) => book.level === els.addBookLevel.value).length;
+  els.addBookPosition.max = String(levelCount + 1);
+  els.addBookPosition.value = String(levelCount + 1);
+}
+
+function openAddBookDialog() {
+  els.addBookForm?.reset();
+  if (els.addBookLevel) {
+    els.addBookLevel.value = LEVEL_FILTERS.includes(state.level) ? state.level : "L1";
+  }
+  updateAddBookPosition();
+  els.addBookDialog?.showModal();
+  els.addBookTitle?.focus();
+}
+
+function closeAddBookDialog() {
+  els.addBookDialog?.close();
+}
+
+function createBookId(level) {
+  const randomPart = window.crypto?.randomUUID
+    ? window.crypto.randomUUID().replaceAll("-", "").slice(0, 10)
+    : `${Date.now().toString(36)}${Math.random().toString(36).slice(2, 7)}`;
+  return `${level.toLowerCase()}-book-local-${randomPart}`;
+}
+
+function getBookInsertIndex(level, position) {
+  const levelBooks = books.filter((book) => book.level === level);
+  const targetBook = levelBooks[position - 1];
+  if (targetBook) return books.indexOf(targetBook);
+  const lastLevelBook = levelBooks.at(-1);
+  if (lastLevelBook) return books.indexOf(lastLevelBook) + 1;
+  const levelRank = LEVEL_FILTERS.indexOf(level);
+  const nextLevelBook = books.find((book) => LEVEL_FILTERS.indexOf(book.level) > levelRank);
+  return nextLevelBook ? books.indexOf(nextLevelBook) : books.length;
+}
+
+function handleAddBookSubmit(event) {
+  event.preventDefault();
+  const formData = new FormData(event.currentTarget);
+  const level = String(formData.get("level") || "");
+  const title = String(formData.get("title") || "").trim();
+  if (!LEVEL_FILTERS.includes(level) || !title) return;
+
+  const levelCount = books.filter((book) => book.level === level).length;
+  const requestedPosition = Number.parseInt(String(formData.get("position") || ""), 10);
+  const position = Math.min(Math.max(Number.isFinite(requestedPosition) ? requestedPosition : levelCount + 1, 1), levelCount + 1);
+  const book = {
+    level,
+    title,
+    valueGoals: String(formData.get("valueGoals") || "").trim(),
+    knowledgeGoals: String(formData.get("knowledgeGoals") || "").trim(),
+    abilityGoals: String(formData.get("abilityGoals") || "").trim(),
+    abilityInferred: false,
+    id: createBookId(level),
+    index: 0,
+    levelIndex: 0,
+    bookTypes: formData.getAll("bookTypes").map(String).filter((typeId) => TYPE_BY_ID.has(typeId)),
+  };
+
+  books.splice(getBookInsertIndex(level, position), 0, book);
+  localAddedBooks.push(book);
+  normalizeBookCollection();
+  persistStructuralChanges();
+  state.level = level;
+  state.query = "";
+  state.topic = "all";
+  state.type = "all";
+  state.editingBookId = null;
+  if (els.searchInput) els.searchInput.value = "";
+  closeAddBookDialog();
+  renderHeroStats();
+  render();
+  setEditStatus(`已在 ${level} 第 ${book.levelIndex} 位新增《${book.title.replace(/[《》]/g, "")}》。`);
+  scrollToBook(book.id);
+}
+
+function deleteBook(book) {
+  const plainTitle = book.title.replace(/[《》]/g, "");
+  if (!window.confirm(`确定删除《${plainTitle}》吗？删除会先保存在当前浏览器，发布后才会同步到云端。`)) return;
+
+  localAddedBooks = localAddedBooks.filter((item) => item.id !== book.id);
+  if (baseBookIds.has(book.id)) localRemovedBookIds.add(book.id);
+  delete localEdits[book.id];
+  if (Object.keys(localEdits).length) {
+    window.localStorage.setItem(LOCAL_EDITS_STORAGE_KEY, JSON.stringify(localEdits));
+  } else {
+    window.localStorage.removeItem(LOCAL_EDITS_STORAGE_KEY);
+  }
+  const bookIndex = books.findIndex((item) => item.id === book.id);
+  if (bookIndex >= 0) books.splice(bookIndex, 1);
+  state.editingBookId = null;
+  normalizeBookCollection();
+  persistStructuralChanges();
+  renderHeroStats();
+  render();
+  setEditStatus(`已在当前浏览器删除《${plainTitle}》。`);
 }
 
 function encodeBase64(text) {
@@ -759,7 +996,11 @@ function renderBookCard(book) {
   const title = createNode("div", "book-title");
   title.append(createNode("span", "", `${book.level} · No.${String(book.levelIndex).padStart(2, "0")}`));
   title.append(createNode("h3", "", book.title));
-  if (localEdits[book.id]) title.append(createNode("small", "local-edit-note", "已本地修改"));
+  if (localAddedBooks.some((item) => item.id === book.id)) {
+    title.append(createNode("small", "local-edit-note", "本地新增"));
+  } else if (localEdits[book.id]) {
+    title.append(createNode("small", "local-edit-note", "已本地修改"));
+  }
   title.append(renderTypePills(book));
   title.append(renderTopicPills(book));
 
@@ -780,7 +1021,10 @@ function renderBookCard(book) {
       render();
       scrollToBook(book.id);
     });
-    meta.append(editButton);
+    const deleteButton = createNode("button", "book-delete-button", "删除此书");
+    deleteButton.type = "button";
+    deleteButton.addEventListener("click", () => deleteBook(book));
+    meta.append(editButton, deleteButton);
   }
   header.append(title, meta);
 
@@ -808,16 +1052,16 @@ function markActiveNav() {
 }
 
 function renderEditControls() {
-  const editCount = Object.keys(localEdits).length;
+  const hasChanges = hasLocalChanges();
   document.body.classList.toggle("is-editing", state.editMode);
   if (els.editModeButton) {
     els.editModeButton.textContent = state.editMode ? "退出编辑" : "编辑内容";
     els.editModeButton.setAttribute("aria-pressed", String(state.editMode));
   }
   if (els.editPanel) els.editPanel.hidden = !state.editMode;
-  if (els.publishEditsButton) els.publishEditsButton.disabled = editCount === 0;
-  if (els.exportEditsButton) els.exportEditsButton.disabled = editCount === 0;
-  if (els.clearEditsButton) els.clearEditsButton.disabled = editCount === 0;
+  if (els.publishEditsButton) els.publishEditsButton.disabled = !hasChanges;
+  if (els.exportEditsButton) els.exportEditsButton.disabled = !hasChanges;
+  if (els.clearEditsButton) els.clearEditsButton.disabled = !hasChanges;
 }
 
 function render() {
@@ -875,6 +1119,7 @@ els.editModeButton?.addEventListener("click", () => {
 });
 
 els.publishEditsButton?.addEventListener("click", openPublishDialog);
+els.addBookButton?.addEventListener("click", openAddBookDialog);
 els.exportEditsButton?.addEventListener("click", exportLocalEdits);
 els.clearEditsButton?.addEventListener("click", clearLocalEdits);
 els.publishForm?.addEventListener("submit", handlePublishSubmit);
@@ -883,6 +1128,10 @@ els.cancelPublishButton?.addEventListener("click", closePublishDialog);
 els.publishDialog?.addEventListener("close", () => {
   if (els.githubTokenInput) els.githubTokenInput.value = "";
 });
+els.addBookForm?.addEventListener("submit", handleAddBookSubmit);
+els.addBookLevel?.addEventListener("change", updateAddBookPosition);
+els.closeAddBookDialogButton?.addEventListener("click", closeAddBookDialog);
+els.cancelAddBookButton?.addEventListener("click", closeAddBookDialog);
 
 function resetFilters(event) {
   event?.preventDefault();
@@ -899,7 +1148,8 @@ els.resetButton.addEventListener("click", resetFilters);
 
 window.addEventListener("scroll", markActiveNav, { passive: true });
 
-applyLocalEdits();
+applyLocalChanges();
+renderAddBookTypeOptions();
 initAccessGate();
 renderHeroStats();
 render();

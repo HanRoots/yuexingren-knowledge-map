@@ -84,9 +84,10 @@
       <section class="edit-panel" id="editPanel" aria-label="本地编辑工具" hidden>
         <div>
           <strong>本地编辑模式</strong>
-          <span>修改仅保存在当前浏览器，可导出 JSON 文件备份。</span>
+          <span>文字修改与书目增删仅保存在当前浏览器，可导出 JSON 文件备份。</span>
         </div>
         <div class="edit-panel__actions">
+          <button id="addBookButton" type="button">新增书目</button>
           <button class="edit-panel__publish" id="publishEditsButton" type="button">发布到云端</button>
           <button id="exportEditsButton" type="button">导出修改</button>
           <button id="clearEditsButton" type="button">恢复线上内容</button>
@@ -162,6 +163,60 @@
         <div class="publish-form__actions">
           <button id="cancelPublishButton" type="button">取消</button>
           <button class="publish-submit" id="confirmPublishButton" type="submit">确认发布</button>
+        </div>
+      </form>
+    </dialog>
+
+    <dialog class="publish-dialog add-book-dialog" id="addBookDialog">
+      <form class="publish-form add-book-form" id="addBookForm">
+        <div class="publish-form__heading">
+          <div>
+            <p>Book Editor</p>
+            <h2>新增书目</h2>
+          </div>
+          <button class="publish-dialog__close" id="closeAddBookDialogButton" type="button" aria-label="关闭">
+            ×
+          </button>
+        </div>
+        <div class="add-book-form__row">
+          <label class="publish-field" for="addBookLevel">
+            <span>级别</span>
+            <select id="addBookLevel" name="level" required>
+              <option value="L1">L1</option>
+              <option value="L2">L2</option>
+              <option value="L3">L3</option>
+              <option value="L4">L4</option>
+              <option value="L5">L5</option>
+            </select>
+          </label>
+          <label class="publish-field" for="addBookPosition">
+            <span>插入序号</span>
+            <input id="addBookPosition" name="position" type="number" min="1" step="1" required />
+          </label>
+        </div>
+        <label class="publish-field" for="addBookTitle">
+          <span>书名</span>
+          <input id="addBookTitle" name="title" type="text" required placeholder="《书名》" />
+        </label>
+        <label class="publish-field" for="addBookKnowledgeGoals">
+          <span>学识目标</span>
+          <textarea id="addBookKnowledgeGoals" name="knowledgeGoals" rows="7"></textarea>
+        </label>
+        <label class="publish-field" for="addBookValueGoals">
+          <span>价值观</span>
+          <textarea id="addBookValueGoals" name="valueGoals" rows="5"></textarea>
+        </label>
+        <label class="publish-field" for="addBookAbilityGoals">
+          <span>能力目标</span>
+          <textarea id="addBookAbilityGoals" name="abilityGoals" rows="4"></textarea>
+        </label>
+        <fieldset class="editor-types add-book-types">
+          <legend class="editor-field__label">书籍类型</legend>
+          <div class="editor-types__options" id="addBookTypeOptions"></div>
+        </fieldset>
+        <div class="publish-form__actions">
+          <button id="cancelAddBookButton" type="button">取消</button>
+          <button class="publish-submit" type="submit">保存新书</button>
         </div>
       </form>
     </dialog>
