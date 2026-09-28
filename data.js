@@ -15,7 +15,7 @@ window.LEVEL_LIBRARY = {
     },
     {
       "id": "L4",
-      "count": 28
+      "count": 29
     },
     {
       "id": "L5",
@@ -26,7 +26,7 @@ window.LEVEL_LIBRARY = {
       "count": 0
     }
   ],
-  "total": 168,
+  "total": 169,
   "sourceFiles": [
     "/Users/han/Desktop/L1.xlsx",
     "/Users/han/Desktop/L2.xlsx",
@@ -2107,13 +2107,25 @@ window.LEVEL_LIBRARY = {
       ]
     },
     {
+      "level": "L4",
+      "title": "测试",
+      "valueGoals": "",
+      "knowledgeGoals": "人物形象",
+      "abilityGoals": "",
+      "abilityInferred": false,
+      "id": "l4-book-local-084df0390f",
+      "index": 146,
+      "levelIndex": 29,
+      "bookTypes": []
+    },
+    {
       "level": "L5",
       "title": "《草木有趣》",
       "valueGoals": "1、感知草木背后的象征义；\n2、感受大自然中植物的独特魅力；",
       "knowledgeGoals": "1、修辞手法：通过阅读训练，掌握引用的修辞手法及作用分析;\n2、从析修辞手法、品语言风格、解情感思想三个角度掌握散文类文章的句子赏析方法；\n3、有技巧地写好状物类作文（植物）\n4、学习借物喻人的表现手法，尝试运用借物喻人的思路进行状物写作",
       "abilityGoals": "概括能力、鉴赏能力、理解能力、迁移运用、逻辑能力、检索能力",
       "id": "l5-book-01",
-      "index": 146,
+      "index": 147,
       "levelIndex": 1,
       "bookTypes": [
         "prose",
@@ -2128,7 +2140,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "1、利用表格，学习使用抓关键词句、删减、提炼的不同方法来概括文章内容，复习小标题概括法\n2、通过文本分析，熟练应用【赏析人物描写】题目的答题思路和答题语言；\n3、揣摩人物内心活动（复习），积累区分情绪、情感词汇；\n4、以析促写，能够运用动作描写来突出人物情绪情感/性格品质，完成《漫画老师》的创作。",
       "abilityGoals": "认读能力、理解能力、逻辑能力、概括能力、鉴赏能力、表达能力、检索能力、知识迁移能力",
       "id": "l5-book-02",
-      "index": 147,
+      "index": 148,
       "levelIndex": 2,
       "bookTypes": [
         "novel"
@@ -2141,7 +2153,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "1、复习使用表格概括故事情节，学习使用山形图概括情节\n2、初步认识故事情节的开端、发展、高潮、结局，阅读故事，学会划分情节结构\n3、掌握创造性复述的方法\n①增加细节讲述\n②变换角色，以不同口吻复述\n③变换情节顺序，设置悬念\n学习缩写故事的思路（摘录、删减、概括、改写），利用表格训练缩写故事",
       "abilityGoals": "认读能力、理解能力、逻辑能力、概括能力、鉴赏能力、表达能力、检索能力、知识迁移能力",
       "id": "l5-book-03",
-      "index": 148,
+      "index": 149,
       "levelIndex": 3,
       "bookTypes": [
         "culture",
@@ -2155,7 +2167,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "1、复习训练对比修辞手法的作用，体会文章情感\n2、阅读小说，学习结合资料，体会作者情感\n3、从手法和情感两个角度初步感知关键句子的作用\n4、学习分点式和综合式表述，通过小说情节，分析人物形象\n5、写作训练《二十年后的家乡》",
       "abilityGoals": "概括能力、鉴赏能力、理解能力、迁移运用、逻辑能力、检索能力",
       "id": "l5-book-04",
-      "index": 149,
+      "index": 150,
       "levelIndex": 4,
       "bookTypes": [
         "biography",
@@ -2170,7 +2182,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "１、学习判断并分析说明方法的表达效果：分类别、引资料、举例子\n２、复习多种说明方法的表达效果，规范答题语言\n３、训练说明文高频考点：某词能否删除\n４、模仿范例运用多种说明方法说明事物特征",
       "abilityGoals": "认读能力、理解能力、概括能力、鉴赏能力、表达能力、检索能力、知识迁移能力",
       "id": "l5-book-05",
-      "index": 150,
+      "index": 151,
       "levelIndex": 5,
       "bookTypes": [
         "science",
@@ -2184,7 +2196,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "1、掌握场景描写的概念，学会判断场景描写和环境描写的区别\n2、训练概括场景描写的内容，并体会作者描写的场景中蕴含的情感\n3、体会标题的表层义和深层义，学习分析标题的作用\n4、体会“反复”修辞的作用，掌握其表达效果的赏析\n5写作训练《我想对您说》",
       "abilityGoals": "概括能力、鉴赏能力、理解能力、迁移运用、逻辑能力、检索能力",
       "id": "l5-book-06",
-      "index": 151,
+      "index": 152,
       "levelIndex": 6,
       "bookTypes": [
         "classic"
@@ -2197,7 +2209,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "1、 发现并判断文章中的静态描写、动态描写\n2、 感知不同描写下景物的特点\n3、 掌握从动静描写的角度赏析句子，复习修辞角度赏析句子\n4、 词句段运用：仿写句子，体会动静描写的作用，把画面写具体\n5、 复习写景顺序，学习在写景习作中加入动态描写，把景物变化写具体、写细腻、写鲜活",
       "abilityGoals": "认读能力、理解能力、逻辑能力、概括能力、鉴赏能力、表达能力、检索能力、知识迁移能力",
       "id": "l5-book-07",
-      "index": 152,
+      "index": 153,
       "levelIndex": 7,
       "bookTypes": [
         "prose",
@@ -2211,7 +2223,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "1、 通过文本分析，训练学生梳理信息、总结概括文本的能力，体会人物形象\n2、 复习检索关键句，判断文章结构\n3、 训练分层概括文本内容\n4、 结合人物行为，体会精神品质，积累与苦难之中的乐观态度相关的词汇\n5、 理解关键词句的深层含义，鉴赏其好处\n6、 理解加点词的含义，鉴赏其表达效果\n7、 结合文章内容，理解关键句子，初步赏析其表达效果\n8、 把握文章主旨，结合生活实际，学会提炼紧扣主旨和实际的启示感悟",
       "abilityGoals": "概括能力、鉴赏能力、理解能力、迁移运用、逻辑能力、检索能力",
       "id": "l5-book-08",
-      "index": 153,
+      "index": 154,
       "levelIndex": 8,
       "bookTypes": [
         "biography",
@@ -2225,7 +2237,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "1、 复习训练概括情节\n2、 通过分析情节和细节描写，总结概括人物形象，体会人物情感\n3、 赏析关键词句，复习从手法、内容、情感等方面体会词句的作用",
       "abilityGoals": "认读能力、理解能力、概括能力、鉴赏能力、表达能力、检索能力、知识迁移能力",
       "id": "l5-book-09",
-      "index": 154,
+      "index": 155,
       "levelIndex": 9,
       "bookTypes": [
         "novel"
@@ -2238,7 +2250,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "1、 复习训练概括情节内容\n2、 复习训练根据正面描写和人物行为分析小说人物形象\n3、 复习体会场景描写和细节描写中蕴含的人物情感\n4、 赏析关键词句，复习从手法、内容、情感等方面体会关键词句的表达效果\n5、 训练片段写作，通过场景和细节描写来表达情感，积累实用词语、素材",
       "abilityGoals": "概括能力、迁移运用、逻辑能力、检索能力",
       "id": "l5-book-10",
-      "index": 155,
+      "index": 156,
       "levelIndex": 10,
       "bookTypes": [
         "novel",
@@ -2252,7 +2264,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "1、通过拆解例题，训练学生对说明文阅读题的审题理解\n2、阅读文章，总结概括说明对象的特点，明确判断依据\n3、复习对说明方法的判断和赏析，完善答题语言：列数字、作比较、举例子、打比方、分类别\n4、期末复习：总结归纳不同类型阅读理解的审题思路\n 期末复习：根据不同作文类型梳理作文素材，要求背诵记忆",
       "abilityGoals": "概括能力、鉴赏能力、理解能力、认读能力、迁移运用、逻辑能力、检索能力",
       "id": "l5-book-11",
-      "index": 156,
+      "index": 157,
       "levelIndex": 11,
       "bookTypes": [
         "science"
@@ -2265,7 +2277,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "1、把握关键情节，分析书中多样的人物形象，如，坚强勇敢的阿廖沙、慈祥善良的外祖母、暴躁专横的外祖父、乐观淳朴的小茨冈等\n2、梳理书中关键人物与阿廖沙的关系，体悟他们在阿廖沙的人生中起到的不同作用，完成对人物关系的梳理图\n3、通过整本书阅读，分别用一句话概括每章内容，尝试给每一章节取小标题\n4、了解环境描写中的社会环境，以及社会环境描写的作用（目标重点在阅读书籍）",
       "abilityGoals": "认读能力、理解能力、概括能力、鉴赏能力、表达能力、检索能力、知识迁移能力",
       "id": "l5-book-12",
-      "index": 157,
+      "index": 158,
       "levelIndex": 12,
       "bookTypes": [
         "classic"
@@ -2278,7 +2290,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "１.分析关键词句（中心句、直抒胸臆）和带有强烈情感的词语，体会文章思想感情（复习理解关键词的深层含义）\n２.关注蕴含情感的人物描写（细节描写）和景物描写（环境描写），品析语言的表达好处，体会文章思想感情\n３.概括典型事例，复习训练小标题概括起因、结果、结果，借助典型事例，体会文章思想感情\n４.围绕感受，对所见、所闻、所思进行细致描写，完成《那一刻，我长大了》习作",
       "abilityGoals": "概括能力、鉴赏能力、理解能力、表达能力、认读能力、迁移运用、逻辑能力、检索能力",
       "id": "l5-book-13",
-      "index": 158,
+      "index": 159,
       "levelIndex": 13,
       "bookTypes": [
         "classic"
@@ -2291,7 +2303,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "1.梳理重要篇章的内容，训练对故事的起因、经过、结果的概括\n2.学习训练抓住人物语言、动作、神态等描写，感受人物形象，对于复杂的人物形象进行评价\n3..通过诵读、评书等形式感受古代白话文的特点，对于不理解的词语，猜测词语意思\n4.学习“引、概、议、联、结”的方法写读后感",
       "abilityGoals": "认读能力、理解能力、逻辑能力、概括能力、鉴赏能力、表达能力、检索能力、知识迁移能力",
       "id": "l5-book-14",
-      "index": 159,
+      "index": 160,
       "levelIndex": 14,
       "bookTypes": [
         "classic",
@@ -2305,7 +2317,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "1.了解汉字的形成与演进，掌握不同字体的特征，能够判断不同字体\n2.学会阅读多种材料组合的非连续性文本，能通过多种渠道获取信息，领会文本的意思\n3.学会搜集信息，运用简单的研究报告进行汉字研究",
       "abilityGoals": "概括能力、鉴赏能力、理解能力、表达能力、认读能力、迁移运用、逻辑能力、检索能力、问题分析能力、多角度思考能力",
       "id": "l5-book-15",
-      "index": 160,
+      "index": 161,
       "levelIndex": 15,
       "bookTypes": [
         "project",
@@ -2319,7 +2331,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "1.通过阅读文本，学习训练从细节描写(动作、语言、神态等）深入揣摩人物情感、心理变化（表格、流程图）和品质；\n2.以读促写，尝试从多角度具体描绘人物表现，完成习作《他_____了》；\n3.复习训练对关键词句的理解，体会人物内心\n4.复习训练对标题的理解",
       "abilityGoals": "概括能力、鉴赏能力、理解能力、表达能力、认读能力、迁移运用、逻辑能力、检索能力",
       "id": "l5-book-16",
-      "index": 161,
+      "index": 162,
       "levelIndex": 16,
       "bookTypes": [
         "novel",
@@ -2333,7 +2345,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "1.复习概括情节主要内容、分析修辞手法\n2.复习分析人物形象（第二单元）\n3.复习通过描写体会人物内心（第四单元）\n4.复习描写人物的基本方法（第五单元）\n5.复习分析人物的思维过程（第六单元）",
       "abilityGoals": "认读能力、理解能力、逻辑能力、概括能力、鉴赏能力、表达能力、检索能力、知识迁移能力",
       "id": "l5-book-17",
-      "index": 162,
+      "index": 163,
       "levelIndex": 17,
       "bookTypes": [
         "classic"
@@ -2346,7 +2358,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "1.阅读经典篇章，结合典型事例，分析人物特征，同时训练根据人物特征概括相关事例\n 结合典型事例，分析人物特征\n 根据人物特征概括相关事例\n2.训练以批注的形式分析细节描写在体现人物特点上的表达效果\n3.学习通过侧面描写（描写他人反应）和借助对比、衬托的写作手法来体现主要人物的特点（集中写作目标）\n4.通过小说中一波三折的情节设置，感受小说波澜起伏、扣人心弦的魅力",
       "abilityGoals": "认读能力、理解能力、概括能力、鉴赏能力、表达能力、检索能力、知识迁移能力",
       "id": "l5-book-18",
-      "index": 163,
+      "index": 164,
       "levelIndex": 18,
       "bookTypes": [
         "classic"
@@ -2359,7 +2371,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "1.掌握翻译文言句子的方法技巧，结合译文、使用六字诀对相关文言句子进行准确翻译\n2.阅读魏晋名士故事，了解人物的思维过程，绘制思维导图，加深对文章内容的理解\n3.通过分析人物的言行，理解其思维过程，感受主要人物的特点\n4.能体会文本语言的精妙趣味，并初步了解其表达效果（双关）。\n5.写作：合理想象故事情节，将遇险经过和求生方法写具体",
       "abilityGoals": "概括能力、鉴赏能力、理解能力、表达能力 认读能力、迁移运用、逻辑能力、检索能力",
       "id": "l5-book-19",
-      "index": 164,
+      "index": 165,
       "levelIndex": 19,
       "bookTypes": [
         "classic",
@@ -2373,7 +2385,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "1.精准识别并深入赏析静态描写与动态描写的片段，分析其如何营造画面感、烘托氛围、传递作者情感\n2.能对比动静手法的不同运用效果（深化）\n3.掌握句子中动词的赏析方法（变形）",
       "abilityGoals": "概括能力、鉴赏能力、理解能力、表达能力、认读能力、迁移运用、逻辑能力、检索能力",
       "id": "l5-book-20",
-      "index": 165,
+      "index": 166,
       "levelIndex": 20,
       "bookTypes": [
         "prose"
@@ -2386,7 +2398,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "",
       "abilityGoals": "",
       "id": "l5-book-21",
-      "index": 166,
+      "index": 167,
       "levelIndex": 21,
       "bookTypes": [
         "classic"
@@ -2399,7 +2411,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "",
       "abilityGoals": "",
       "id": "l5-book-22",
-      "index": 167,
+      "index": 168,
       "levelIndex": 22,
       "bookTypes": [
         "novel",
@@ -2413,7 +2425,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "",
       "abilityGoals": "",
       "id": "l5-book-23",
-      "index": 168,
+      "index": 169,
       "levelIndex": 23,
       "bookTypes": [
         "classic"
