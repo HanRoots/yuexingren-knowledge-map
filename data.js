@@ -23,10 +23,10 @@ window.LEVEL_LIBRARY = {
     },
     {
       "id": "L6",
-      "count": 0
+      "count": 7
     }
   ],
-  "total": 168,
+  "total": 175,
   "sourceFiles": [
     "/Users/han/Desktop/L1.xlsx",
     "/Users/han/Desktop/L2.xlsx",
@@ -2418,6 +2418,90 @@ window.LEVEL_LIBRARY = {
       "bookTypes": [
         "classic"
       ]
+    },
+    {
+      "level": "L6",
+      "title": "《天工开物》",
+      "valueGoals": "",
+      "knowledgeGoals": "",
+      "abilityGoals": "",
+      "abilityInferred": false,
+      "id": "l6-book-local-160e5d6577",
+      "index": 169,
+      "levelIndex": 1,
+      "bookTypes": []
+    },
+    {
+      "level": "L6",
+      "title": "《爱的教育》",
+      "valueGoals": "",
+      "knowledgeGoals": "",
+      "abilityGoals": "",
+      "abilityInferred": false,
+      "id": "l6-book-local-7bfa0ef2e8",
+      "index": 170,
+      "levelIndex": 2,
+      "bookTypes": []
+    },
+    {
+      "level": "L6",
+      "title": "《长安的荔枝》",
+      "valueGoals": "",
+      "knowledgeGoals": "",
+      "abilityGoals": "",
+      "abilityInferred": false,
+      "id": "l6-book-local-7b5cc2bef8",
+      "index": 171,
+      "levelIndex": 3,
+      "bookTypes": []
+    },
+    {
+      "level": "L6",
+      "title": "《浅的绿，深的绿》",
+      "valueGoals": "",
+      "knowledgeGoals": "",
+      "abilityGoals": "",
+      "abilityInferred": false,
+      "id": "l6-book-local-76a3fbf4bd",
+      "index": 172,
+      "levelIndex": 4,
+      "bookTypes": []
+    },
+    {
+      "level": "L6",
+      "title": "《鲸之殇》",
+      "valueGoals": "",
+      "knowledgeGoals": "",
+      "abilityGoals": "",
+      "abilityInferred": false,
+      "id": "l6-book-local-aaecc4271c",
+      "index": 173,
+      "levelIndex": 5,
+      "bookTypes": []
+    },
+    {
+      "level": "L6",
+      "title": "《我在故宫修文物》",
+      "valueGoals": "",
+      "knowledgeGoals": "",
+      "abilityGoals": "",
+      "abilityInferred": false,
+      "id": "l6-book-local-313124ac2e",
+      "index": 174,
+      "levelIndex": 6,
+      "bookTypes": []
+    },
+    {
+      "level": "L6",
+      "title": "《朝花夕拾》",
+      "valueGoals": "",
+      "knowledgeGoals": "",
+      "abilityGoals": "",
+      "abilityInferred": false,
+      "id": "l6-book-local-e91626d341",
+      "index": 175,
+      "levelIndex": 7,
+      "bookTypes": []
     }
   ]
 };
