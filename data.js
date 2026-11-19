@@ -23,10 +23,10 @@ window.LEVEL_LIBRARY = {
     },
     {
       "id": "L6",
-      "count": 9
+      "count": 10
     }
   ],
-  "total": 172,
+  "total": 173,
   "sourceFiles": [
     "/Users/han/Desktop/L1.xlsx",
     "/Users/han/Desktop/L2.xlsx",
@@ -172,14 +172,15 @@ window.LEVEL_LIBRARY = {
     {
       "level": "L1",
       "title": "《解救肚脐公主》",
-      "valueGoals": "",
-      "knowledgeGoals": "",
+      "valueGoals": "在冒险故事中学习探索、团结、乐观的精神，让小读者在阅读中收获快乐、勇气和力量。",
+      "knowledgeGoals": "1.复习故事结构：起因、经过、结果，并尝试通过这样的结构复述故事；2.再次感受比喻句，熟悉比喻句的基本句式“......像......”；\n3.复习拟声词，并尝试在场景中恰当运用。",
       "abilityGoals": "",
       "abilityInferred": false,
       "id": "l1-book-local-be75105b90",
       "index": 10,
       "levelIndex": 10,
-      "bookTypes": []
+      "bookTypes": [],
+      "knowledgeTopics": null
     },
     {
       "level": "L1",
@@ -1062,14 +1063,15 @@ window.LEVEL_LIBRARY = {
     {
       "level": "L2",
       "title": "《故宫里的大怪兽》",
-      "valueGoals": "",
-      "knowledgeGoals": "",
-      "abilityGoals": "",
+      "valueGoals": "通过认识故宫中的脊兽、吻兽等感知故宫是中华民族的瑰宝，进而感知中国古代建筑的美。",
+      "knowledgeGoals": "学习多角度观察，并能表格进行记录。\n观察要点：①观察要细致；②观察时可以调用五感；③观察时要注意事物的变化。",
+      "abilityGoals": "认读能力、逻辑能力、概括能力、理解能力、表达能力、迁移应用能力",
       "abilityInferred": false,
       "id": "l2-book-local-620967a956",
       "index": 71,
       "levelIndex": 22,
-      "bookTypes": []
+      "bookTypes": [],
+      "knowledgeTopics": null
     },
     {
       "level": "L2",
@@ -2146,9 +2148,9 @@ window.LEVEL_LIBRARY = {
     {
       "level": "L5",
       "title": "《安德的游戏》",
-      "valueGoals": "",
-      "knowledgeGoals": "",
-      "abilityGoals": "",
+      "valueGoals": "1.理解故事主人公安德身上所具备的独特品质和敢于担当的精神\n2.能够对人性和道德的评判标准有深入思考",
+      "knowledgeGoals": "1.结合具体情节、人物描写分析人物形象\n2.联系人物处境和前后情节，梳理人物心理变化，并分析变化的原因。\n3.分析重要情节、反复出现的细节对推动故事发展、表现人物性格和为下文作铺垫的作用。\n4.了解辩论赛的结构和形式，学习辩论\n5.阶段重点学识复习与迁移",
+      "abilityGoals": "概括能力、鉴赏能力、理解能力、表达能力、迁移运用、逻辑能力、检索能力",
       "abilityInferred": false,
       "id": "l5-book-local-1a26bba36f",
       "index": 147,
@@ -2360,62 +2362,93 @@ window.LEVEL_LIBRARY = {
     {
       "level": "L6",
       "title": "《天工开物》",
-      "valueGoals": "",
-      "knowledgeGoals": "",
-      "abilityGoals": "",
+      "valueGoals": "1.培养主动阅读意识，成为积极阅读者：学习并运用“有目的地阅读”策略，在阅读时能根据不同目的自主选择材料和方法，不再是被动接受，而是主动建构意义。\n2.理性思维与问题解决：通过阅读文本，学习带着问题去阅读、筛选信息、验证假设的思维方式，培养解决问题的能力和科学探究精神。\n3.认识中国古代科技的辉煌成就，提高学生的科学素养并引导学生热爱科学。",
+      "knowledgeGoals": "1.能够根据所提供的多个阅读任务，针对不同目的（如了解特点、探究原因等）快速定位关键信息。\n2.用表格、思维导图等工具整理信息。\n3.复习训练对说明文的阅读分析\n4.完成习作：__让生活更美好（写清楚某种事物让生活变美好的经历，把原因写具体）。",
+      "abilityGoals": "理解能力、逻辑能力、概括能力、鉴赏能力、表达能力、检索能力、知识迁移能力",
       "abilityInferred": false,
       "id": "l6-book-local-160e5d6577",
       "index": 163,
       "levelIndex": 3,
-      "bookTypes": []
-    },
-    {
-      "level": "L6",
-      "title": "《爱的教育》",
-      "valueGoals": "",
-      "knowledgeGoals": "",
-      "abilityGoals": "",
-      "abilityInferred": false,
-      "id": "l6-book-local-7bfa0ef2e8",
-      "index": 164,
-      "levelIndex": 4,
-      "bookTypes": []
-    },
-    {
-      "level": "L6",
-      "title": "《长安的荔枝》",
-      "valueGoals": "",
-      "knowledgeGoals": "",
-      "abilityGoals": "",
-      "abilityInferred": false,
-      "id": "l6-book-local-7b5cc2bef8",
-      "index": 165,
-      "levelIndex": 5,
-      "bookTypes": []
+      "bookTypes": [],
+      "knowledgeTopics": null
     },
     {
       "level": "L6",
       "title": "《浅的绿，深的绿》",
-      "valueGoals": "",
-      "knowledgeGoals": "",
-      "abilityGoals": "",
+      "valueGoals": "1.感受本书中体现出的真挚友情、深切思乡情以及高尚的品格；用心去感受生活的每一个细节，体会每一个美好瞬间，真诚相待每一份情感。\n2.学会有条理地表达：学会围绕中心意思选择材料，并进行有序表达。",
+      "knowledgeGoals": "1.学习训练找出贯穿全文的中心句或核心观点，并说明其与各段落或材料的统摄关系。\n2.能围绕中心意思对选材和描写内容进行分析，说清楚是如何体现中心意思的。\n3.完成习作：围绕中心意思写（选择感受最深的一个字，围绕中心写一篇习作。",
+      "abilityGoals": "理解能力、概括能力、鉴赏能力、表达能力、检索能力、知识迁移能力",
       "abilityInferred": false,
       "id": "l6-book-local-76a3fbf4bd",
-      "index": 166,
-      "levelIndex": 6,
-      "bookTypes": []
+      "index": 164,
+      "levelIndex": 4,
+      "bookTypes": [],
+      "knowledgeTopics": null
+    },
+    {
+      "level": "L6",
+      "title": "《爱的教育》",
+      "valueGoals": "1.感受人性光辉，涵养道德情操：通过阅读，感受普通人在困境中闪现的人性光辉，如责任、善良、奉献、无私。\n2.体验成长与共情：关注人物的命运和内心世界，培养同理心和共情能力，并从他人的经历中汲取成长的力量",
+      "knowledgeGoals": "1.从情节发展和环境描写中感受人物形象。\n2.要求根据上下文推断人物当时的心理，并进行补白（写内心独白）。\n3.分析环境描写对塑造人物的作用，如何烘托人物形象或暗示人物命运。\n4.分析情节安排（如悬念、结尾突转）对塑造人物和增强感染力的作用。（包括对标题的理解）\n5.完成习作笔尖流出的故事，展开想象，根据提供的环境和人物创编故事。把故事情节写完整，通过环境或心理描写体现人物",
+      "abilityGoals": "概括能力、鉴赏能力、理解能力、表达能力、认读能力、迁移运用、逻辑能力、检索能力",
+      "abilityInferred": false,
+      "id": "l6-book-local-7bfa0ef2e8",
+      "index": 165,
+      "levelIndex": 5,
+      "bookTypes": [],
+      "knowledgeTopics": null
     },
     {
       "level": "L6",
       "title": "《鲸之殇》",
-      "valueGoals": "",
-      "knowledgeGoals": "",
-      "abilityGoals": "",
+      "valueGoals": "感受人类行为对自然生态的影响，培养爱护地球、保护环境的意识，增强社会责任感。",
+      "knowledgeGoals": "1.抓住关键句，把握文章主要观点。能够通过阅读找出文中的关键句（如中心句、总起句、总结句），并借助这些关键句理解文章或段落的主要观点和内容。\n2.体会说明文语言的准确性。能够感受说明文语言准确、严谨、科学的特点，分析句中修饰词的作用，理解删改词语对表达效果的影响。\n3.了解说明方法及其作用。能够判断常⻅的说明方法（如列数字、作比较），分析其在文中的表达效果。\n4.联系实际，思考问题。能够将课文内容与生活实际联系起来，关注环境问题，并提出自己的⻅解或建议\n5.学写倡议书。能够按照倡议书的格式（标题、称呼、正文、署名、日期），写一份说明现状、提出倡议、发出呼吁的倡议书。",
+      "abilityGoals": "理解能力、逻辑能力、概括能力、鉴赏能力、表达能力、检索能力、知识迁移能力",
       "abilityInferred": false,
       "id": "l6-book-local-aaecc4271c",
+      "index": 166,
+      "levelIndex": 6,
+      "bookTypes": [],
+      "knowledgeTopics": null
+    },
+    {
+      "level": "L6",
+      "title": "《长安的荔枝》",
+      "valueGoals": "体会作者想传递的时代之下小人物的抗争精神；感受“绝境中不放弃”的精神力量；感受个人命运与时代洪流的紧密关联。",
+      "knowledgeGoals": "1.能够准确识别“面”的描写与“点”的描写，分析“点面结合”写法的表达效果。\n2.能够识别运用联想与想象的语句，区分“联想”与“想象”，并分析联想与想象在文中的作用；尝试运用联想与想象进行仿写或续写。\n3.能够分析景物描写的作用；理解“融情于景”的写法，体会作者在景物描写中融入的情感。\n4.能够通过人物的动作、语言、神态、心理等描写，分析人物的性格特点与精神品质、变化与成⻓轨迹。",
+      "abilityGoals": "逻辑能力、理解能力、概括能力、鉴赏能力、表达能力、检索能力、知识迁移能力",
+      "abilityInferred": false,
+      "id": "l6-book-local-7b5cc2bef8",
       "index": 167,
       "levelIndex": 7,
-      "bookTypes": []
+      "bookTypes": [],
+      "knowledgeTopics": null
+    },
+    {
+      "level": "L6",
+      "title": "《宇宙无事发生》",
+      "valueGoals": "感受科幻故事中的好奇心，怀着好奇心，探索未知世界；引导学生思辨，理性看待科技的力量。",
+      "knowledgeGoals": "1.能够根据文本特点，选择恰当的阅读方法并综合运用借助关键语句、理清起因、经过和结果、拟小标题、抓人物对话等多种阅读方法，把握文章的主要内容。\n2.了解伏笔的概念和作用，掌握寻找伏笔的阅读方法。\n3.展开想象，试着写科幻故事，大胆设想人物生活环境、奇特经历和不可思议的科学技术，做到想象奇特而又令人信服。",
+      "abilityGoals": "理解能力、逻辑能力、概括能力、鉴赏能力、表达能力、检索能力、知识迁移能力",
+      "abilityInferred": false,
+      "id": "l6-book-local-aaf91d9083",
+      "index": 168,
+      "levelIndex": 8,
+      "bookTypes": [],
+      "knowledgeTopics": null
+    },
+    {
+      "level": "L6",
+      "title": "《朝花夕拾》",
+      "valueGoals": "1.感受鲁迅文章特色与鲁迅个人的人物风采；\n2.能够由文本解读感受鲁迅对真善美的向往和珍视，并感受鲁迅的批判精神，培养学生的家国情怀和文化自信。",
+      "knowledgeGoals": "1、能借助相关资料理解课文主要内容（结合注释、阅读链接等）；增强根据阅读需要自主查找、筛选和使用资料的意识与能力。\n2、理解含义深刻的句子。\n3、能结合课文所学和查找的资料，制作人物卡片，从文学、思想、人格三个维度全面认识鲁迅，加深对鲁迅的了解。\n4、能结合课文内容和相关资料感受鲁迅的形象。\n5、能用较快的速度默读课文，把握课文主要内容。\n6、理解家风的含义，学会从生活小事中提炼家风主题，并通过典型事例体现家风，写出传承。",
+      "abilityGoals": "检索能力、理解能力、问题分析能力、知识迁移能力、逻辑能力、多⻆度思考能力、鉴赏能力、表达能力、概括能力",
+      "abilityInferred": false,
+      "id": "l6-book-local-83e838cb14",
+      "index": 169,
+      "levelIndex": 9,
+      "bookTypes": [],
+      "knowledgeTopics": null
     },
     {
       "level": "L6",
@@ -2425,20 +2458,8 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "",
       "abilityInferred": false,
       "id": "l6-book-local-313124ac2e",
-      "index": 168,
-      "levelIndex": 8,
-      "bookTypes": []
-    },
-    {
-      "level": "L6",
-      "title": "《朝花夕拾》",
-      "valueGoals": "",
-      "knowledgeGoals": "",
-      "abilityGoals": "",
-      "abilityInferred": false,
-      "id": "l6-book-local-e91626d341",
-      "index": 169,
-      "levelIndex": 9,
+      "index": 170,
+      "levelIndex": 10,
       "bookTypes": []
     },
     {
@@ -2449,7 +2470,7 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "理解能力、概括能力、逻辑能力、表达能力、检索能力、鉴赏能力、迁移运用",
       "abilityInferred": false,
       "id": "l3-book-local-5b3559e81a",
-      "index": 170,
+      "index": 171,
       "levelIndex": 22,
       "bookTypes": [],
       "knowledgeTopics": null
@@ -2462,7 +2483,7 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "理解能力、表达能力、概括能力、逻辑能力、鉴赏能力、迁移能力",
       "abilityInferred": false,
       "id": "l3-book-local-b37fd9eb2e",
-      "index": 171,
+      "index": 172,
       "levelIndex": 23,
       "bookTypes": [],
       "knowledgeTopics": null
@@ -2475,7 +2496,7 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "理解能力、概括能力、逻辑能力、表达能力、检索能力、鉴赏能力、迁移运用",
       "abilityInferred": false,
       "id": "l4-book-local-77c4fbf109",
-      "index": 172,
+      "index": 173,
       "levelIndex": 23,
       "bookTypes": [],
       "knowledgeTopics": null
