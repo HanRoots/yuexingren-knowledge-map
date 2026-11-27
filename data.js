@@ -3,7 +3,7 @@ window.LEVEL_LIBRARY = {
   "levels": [
     {
       "id": "L1",
-      "count": 49
+      "count": 57
     },
     {
       "id": "L2",
@@ -26,7 +26,7 @@ window.LEVEL_LIBRARY = {
       "count": 10
     }
   ],
-  "total": 176,
+  "total": 184,
   "sourceFiles": [
     "/Users/han/Desktop/L1.xlsx",
     "/Users/han/Desktop/L2.xlsx",
@@ -36,42 +36,14 @@ window.LEVEL_LIBRARY = {
   "books": [
     {
       "level": "L1",
-      "title": "《大头鱼上学记》",
-      "valueGoals": "通过大头鱼第一天上学遇到的困难、逐渐适应新环境的经历，帮助孩子理解紧张和挫折都是成长的一部分，学习用勇气和积极心态迎接校园生活。",
-      "knowledgeGoals": "基础：\n1.积累词语共43个\n（1）积累与“缤纷校园”主题相关的词语，\n（2）不同结构类型词语的积累，如拟声词、ABB、AABB、ABAB、ABAC结构的词语（一二年级常考词语积累类型）\n2.积累句型3个\n表达与写作：\n能够灵活运用所学方法完成“缤纷校园”主题的相关创作。\n1.学习看图写话的方法（如：三要素），并能将所学句型运用其中；\n2.学习3种观点性表达的表达结构，帮助孩子有逻辑地进行观点性的口语表达。\n一、基础知识（词语积累：反应主人公对待事情感受的词语、有关面部表情的词语、拟声词、和校园主题相关的词语）\n二、创作：能够步骤清晰地说清楚一个问题",
-      "abilityGoals": "认读能力、理解能力、逻辑能力、表达能力、写作能力、知识迁移能力",
-      "abilityInferred": true,
-      "id": "l1-book-01",
-      "index": 1,
-      "levelIndex": 1,
-      "bookTypes": [
-        "picture"
-      ]
-    },
-    {
-      "level": "L1",
-      "title": "《在教室说错了没关系》",
-      "valueGoals": "通过课堂发言和犯错场景，引导孩子明白学习本来就允许尝试和出错，学会勇敢表达自己的想法，也学会尊重、倾听同伴的不同回答。",
-      "knowledgeGoals": "一、基础知识（词语积累：1.程度一（能够理解意思，扫清理解障碍）结合班级情况选择进行扫盲的词语。例如：（激荡、畏缩、无可奈何、心不在焉、懊恼、绞尽脑汁、创造……）\n2.程度二（能够理解意思，做到跟读）不同词语结构的词语。ABB（热烘烘）AABB （结结巴巴）ABAB（ 扑通扑通）ABAC（糊里糊涂）\n3.程度三（能够做到认读） 和校园主题相关的词语：发言、讨论、举手。）\n二、口语交际：能够使用观点表达的结构结合主旨进行自我观点的表达",
-      "abilityGoals": "认读能力、理解能力、逻辑能力、表达能力、写作能力、知识迁移能力",
-      "abilityInferred": true,
-      "id": "l1-book-02",
-      "index": 2,
-      "levelIndex": 2,
-      "bookTypes": [
-        "picture"
-      ]
-    },
-    {
-      "level": "L1",
       "title": "《我永远也得不到贝森老师黑板上的一颗星》",
       "valueGoals": "通过罗丝渴望得到星星、最终发现自身艺术闪光点的经历，帮助孩子理解每个人都有不同优势，不用被单一标准定义，学会建立自信。",
       "knowledgeGoals": "一、基础知识\n1.词语积累\n  （1）程度一（能够理解意思，扫清理解障碍）结合班级情况选择进行扫盲的词语（永远、整洁、答案、洪亮、沉浸）\n  （2）程度二（能够做到认读） 和校园主题相关的词语（拼写、数学、阅读、绘画）\n2.句型积累\n承接复句：首先……然后……最后……（体会句型用法并能结合自我表达进行运用）\n二、口语交际\n主题：能够使用叙事性表达的结构快速说清楚一件事",
       "abilityGoals": "认读能力、理解能力、逻辑能力、表达能力、知识迁移能力、写作能力",
       "abilityInferred": true,
       "id": "l1-book-03",
-      "index": 3,
-      "levelIndex": 3,
+      "index": 1,
+      "levelIndex": 1,
       "bookTypes": [
         "picture"
       ]
@@ -84,26 +56,11 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "认读能力、理解能力、逻辑能力、表达能力、写作能力、想象力、知识迁移能力",
       "abilityInferred": true,
       "id": "l1-book-05",
-      "index": 4,
-      "levelIndex": 4,
+      "index": 2,
+      "levelIndex": 2,
       "bookTypes": [
         "picture",
         "culture"
-      ],
-      "knowledgeTopics": null
-    },
-    {
-      "level": "L1",
-      "title": "（待确认）《不一样的上学日》",
-      "valueGoals": "通过“不一样”的课堂和学习体验，感受想象力、创造力能让平凡生活变得新鲜有趣，鼓励孩子以开放心态面对变化和新方法。",
-      "knowledgeGoals": "一、基础知识\n 1.词语积累\n  1.程度一（能够理解意思，扫清理解障碍）结合班级情况选择进行扫盲的词语：婉转飞扬、跌宕起伏、 颠三倒四、 精彩非凡。\n  2.程度二（能够理解意思并做到跟读）：平常、非比寻常、不同寻常。\n  3.程度三（能够做到认读） 和校园主题相关的词语：校服、课桌。\n 2.句型积累\n  （1）一边……一边……：初步掌握句式“一边……一边……”的使用场景，并能简单模仿运用。\n  （2）有的……有的……：初步掌握句式“有的……有的……”的使用场景，并能简单模仿运用。\n二、创作\n1.能够根据要求提取图片要素（图中描写的场景是哪儿？都有谁？他们在干什么？）\n2.能够针对题目要求进行看图写话\n（1）  图中描写的场景是哪儿？都有谁？他在干什么？请你用“一边……一边……”这个句式写一句话。\n（2） 图中描写的场景是哪儿？都有谁？他们在干什么？请你用“有的……有的……”这个句式写一句话。",
-      "abilityGoals": "认读能力、理解能力、检索能力、鉴赏能力、写作能力、想象力、知识迁移能力、表达能力",
-      "abilityInferred": true,
-      "id": "l1-book-04",
-      "index": 5,
-      "levelIndex": 5,
-      "bookTypes": [
-        "picture"
       ],
       "knowledgeTopics": null
     },
@@ -115,8 +72,8 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "认读能力、理解能力、逻辑能力、表达能力、写作能力、想象力、知识迁移能力",
       "abilityInferred": true,
       "id": "l1-book-07",
-      "index": 6,
-      "levelIndex": 6,
+      "index": 3,
+      "levelIndex": 3,
       "bookTypes": [
         "picture",
         "culture"
@@ -131,29 +88,12 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "认读能力、理解能力、逻辑能力、写作能力、观察能力、知识迁移能力、表达能力",
       "abilityInferred": true,
       "id": "l1-book-06",
-      "index": 7,
-      "levelIndex": 7,
+      "index": 4,
+      "levelIndex": 4,
       "bookTypes": [
         "picture",
         "culture"
       ]
-    },
-    {
-      "level": "L1",
-      "title": "（待确认）《十二生肖的故事》",
-      "valueGoals": "通过十二生肖的来历故事，感受中国传统文化中的想象力和民俗智慧，理解合作、竞争和各展所长的意义。",
-      "knowledgeGoals": "一、基础知识\n1.词语积累\n（1）程度一(能够理解意思，扫清理解障碍):玉皇大帝、土地公、渡河、合作。\n（2）程度二(能够做到认读) 和主题相关的词语:生肖、十二生肖的名称(鼠、牛、虎、兔、龙、蛇、马、羊、猴、鸡、狗、猪)\n二、创作\n看图写话：能够发挥想象把图片写的更加具体。(图中都有谁?他们在哪里?他们在做什么呢?请你发挥想象写几句话吧!)\n1.观察图片细节\n人物/动物:动作、表情\n2.发挥想象\n人物的心情怎样?\n人物会说些什么?想什么?\n事情的结果会怎么样?",
-      "abilityGoals": "认读能力、理解能力、概括能力、写作能力、观察能力、想象力、表达能力、知识迁移能力",
-      "abilityInferred": true,
-      "id": "l1-book-08",
-      "index": 8,
-      "levelIndex": 8,
-      "bookTypes": [
-        "picture",
-        "fairy",
-        "culture"
-      ],
-      "knowledgeTopics": null
     },
     {
       "level": "L1",
@@ -163,8 +103,8 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "认读能力、理解能力、概括能力、鉴赏能力、表达能力、写作能力、观察能力、想象力",
       "abilityInferred": true,
       "id": "l1-book-09",
-      "index": 9,
-      "levelIndex": 9,
+      "index": 5,
+      "levelIndex": 5,
       "bookTypes": [
         "picture"
       ]
@@ -177,8 +117,8 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "",
       "abilityInferred": false,
       "id": "l1-book-local-be75105b90",
-      "index": 10,
-      "levelIndex": 10,
+      "index": 6,
+      "levelIndex": 6,
       "bookTypes": [],
       "knowledgeTopics": null
     },
@@ -190,8 +130,8 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "认读能力、理解能力、写作能力、观察能力、表达能力、知识迁移能力",
       "abilityInferred": true,
       "id": "l1-book-11",
-      "index": 11,
-      "levelIndex": 11,
+      "index": 7,
+      "levelIndex": 7,
       "bookTypes": [
         "picture",
         "science"
@@ -205,8 +145,8 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "认读能力、理解能力、写作能力、观察能力、知识迁移能力、表达能力",
       "abilityInferred": true,
       "id": "l1-book-12",
-      "index": 12,
-      "levelIndex": 12,
+      "index": 8,
+      "levelIndex": 8,
       "bookTypes": [
         "picture",
         "science"
@@ -220,8 +160,8 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "认读能力、理解能力、概括能力、逻辑能力、鉴赏能力、表达能力、写作能力、想象力",
       "abilityInferred": true,
       "id": "l1-book-13",
-      "index": 13,
-      "levelIndex": 13,
+      "index": 9,
+      "levelIndex": 9,
       "bookTypes": [
         "bridge",
         "fairy"
@@ -235,8 +175,8 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "认读能力、理解能力、写作能力、知识迁移能力、表达能力",
       "abilityInferred": true,
       "id": "l1-book-14",
-      "index": 14,
-      "levelIndex": 14,
+      "index": 10,
+      "levelIndex": 10,
       "bookTypes": [
         "bridge",
         "fairy"
@@ -244,15 +184,78 @@ window.LEVEL_LIBRARY = {
     },
     {
       "level": "L1",
-      "title": "待定《奇先生妙小姐》",
+      "title": "《奇先生妙小姐上》",
       "valueGoals": "",
       "knowledgeGoals": "",
       "abilityGoals": "",
       "abilityInferred": false,
       "id": "l1-book-local-26849c9af7",
+      "index": 11,
+      "levelIndex": 11,
+      "bookTypes": []
+    },
+    {
+      "level": "L1",
+      "title": "《奇先生妙小姐下》",
+      "valueGoals": "",
+      "knowledgeGoals": "",
+      "abilityGoals": "",
+      "abilityInferred": false,
+      "id": "l1-book-mr-men-02",
+      "index": 12,
+      "levelIndex": 12,
+      "bookTypes": []
+    },
+    {
+      "level": "L1",
+      "title": "《深夜打喷嚏大赛》",
+      "valueGoals": "",
+      "knowledgeGoals": "",
+      "abilityGoals": "",
+      "abilityInferred": false,
+      "id": "l1-book-sneeze-contest",
+      "index": 13,
+      "levelIndex": 13,
+      "bookTypes": []
+    },
+    {
+      "level": "L1",
+      "title": "《童话大语文上》",
+      "valueGoals": "",
+      "knowledgeGoals": "",
+      "abilityGoals": "",
+      "abilityInferred": false,
+      "id": "l1-book-fairy-tale-language-01",
+      "index": 14,
+      "levelIndex": 14,
+      "bookTypes": []
+    },
+    {
+      "level": "L1",
+      "title": "《童话大语文下》",
+      "valueGoals": "",
+      "knowledgeGoals": "",
+      "abilityGoals": "",
+      "abilityInferred": false,
+      "id": "l1-book-fairy-tale-language-02",
       "index": 15,
       "levelIndex": 15,
       "bookTypes": []
+    },
+    {
+      "level": "L1",
+      "title": "《小熊维尼·噗》",
+      "valueGoals": "通过小熊维尼和朋友们的童话故事，感受真诚、善良和友谊的可贵，理解简单快乐也能带来温暖力量。",
+      "knowledgeGoals": "一、基础知识\n1.积累描写人物特点的词语：憨、贪吃、真诚、聪明、果敢\n二、阅读：能够初步通过事件分析感知人物形象\n三、口语表达\n能够读出问句的语气",
+      "abilityGoals": "理解能力、鉴赏能力、表达能力、想象力、认读能力、写作能力、知识迁移能力",
+      "abilityInferred": true,
+      "id": "l1-book-23",
+      "index": 16,
+      "levelIndex": 16,
+      "bookTypes": [
+        "fairy",
+        "classic"
+      ]
     },
     {
       "level": "L1",
@@ -262,8 +265,8 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "认读能力、理解能力、表达能力、写作能力、知识迁移能力",
       "abilityInferred": true,
       "id": "l1-book-15",
-      "index": 16,
-      "levelIndex": 16,
+      "index": 17,
+      "levelIndex": 17,
       "bookTypes": [
         "bridge",
         "novel"
@@ -277,8 +280,8 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "认读能力、概括能力、逻辑能力、写作能力、知识迁移能力、理解能力、表达能力",
       "abilityInferred": true,
       "id": "l1-book-16",
-      "index": 17,
-      "levelIndex": 17,
+      "index": 18,
+      "levelIndex": 18,
       "bookTypes": [
         "bridge",
         "novel"
@@ -292,8 +295,8 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "认读能力、理解能力、鉴赏能力、表达能力、写作能力、知识迁移能力",
       "abilityInferred": true,
       "id": "l1-book-17",
-      "index": 18,
-      "levelIndex": 18,
+      "index": 19,
+      "levelIndex": 19,
       "bookTypes": [
         "bridge",
         "fairy"
@@ -307,8 +310,8 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "认读能力、理解能力、鉴赏能力、表达能力、写作能力、知识迁移能力",
       "abilityInferred": true,
       "id": "l1-book-18",
-      "index": 19,
-      "levelIndex": 19,
+      "index": 20,
+      "levelIndex": 20,
       "bookTypes": [
         "bridge",
         "fairy"
@@ -322,69 +325,11 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "认读能力、理解能力、表达能力、写作能力、想象力、知识迁移能力",
       "abilityInferred": true,
       "id": "l1-book-19",
-      "index": 20,
-      "levelIndex": 20,
-      "bookTypes": [
-        "bridge",
-        "fairy"
-      ]
-    },
-    {
-      "level": "L1",
-      "title": "《送你一本书》",
-      "valueGoals": "通过“送书”与选择礼物的故事，理解真正珍贵的礼物不只在于物品本身，更在于理解、取舍和对他人需要的体贴。",
-      "knowledgeGoals": "基础：\n1.积累词语18个：\n（1）积累好词及描写人物特点的词语\n（2）积累拟声词\n2.句子\n（1）积累1种句型\n阅读：\n1.阅读方法：积累阅读书籍的方法；带着同理心阅读，更好地理解文章；用鱼骨图梳理故事和人物。\n2.能够初步通过事件分析感知人物形象\n3.更好地学习儿歌：认识和了解儿歌，体会儿歌的特点；能够正确、流利、有节奏地朗读儿歌。\n4.初步感受夸张的用法。\n5.能够读出问句的语气\n6.初步感知人物描写中的外貌描写。\n表达与写作：\n1.能够运用流程图说清一个问题。\n2.能够初步补充简单的儿歌。\n一、基础知识\n1.词语积累(毫不犹豫、意想不到)\n2.汉语音变现象\n“一”的变调\n“不”的变调\n3.初步了解书信的格式。\n二、阅读\n根据熊太阅读时的行为，积累阅读书籍的方法。\n二、创作\n学会用“讲故事齿轮”把故事补充完整。",
-      "abilityGoals": "认读能力、理解能力、概括能力、逻辑能力、鉴赏能力、表达能力、写作能力、观察能力",
-      "abilityInferred": true,
-      "id": "l1-book-20",
       "index": 21,
       "levelIndex": 21,
       "bookTypes": [
-        "picture"
-      ]
-    },
-    {
-      "level": "L1",
-      "title": "《最特别的送给你》",
-      "valueGoals": "通过寻找“最特别”礼物的过程，帮助孩子理解生活的真谛常藏在用心、陪伴和分享之中，学习珍惜平凡中的温暖。",
-      "knowledgeGoals": "一、基础知识\n1.词语积累\n(1)扫除理解障碍(橡实、喃喃自语)\n(2)拟声词(和生气相关的拟声词:哼;和笑声相关的拟声词:哈哈哈、嘿嘿嘿、 嘻嘻嘻、呵呵呵、咯咯咯)\n2.句型积累\n……也……\n二、阅读\n1,带着同理心阅读，更好地理解文章。\n2.了解鱼骨图，用鱼骨图梳理故事和人物。\n三、创作\n能够运用句型“……也……\"进行造句",
-      "abilityGoals": "认读能力、理解能力、概括能力、写作能力、观察能力、知识迁移能力、表达能力",
-      "abilityInferred": true,
-      "id": "l1-book-21",
-      "index": 22,
-      "levelIndex": 22,
-      "bookTypes": [
-        "picture"
-      ]
-    },
-    {
-      "level": "L1",
-      "title": "《生日狮子》",
-      "valueGoals": "通过生日与狮子带来的想象故事，鼓励孩子保持童心和想象力，学习在特别的日子里感受被爱、表达感谢。",
-      "knowledgeGoals": "一、基础知识\n1.词语积累\n(1)词语扫盲(嘈杂、威风凛凛、提心吊胆、香槟)\n二、阅读\n1.带着同理心阅读，更好地理解文章。\n2.体会加上描述动作情状的词语使句子更生动形象。\n3.初步感知人物描写。（外貌描写）\n三、创作\n1.能够运用流程图说清一个问题。",
-      "abilityGoals": "认读能力、理解能力、逻辑能力、鉴赏能力、写作能力、观察能力、想象力、知识迁移能力",
-      "abilityInferred": true,
-      "id": "l1-book-22",
-      "index": 23,
-      "levelIndex": 23,
-      "bookTypes": [
-        "picture",
+        "bridge",
         "fairy"
-      ]
-    },
-    {
-      "level": "L1",
-      "title": "《小熊维尼·噗》",
-      "valueGoals": "通过小熊维尼和朋友们的童话故事，感受真诚、善良和友谊的可贵，理解简单快乐也能带来温暖力量。",
-      "knowledgeGoals": "一、基础知识\n1.积累描写人物特点的词语：憨、贪吃、真诚、聪明、果敢\n二、阅读：能够初步通过事件分析感知人物形象\n三、口语表达\n能够读出问句的语气",
-      "abilityGoals": "理解能力、鉴赏能力、表达能力、想象力、认读能力、写作能力、知识迁移能力",
-      "abilityInferred": true,
-      "id": "l1-book-23",
-      "index": 24,
-      "levelIndex": 24,
-      "bookTypes": [
-        "fairy",
-        "classic"
       ]
     },
     {
@@ -395,8 +340,8 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "认读能力、理解能力、鉴赏能力、写作能力、想象力、知识迁移能力、表达能力",
       "abilityInferred": true,
       "id": "l1-book-24",
-      "index": 25,
-      "levelIndex": 25,
+      "index": 22,
+      "levelIndex": 22,
       "bookTypes": [
         "picture",
         "fairy"
@@ -410,25 +355,11 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "认读能力、理解能力、逻辑能力、鉴赏能力、表达能力、写作能力、观察能力、知识迁移能力",
       "abilityInferred": true,
       "id": "l1-book-25",
-      "index": 26,
-      "levelIndex": 26,
+      "index": 23,
+      "levelIndex": 23,
       "bookTypes": [
         "picture",
         "fairy"
-      ]
-    },
-    {
-      "level": "L1",
-      "title": "《吉姆的狮子》",
-      "valueGoals": "通过吉姆与狮子的故事，感受想象中的守护力量，帮助孩子在害怕和脆弱时找到勇气、信任与内心力量。",
-      "knowledgeGoals": "一、基础知识\n 1.词语积累： 部落、守护神、潮汐\n二、创作\n调动五感，生动地描述景或物。（我能看到什么？闻到什么？尝到什么？听到什么？触摸到什么？）",
-      "abilityGoals": "认读能力、写作能力、观察能力、理解能力、表达能力、知识迁移能力",
-      "abilityInferred": true,
-      "id": "l1-book-26",
-      "index": 27,
-      "levelIndex": 27,
-      "bookTypes": [
-        "picture"
       ]
     },
     {
@@ -439,8 +370,8 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "认读能力、理解能力、逻辑能力、表达能力、写作能力、观察能力、知识迁移能力",
       "abilityInferred": true,
       "id": "l1-book-27",
-      "index": 28,
-      "levelIndex": 28,
+      "index": 24,
+      "levelIndex": 24,
       "bookTypes": [
         "novel",
         "fairy"
@@ -454,11 +385,23 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "理解能力、鉴赏能力、写作能力、知识迁移能力、认读能力、表达能力",
       "abilityInferred": true,
       "id": "l1-book-28",
-      "index": 29,
-      "levelIndex": 29,
+      "index": 25,
+      "levelIndex": 25,
       "bookTypes": [
         "picture"
       ]
+    },
+    {
+      "level": "L1",
+      "title": "《伟大的一步》",
+      "valueGoals": "",
+      "knowledgeGoals": "",
+      "abilityGoals": "",
+      "abilityInferred": false,
+      "id": "l1-book-great-step",
+      "index": 26,
+      "levelIndex": 26,
+      "bookTypes": []
     },
     {
       "level": "L1",
@@ -468,8 +411,8 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "认读能力、理解能力、逻辑能力、鉴赏能力、表达能力、写作能力、观察能力、知识迁移能力",
       "abilityInferred": true,
       "id": "l1-book-29",
-      "index": 30,
-      "levelIndex": 30,
+      "index": 27,
+      "levelIndex": 27,
       "bookTypes": [
         "picture",
         "prose"
@@ -483,8 +426,8 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "认读能力、理解能力、写作能力、观察能力、知识迁移能力、表达能力",
       "abilityInferred": true,
       "id": "l1-book-30",
-      "index": 31,
-      "levelIndex": 31,
+      "index": 28,
+      "levelIndex": 28,
       "bookTypes": [
         "picture",
         "science"
@@ -498,8 +441,8 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "认读能力、理解能力、逻辑能力、表达能力、写作能力、观察能力、知识迁移能力",
       "abilityInferred": true,
       "id": "l1-book-31",
-      "index": 32,
-      "levelIndex": 32,
+      "index": 29,
+      "levelIndex": 29,
       "bookTypes": [
         "science"
       ]
@@ -512,8 +455,8 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "认读能力、理解能力、逻辑能力、写作能力、观察能力、知识迁移能力、表达能力",
       "abilityInferred": true,
       "id": "l1-book-32",
-      "index": 33,
-      "levelIndex": 33,
+      "index": 30,
+      "levelIndex": 30,
       "bookTypes": [
         "science"
       ]
@@ -526,12 +469,24 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "认读能力、理解能力、鉴赏能力、表达能力、写作能力、知识迁移能力",
       "abilityInferred": true,
       "id": "l1-book-33",
-      "index": 34,
-      "levelIndex": 34,
+      "index": 31,
+      "levelIndex": 31,
       "bookTypes": [
         "red",
         "biography"
       ]
+    },
+    {
+      "level": "L1",
+      "title": "《怪男孩》",
+      "valueGoals": "",
+      "knowledgeGoals": "",
+      "abilityGoals": "",
+      "abilityInferred": false,
+      "id": "l1-book-strange-boy",
+      "index": 32,
+      "levelIndex": 32,
+      "bookTypes": []
     },
     {
       "level": "L1",
@@ -541,41 +496,38 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "认读能力、理解能力、检索能力、鉴赏能力、写作能力、知识迁移能力、表达能力",
       "abilityInferred": true,
       "id": "l1-book-34",
+      "index": 33,
+      "levelIndex": 33,
+      "bookTypes": [
+        "red",
+        "novel"
+      ]
+    },
+    {
+      "level": "L1",
+      "title": "《鞋子里的盐》",
+      "valueGoals": "",
+      "knowledgeGoals": "",
+      "abilityGoals": "",
+      "abilityInferred": false,
+      "id": "l1-book-salt-in-shoes",
+      "index": 34,
+      "levelIndex": 34,
+      "bookTypes": []
+    },
+    {
+      "level": "L1",
+      "title": "《小彗星旅行记》",
+      "valueGoals": "通过小彗星在宇宙中的旅行，感受星空和天文科学的魅力，培养探索宇宙、勇敢远行和认识自我的好奇心。",
+      "knowledgeGoals": "一、基础知识\n1.词语积累\n （1）程度一（积累并认读）：巨大无比、羡慕、不畏艰险、长途跋涉\n （2）程度二（理解与天体相关的专有名词）：太阳系、恒星、行星、卫星、彗星\n二、创作\n认识表格并能借助表格整理、提取信息\n （1）初步认识表格的形式及作用\n （2）能够将故事中提取的信息整理到表格相应的位置上。\n （3）能够借助表格内容提取信息",
+      "abilityGoals": "认读能力、理解能力、检索能力、写作能力、表达能力、知识迁移能力",
+      "abilityInferred": true,
+      "id": "l1-book-38",
       "index": 35,
       "levelIndex": 35,
       "bookTypes": [
-        "red",
-        "novel"
-      ]
-    },
-    {
-      "level": "L1",
-      "title": "《闪闪的红星》",
-      "valueGoals": "通过潘冬子在艰难环境中成长的经历，感受信念、勇气和家国情怀，理解今天的和平生活来之不易。",
-      "knowledgeGoals": "一、基础知识\n1.积累与人物品质相关的词语:英勇无畏、舍己为人、唯利是图\n二、阅读\n1.能够根据人物心里的想法感知人物的感情\n三、创作\n1.能够以“我心想”为开头，写出不同情况下自己的内心想法。",
-      "abilityGoals": "理解能力、写作能力、认读能力、表达能力、知识迁移能力",
-      "abilityInferred": true,
-      "id": "l1-book-35",
-      "index": 36,
-      "levelIndex": 36,
-      "bookTypes": [
-        "red",
-        "novel"
-      ]
-    },
-    {
-      "level": "L1",
-      "title": "《洋葱头的神奇外衣》",
-      "valueGoals": "通过围绕生物与自然知识展开的故事，感受生物科学的奇妙，激发孩子主动观察、提出问题和探索生命奥秘的兴趣。",
-      "knowledgeGoals": "基础：积累自然相关的词语\n表达与写作：状物类写作的方法（植物、动物）\n一、基础知识\n1.积累与动物有关的专有名词：椋鸟、园丁鸟、杜鹃、营冢鸟、金丝燕、缝叶莺\n2.积累带“得”的短语，如：听得认真、变得洁白漂亮、抖得一干二净\n二、创作\n1.能够创作带“得”字的短语，如：跑得快、飞得高、洗得干净、读得认真……\n2.能够结合本课内容，完整表达自己的观点。",
-      "abilityGoals": "理解能力、表达能力、写作能力、观察能力、知识迁移能力、认读能力",
-      "abilityInferred": true,
-      "id": "l1-book-36",
-      "index": 37,
-      "levelIndex": 37,
-      "bookTypes": [
-        "novel",
-        "fairy"
+        "picture",
+        "science"
       ]
     },
     {
@@ -586,8 +538,8 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "认读能力、理解能力、表达能力、写作能力、观察能力、知识迁移能力",
       "abilityInferred": true,
       "id": "l1-book-37",
-      "index": 38,
-      "levelIndex": 38,
+      "index": 36,
+      "levelIndex": 36,
       "bookTypes": [
         "picture",
         "science"
@@ -595,47 +547,15 @@ window.LEVEL_LIBRARY = {
     },
     {
       "level": "L1",
-      "title": "《小彗星旅行记》",
-      "valueGoals": "通过小彗星在宇宙中的旅行，感受星空和天文科学的魅力，培养探索宇宙、勇敢远行和认识自我的好奇心。",
-      "knowledgeGoals": "一、基础知识\n1.词语积累\n （1）程度一（积累并认读）：巨大无比、羡慕、不畏艰险、长途跋涉\n （2）程度二（理解与天体相关的专有名词）：太阳系、恒星、行星、卫星、彗星\n二、创作\n认识表格并能借助表格整理、提取信息\n （1）初步认识表格的形式及作用\n （2）能够将故事中提取的信息整理到表格相应的位置上。\n （3）能够借助表格内容提取信息",
-      "abilityGoals": "认读能力、理解能力、检索能力、写作能力、表达能力、知识迁移能力",
-      "abilityInferred": true,
-      "id": "l1-book-38",
-      "index": 39,
-      "levelIndex": 39,
-      "bookTypes": [
-        "picture",
-        "science"
-      ]
-    },
-    {
-      "level": "L1",
-      "title": "《看不见的生物——病毒、细菌》",
-      "valueGoals": "通过认识病毒、细菌等微生物，理解看不见的生命同样影响世界，培养科学防护意识和理性看待微生物的态度。",
-      "knowledgeGoals": "一、基础知识\n1.词语积累\n程度一（积累并认读）：千奇百怪、自食其力、各显神通\n程度二（理解与微生物相关的专有名词），如：细菌、病毒、噬菌体、免疫细胞\n二、阅读\n1.学习阅读复杂科学绘本的方法\n （1）了解科普绘本页面的构成：大标题、小标题、图文内容\n （2）按照一定顺序阅读：从上到下、从左到右；先读大标题，了解本页大致内容；再读小标题，知道大标题下的分类；最后阅读具体内容，可结合图文理解相关知识。\n三、创作\n1.学会按照空间顺序描述事物的外形：\n （1）先分别描述事物的不同部位： 从上到下、从外到内、从前到后\n （2）再对事物整体进行总结",
-      "abilityGoals": "认读能力、理解能力、概括能力、逻辑能力、写作能力、知识迁移能力、表达能力",
-      "abilityInferred": true,
-      "id": "l1-book-39",
-      "index": 40,
-      "levelIndex": 40,
-      "bookTypes": [
-        "picture",
-        "science"
-      ]
-    },
-    {
-      "level": "L1",
-      "title": "《一年级大个子二年级小个子》",
-      "valueGoals": "通过“大个子”和“小个子”之间的成长故事，理解真正的坚强不是外表强大，而是接纳不足、鼓起勇气并帮助他人。",
-      "knowledgeGoals": "基础：积累不同国家、民族主题的词汇\n阅读：赏析夸张的修辞手法\n再次感知人物描写，试分析其作用\n尝试对人物形象进行评价\n表达与写作：运用夸张说出某人物的特点\n一、基础知识\n词语积累：阴森森、懦弱\n二、阅读\n初步感知环境描写体现出的人物心情\n三、创作\n掌握留言条的正确格式，学写留言条。",
-      "abilityGoals": "认读能力、理解能力、鉴赏能力、表达能力、写作能力、知识迁移能力",
-      "abilityInferred": true,
-      "id": "l1-book-40",
-      "index": 41,
-      "levelIndex": 41,
-      "bookTypes": [
-        "novel"
-      ]
+      "title": "《一座岛的六百万年》",
+      "valueGoals": "",
+      "knowledgeGoals": "",
+      "abilityGoals": "",
+      "abilityInferred": false,
+      "id": "l1-book-island-six-million-years",
+      "index": 37,
+      "levelIndex": 37,
+      "bookTypes": []
     },
     {
       "level": "L1",
@@ -645,8 +565,8 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "认读能力、理解能力、鉴赏能力、写作能力、知识迁移能力、表达能力",
       "abilityInferred": true,
       "id": "l1-book-41",
-      "index": 42,
-      "levelIndex": 42,
+      "index": 38,
+      "levelIndex": 38,
       "bookTypes": [
         "novel",
         "fairy"
@@ -654,28 +574,161 @@ window.LEVEL_LIBRARY = {
     },
     {
       "level": "L1",
-      "title": "《撒哈拉女孩穆娜》",
-      "valueGoals": "通过穆娜在撒哈拉环境中的生活故事，理解不同地域会形成不同生活方式，培养尊重差异、理解多元文化的态度。",
-      "knowledgeGoals": "一、基础知识\n积累与表情相关的词语：难以置信、全神贯注、熟视无睹\n二、阅读\n通过神态描写感知人物的情感\n三、创作\n借助图片，尝试写出不同情感下人物的神态",
-      "abilityGoals": "理解能力、鉴赏能力、写作能力、知识迁移能力、认读能力、表达能力",
+      "title": "《大头鱼上学记》（备选）",
+      "valueGoals": "通过大头鱼第一天上学遇到的困难、逐渐适应新环境的经历，帮助孩子理解紧张和挫折都是成长的一部分，学习用勇气和积极心态迎接校园生活。",
+      "knowledgeGoals": "基础：\n1.积累词语共43个\n（1）积累与“缤纷校园”主题相关的词语，\n（2）不同结构类型词语的积累，如拟声词、ABB、AABB、ABAB、ABAC结构的词语（一二年级常考词语积累类型）\n2.积累句型3个\n表达与写作：\n能够灵活运用所学方法完成“缤纷校园”主题的相关创作。\n1.学习看图写话的方法（如：三要素），并能将所学句型运用其中；\n2.学习3种观点性表达的表达结构，帮助孩子有逻辑地进行观点性的口语表达。\n一、基础知识（词语积累：反应主人公对待事情感受的词语、有关面部表情的词语、拟声词、和校园主题相关的词语）\n二、创作：能够步骤清晰地说清楚一个问题",
+      "abilityGoals": "认读能力、理解能力、逻辑能力、表达能力、写作能力、知识迁移能力",
       "abilityInferred": true,
-      "id": "l1-book-42",
+      "id": "l1-book-01",
+      "index": 39,
+      "levelIndex": 39,
+      "bookTypes": [
+        "picture"
+      ]
+    },
+    {
+      "level": "L1",
+      "title": "《在教室说错了没关系》（备选）",
+      "valueGoals": "通过课堂发言和犯错场景，引导孩子明白学习本来就允许尝试和出错，学会勇敢表达自己的想法，也学会尊重、倾听同伴的不同回答。",
+      "knowledgeGoals": "一、基础知识（词语积累：1.程度一（能够理解意思，扫清理解障碍）结合班级情况选择进行扫盲的词语。例如：（激荡、畏缩、无可奈何、心不在焉、懊恼、绞尽脑汁、创造……）\n2.程度二（能够理解意思，做到跟读）不同词语结构的词语。ABB（热烘烘）AABB （结结巴巴）ABAB（ 扑通扑通）ABAC（糊里糊涂）\n3.程度三（能够做到认读） 和校园主题相关的词语：发言、讨论、举手。）\n二、口语交际：能够使用观点表达的结构结合主旨进行自我观点的表达",
+      "abilityGoals": "认读能力、理解能力、逻辑能力、表达能力、写作能力、知识迁移能力",
+      "abilityInferred": true,
+      "id": "l1-book-02",
+      "index": 40,
+      "levelIndex": 40,
+      "bookTypes": [
+        "picture"
+      ]
+    },
+    {
+      "level": "L1",
+      "title": "（待确认）《不一样的上学日》（备选）",
+      "valueGoals": "通过“不一样”的课堂和学习体验，感受想象力、创造力能让平凡生活变得新鲜有趣，鼓励孩子以开放心态面对变化和新方法。",
+      "knowledgeGoals": "一、基础知识\n 1.词语积累\n  1.程度一（能够理解意思，扫清理解障碍）结合班级情况选择进行扫盲的词语：婉转飞扬、跌宕起伏、 颠三倒四、 精彩非凡。\n  2.程度二（能够理解意思并做到跟读）：平常、非比寻常、不同寻常。\n  3.程度三（能够做到认读） 和校园主题相关的词语：校服、课桌。\n 2.句型积累\n  （1）一边……一边……：初步掌握句式“一边……一边……”的使用场景，并能简单模仿运用。\n  （2）有的……有的……：初步掌握句式“有的……有的……”的使用场景，并能简单模仿运用。\n二、创作\n1.能够根据要求提取图片要素（图中描写的场景是哪儿？都有谁？他们在干什么？）\n2.能够针对题目要求进行看图写话\n（1）  图中描写的场景是哪儿？都有谁？他在干什么？请你用“一边……一边……”这个句式写一句话。\n（2） 图中描写的场景是哪儿？都有谁？他们在干什么？请你用“有的……有的……”这个句式写一句话。",
+      "abilityGoals": "认读能力、理解能力、检索能力、鉴赏能力、写作能力、想象力、知识迁移能力、表达能力",
+      "abilityInferred": true,
+      "id": "l1-book-04",
+      "index": 41,
+      "levelIndex": 41,
+      "bookTypes": [
+        "picture"
+      ],
+      "knowledgeTopics": null
+    },
+    {
+      "level": "L1",
+      "title": "（待确认）《十二生肖的故事》（备选）",
+      "valueGoals": "通过十二生肖的来历故事，感受中国传统文化中的想象力和民俗智慧，理解合作、竞争和各展所长的意义。",
+      "knowledgeGoals": "一、基础知识\n1.词语积累\n（1）程度一(能够理解意思，扫清理解障碍):玉皇大帝、土地公、渡河、合作。\n（2）程度二(能够做到认读) 和主题相关的词语:生肖、十二生肖的名称(鼠、牛、虎、兔、龙、蛇、马、羊、猴、鸡、狗、猪)\n二、创作\n看图写话：能够发挥想象把图片写的更加具体。(图中都有谁?他们在哪里?他们在做什么呢?请你发挥想象写几句话吧!)\n1.观察图片细节\n人物/动物:动作、表情\n2.发挥想象\n人物的心情怎样?\n人物会说些什么?想什么?\n事情的结果会怎么样?",
+      "abilityGoals": "认读能力、理解能力、概括能力、写作能力、观察能力、想象力、表达能力、知识迁移能力",
+      "abilityInferred": true,
+      "id": "l1-book-08",
+      "index": 42,
+      "levelIndex": 42,
+      "bookTypes": [
+        "picture",
+        "fairy",
+        "culture"
+      ],
+      "knowledgeTopics": null
+    },
+    {
+      "level": "L1",
+      "title": "《送你一本书》（备选）",
+      "valueGoals": "通过“送书”与选择礼物的故事，理解真正珍贵的礼物不只在于物品本身，更在于理解、取舍和对他人需要的体贴。",
+      "knowledgeGoals": "基础：\n1.积累词语18个：\n（1）积累好词及描写人物特点的词语\n（2）积累拟声词\n2.句子\n（1）积累1种句型\n阅读：\n1.阅读方法：积累阅读书籍的方法；带着同理心阅读，更好地理解文章；用鱼骨图梳理故事和人物。\n2.能够初步通过事件分析感知人物形象\n3.更好地学习儿歌：认识和了解儿歌，体会儿歌的特点；能够正确、流利、有节奏地朗读儿歌。\n4.初步感受夸张的用法。\n5.能够读出问句的语气\n6.初步感知人物描写中的外貌描写。\n表达与写作：\n1.能够运用流程图说清一个问题。\n2.能够初步补充简单的儿歌。\n一、基础知识\n1.词语积累(毫不犹豫、意想不到)\n2.汉语音变现象\n“一”的变调\n“不”的变调\n3.初步了解书信的格式。\n二、阅读\n根据熊太阅读时的行为，积累阅读书籍的方法。\n二、创作\n学会用“讲故事齿轮”把故事补充完整。",
+      "abilityGoals": "认读能力、理解能力、概括能力、逻辑能力、鉴赏能力、表达能力、写作能力、观察能力",
+      "abilityInferred": true,
+      "id": "l1-book-20",
       "index": 43,
       "levelIndex": 43,
       "bookTypes": [
+        "picture"
+      ]
+    },
+    {
+      "level": "L1",
+      "title": "《最特别的送给你》（备选）",
+      "valueGoals": "通过寻找“最特别”礼物的过程，帮助孩子理解生活的真谛常藏在用心、陪伴和分享之中，学习珍惜平凡中的温暖。",
+      "knowledgeGoals": "一、基础知识\n1.词语积累\n(1)扫除理解障碍(橡实、喃喃自语)\n(2)拟声词(和生气相关的拟声词:哼;和笑声相关的拟声词:哈哈哈、嘿嘿嘿、 嘻嘻嘻、呵呵呵、咯咯咯)\n2.句型积累\n……也……\n二、阅读\n1,带着同理心阅读，更好地理解文章。\n2.了解鱼骨图，用鱼骨图梳理故事和人物。\n三、创作\n能够运用句型“……也……\"进行造句",
+      "abilityGoals": "认读能力、理解能力、概括能力、写作能力、观察能力、知识迁移能力、表达能力",
+      "abilityInferred": true,
+      "id": "l1-book-21",
+      "index": 44,
+      "levelIndex": 44,
+      "bookTypes": [
+        "picture"
+      ]
+    },
+    {
+      "level": "L1",
+      "title": "《生日狮子》（备选）",
+      "valueGoals": "通过生日与狮子带来的想象故事，鼓励孩子保持童心和想象力，学习在特别的日子里感受被爱、表达感谢。",
+      "knowledgeGoals": "一、基础知识\n1.词语积累\n(1)词语扫盲(嘈杂、威风凛凛、提心吊胆、香槟)\n二、阅读\n1.带着同理心阅读，更好地理解文章。\n2.体会加上描述动作情状的词语使句子更生动形象。\n3.初步感知人物描写。（外貌描写）\n三、创作\n1.能够运用流程图说清一个问题。",
+      "abilityGoals": "认读能力、理解能力、逻辑能力、鉴赏能力、写作能力、观察能力、想象力、知识迁移能力",
+      "abilityInferred": true,
+      "id": "l1-book-22",
+      "index": 45,
+      "levelIndex": 45,
+      "bookTypes": [
+        "picture",
+        "fairy"
+      ]
+    },
+    {
+      "level": "L1",
+      "title": "《吉姆的狮子》（备选）",
+      "valueGoals": "通过吉姆与狮子的故事，感受想象中的守护力量，帮助孩子在害怕和脆弱时找到勇气、信任与内心力量。",
+      "knowledgeGoals": "一、基础知识\n 1.词语积累： 部落、守护神、潮汐\n二、创作\n调动五感，生动地描述景或物。（我能看到什么？闻到什么？尝到什么？听到什么？触摸到什么？）",
+      "abilityGoals": "认读能力、写作能力、观察能力、理解能力、表达能力、知识迁移能力",
+      "abilityInferred": true,
+      "id": "l1-book-26",
+      "index": 46,
+      "levelIndex": 46,
+      "bookTypes": [
+        "picture"
+      ]
+    },
+    {
+      "level": "L1",
+      "title": "《闪闪的红星》（备选）",
+      "valueGoals": "通过潘冬子在艰难环境中成长的经历，感受信念、勇气和家国情怀，理解今天的和平生活来之不易。",
+      "knowledgeGoals": "一、基础知识\n1.积累与人物品质相关的词语:英勇无畏、舍己为人、唯利是图\n二、阅读\n1.能够根据人物心里的想法感知人物的感情\n三、创作\n1.能够以“我心想”为开头，写出不同情况下自己的内心想法。",
+      "abilityGoals": "理解能力、写作能力、认读能力、表达能力、知识迁移能力",
+      "abilityInferred": true,
+      "id": "l1-book-35",
+      "index": 47,
+      "levelIndex": 47,
+      "bookTypes": [
+        "red",
         "novel"
       ]
     },
     {
       "level": "L1",
-      "title": "《人》",
-      "valueGoals": "通过认识人与人之间外貌、生活和能力的不同，引导孩子接纳多样性，用尊重、平等和开放的眼光看待每一个人。",
-      "knowledgeGoals": "一、基础知识\n1.词语积累：积累能形容多元的词语，如：独一无二、独具特色、五花八门\n二、创作\n1.能够用“有……”的句型将事物的特点说具体；\n2.回顾思维导图，能够使用思维导图梳理本节课的知识。",
-      "abilityGoals": "认读能力、概括能力、逻辑能力、写作能力、理解能力、表达能力、知识迁移能力",
+      "title": "《洋葱头的神奇外衣》（备选）",
+      "valueGoals": "通过围绕生物与自然知识展开的故事，感受生物科学的奇妙，激发孩子主动观察、提出问题和探索生命奥秘的兴趣。",
+      "knowledgeGoals": "基础：积累自然相关的词语\n表达与写作：状物类写作的方法（植物、动物）\n一、基础知识\n1.积累与动物有关的专有名词：椋鸟、园丁鸟、杜鹃、营冢鸟、金丝燕、缝叶莺\n2.积累带“得”的短语，如：听得认真、变得洁白漂亮、抖得一干二净\n二、创作\n1.能够创作带“得”字的短语，如：跑得快、飞得高、洗得干净、读得认真……\n2.能够结合本课内容，完整表达自己的观点。",
+      "abilityGoals": "理解能力、表达能力、写作能力、观察能力、知识迁移能力、认读能力",
       "abilityInferred": true,
-      "id": "l1-book-43",
-      "index": 44,
-      "levelIndex": 44,
+      "id": "l1-book-36",
+      "index": 48,
+      "levelIndex": 48,
+      "bookTypes": [
+        "novel",
+        "fairy"
+      ]
+    },
+    {
+      "level": "L1",
+      "title": "《看不见的生物——病毒、细菌》（备选）",
+      "valueGoals": "通过认识病毒、细菌等微生物，理解看不见的生命同样影响世界，培养科学防护意识和理性看待微生物的态度。",
+      "knowledgeGoals": "一、基础知识\n1.词语积累\n程度一（积累并认读）：千奇百怪、自食其力、各显神通\n程度二（理解与微生物相关的专有名词），如：细菌、病毒、噬菌体、免疫细胞\n二、阅读\n1.学习阅读复杂科学绘本的方法\n （1）了解科普绘本页面的构成：大标题、小标题、图文内容\n （2）按照一定顺序阅读：从上到下、从左到右；先读大标题，了解本页大致内容；再读小标题，知道大标题下的分类；最后阅读具体内容，可结合图文理解相关知识。\n三、创作\n1.学会按照空间顺序描述事物的外形：\n （1）先分别描述事物的不同部位： 从上到下、从外到内、从前到后\n （2）再对事物整体进行总结",
+      "abilityGoals": "认读能力、理解能力、概括能力、逻辑能力、写作能力、知识迁移能力、表达能力",
+      "abilityInferred": true,
+      "id": "l1-book-39",
+      "index": 49,
+      "levelIndex": 49,
       "bookTypes": [
         "picture",
         "science"
@@ -683,70 +736,113 @@ window.LEVEL_LIBRARY = {
     },
     {
       "level": "L1",
-      "title": "《写给孩子的中国历史1》",
+      "title": "《一年级大个子二年级小个子》（备选）",
+      "valueGoals": "通过“大个子”和“小个子”之间的成长故事，理解真正的坚强不是外表强大，而是接纳不足、鼓起勇气并帮助他人。",
+      "knowledgeGoals": "基础：积累不同国家、民族主题的词汇\n阅读：赏析夸张的修辞手法\n再次感知人物描写，试分析其作用\n尝试对人物形象进行评价\n表达与写作：运用夸张说出某人物的特点\n一、基础知识\n词语积累：阴森森、懦弱\n二、阅读\n初步感知环境描写体现出的人物心情\n三、创作\n掌握留言条的正确格式，学写留言条。",
+      "abilityGoals": "认读能力、理解能力、鉴赏能力、表达能力、写作能力、知识迁移能力",
+      "abilityInferred": true,
+      "id": "l1-book-40",
+      "index": 50,
+      "levelIndex": 50,
+      "bookTypes": [
+        "novel"
+      ]
+    },
+    {
+      "level": "L1",
+      "title": "《撒哈拉女孩穆娜》（备选）",
+      "valueGoals": "通过穆娜在撒哈拉环境中的生活故事，理解不同地域会形成不同生活方式，培养尊重差异、理解多元文化的态度。",
+      "knowledgeGoals": "一、基础知识\n积累与表情相关的词语：难以置信、全神贯注、熟视无睹\n二、阅读\n通过神态描写感知人物的情感\n三、创作\n借助图片，尝试写出不同情感下人物的神态",
+      "abilityGoals": "理解能力、鉴赏能力、写作能力、知识迁移能力、认读能力、表达能力",
+      "abilityInferred": true,
+      "id": "l1-book-42",
+      "index": 51,
+      "levelIndex": 51,
+      "bookTypes": [
+        "novel"
+      ]
+    },
+    {
+      "level": "L1",
+      "title": "《人》（备选）",
+      "valueGoals": "通过认识人与人之间外貌、生活和能力的不同，引导孩子接纳多样性，用尊重、平等和开放的眼光看待每一个人。",
+      "knowledgeGoals": "一、基础知识\n1.词语积累：积累能形容多元的词语，如：独一无二、独具特色、五花八门\n二、创作\n1.能够用“有……”的句型将事物的特点说具体；\n2.回顾思维导图，能够使用思维导图梳理本节课的知识。",
+      "abilityGoals": "认读能力、概括能力、逻辑能力、写作能力、理解能力、表达能力、知识迁移能力",
+      "abilityInferred": true,
+      "id": "l1-book-43",
+      "index": 52,
+      "levelIndex": 52,
+      "bookTypes": [
+        "picture",
+        "science"
+      ]
+    },
+    {
+      "level": "L1",
+      "title": "《写给孩子的中国历史1》（备选）",
       "valueGoals": "通过中国历史开端与早期文明故事，帮助孩子初步建立历史意识，感受中华文明的悠久与先民创造生活的智慧。",
       "knowledgeGoals": "基础：积累历史典故成语\n表达与写作：尝试使用多种方法复述历史小故事\n1.初步搭建中国历史发展体系；\n2.掌握使用思维导图梳理历史脉络的方法，并能够简单进行故事叙述；",
       "abilityGoals": "概括能力、逻辑能力、表达能力、写作能力、知识迁移能力、认读能力、理解能力",
       "abilityInferred": true,
       "id": "l1-book-44",
-      "index": 45,
-      "levelIndex": 45,
+      "index": 53,
+      "levelIndex": 53,
       "bookTypes": [
         "culture"
       ]
     },
     {
       "level": "L1",
-      "title": "《写给孩子的中国历史2》",
+      "title": "《写给孩子的中国历史2》（备选）",
       "valueGoals": "通过继续了解中国历史人物和重要事件，感受中华文明在变迁中不断延续，培养民族认同和对历史学习的兴趣。",
       "knowledgeGoals": "",
       "abilityGoals": "认读能力、理解能力、表达能力、写作能力、知识迁移能力",
       "abilityInferred": true,
       "id": "l1-book-45",
-      "index": 46,
-      "levelIndex": 46,
+      "index": 54,
+      "levelIndex": 54,
       "bookTypes": [
         "culture"
       ]
     },
     {
       "level": "L1",
-      "title": "《写给孩子的中国历史3》",
+      "title": "《写给孩子的中国历史3》（备选）",
       "valueGoals": "通过古代王朝兴替、人物选择和时代故事，理解历史由人的行动共同推动，学习从历史中观察责任、智慧与得失。",
       "knowledgeGoals": "",
       "abilityGoals": "认读能力、理解能力、表达能力、写作能力、知识迁移能力",
       "abilityInferred": true,
       "id": "l1-book-46",
-      "index": 47,
-      "levelIndex": 47,
+      "index": 55,
+      "levelIndex": 55,
       "bookTypes": [
         "culture"
       ]
     },
     {
       "level": "L1",
-      "title": "《写给孩子的中国历史4》",
+      "title": "《写给孩子的中国历史4》（备选）",
       "valueGoals": "通过不同朝代的政治、文化和社会故事，感受中国历史的丰富层次，培养用联系和比较的眼光理解国家发展。",
       "knowledgeGoals": "",
       "abilityGoals": "认读能力、理解能力、表达能力、写作能力、知识迁移能力",
       "abilityInferred": true,
       "id": "l1-book-47",
-      "index": 48,
-      "levelIndex": 48,
+      "index": 56,
+      "levelIndex": 56,
       "bookTypes": [
         "culture"
       ]
     },
     {
       "level": "L1",
-      "title": "《写给孩子的中国历史5》",
+      "title": "《写给孩子的中国历史5》（备选）",
       "valueGoals": "通过近代以前中国历史的关键人物与事件，理解民族在困难与变革中的坚持，建立历史责任感和文化自信。",
       "knowledgeGoals": "",
       "abilityGoals": "认读能力、理解能力、表达能力、写作能力、知识迁移能力",
       "abilityInferred": true,
       "id": "l1-book-48",
-      "index": 49,
-      "levelIndex": 49,
+      "index": 57,
+      "levelIndex": 57,
       "bookTypes": [
         "culture"
       ]
@@ -759,7 +855,7 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "理解能力、概括能力、鉴赏能力、写作能力、知识迁移能力、表达能力",
       "abilityInferred": true,
       "id": "l2-book-01",
-      "index": 50,
+      "index": 58,
       "levelIndex": 1,
       "bookTypes": [
         "novel",
@@ -774,7 +870,7 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "理解能力、鉴赏能力、写作能力、知识迁移能力、概括能力、表达能力",
       "abilityInferred": true,
       "id": "l2-book-02",
-      "index": 51,
+      "index": 59,
       "levelIndex": 2,
       "bookTypes": [
         "novel",
@@ -789,7 +885,7 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "鉴赏能力、写作能力、知识迁移能力、理解能力、概括能力、表达能力",
       "abilityInferred": true,
       "id": "l2-book-03",
-      "index": 52,
+      "index": 60,
       "levelIndex": 3,
       "bookTypes": [
         "novel"
@@ -803,7 +899,7 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "概括能力、鉴赏能力、写作能力、知识迁移能力、理解能力、表达能力",
       "abilityInferred": true,
       "id": "l2-book-04",
-      "index": 53,
+      "index": 61,
       "levelIndex": 4,
       "bookTypes": [
         "novel",
@@ -818,7 +914,7 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "检索能力、逻辑能力、写作能力、观察能力、知识迁移能力、理解能力、概括能力、鉴赏能力",
       "abilityInferred": true,
       "id": "l2-book-05",
-      "index": 54,
+      "index": 62,
       "levelIndex": 5,
       "bookTypes": [
         "science",
@@ -833,7 +929,7 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "逻辑能力、写作能力、观察能力、理解能力、概括能力、鉴赏能力、表达能力、知识迁移能力",
       "abilityInferred": true,
       "id": "l2-book-06",
-      "index": 55,
+      "index": 63,
       "levelIndex": 6,
       "bookTypes": [
         "picture",
@@ -849,7 +945,7 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "概括能力、逻辑能力、表达能力、写作能力、观察能力、知识迁移能力、理解能力、鉴赏能力",
       "abilityInferred": true,
       "id": "l2-book-07",
-      "index": 56,
+      "index": 64,
       "levelIndex": 7,
       "bookTypes": [
         "picture",
@@ -864,7 +960,7 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "逻辑能力、写作能力、观察能力、知识迁移能力、理解能力、概括能力、鉴赏能力、表达能力",
       "abilityInferred": true,
       "id": "l2-book-08",
-      "index": 57,
+      "index": 65,
       "levelIndex": 8,
       "bookTypes": [
         "science"
@@ -878,7 +974,7 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "理解能力、逻辑能力、写作能力、想象力、知识迁移能力、概括能力、鉴赏能力、表达能力",
       "abilityInferred": true,
       "id": "l2-book-09",
-      "index": 58,
+      "index": 66,
       "levelIndex": 9,
       "bookTypes": [
         "novel",
@@ -893,7 +989,7 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "逻辑能力、知识迁移能力、理解能力、概括能力、鉴赏能力、表达能力、写作能力",
       "abilityInferred": true,
       "id": "l2-book-10",
-      "index": 59,
+      "index": 67,
       "levelIndex": 10,
       "bookTypes": [
         "novel",
@@ -908,7 +1004,7 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "逻辑能力、表达能力、写作能力、想象力、知识迁移能力、理解能力、概括能力、鉴赏能力",
       "abilityInferred": true,
       "id": "l2-book-11",
-      "index": 60,
+      "index": 68,
       "levelIndex": 11,
       "bookTypes": [
         "novel"
@@ -922,7 +1018,7 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "概括能力、逻辑能力、写作能力、想象力、知识迁移能力、理解能力、鉴赏能力、表达能力",
       "abilityInferred": true,
       "id": "l2-book-12",
-      "index": 61,
+      "index": 69,
       "levelIndex": 12,
       "bookTypes": [
         "novel"
@@ -936,7 +1032,7 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "理解能力、概括能力、鉴赏能力、表达能力、写作能力、观察能力、知识迁移能力",
       "abilityInferred": true,
       "id": "l2-book-13",
-      "index": 62,
+      "index": 70,
       "levelIndex": 13,
       "bookTypes": [
         "novel"
@@ -950,7 +1046,7 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "理解能力、概括能力、写作能力、观察能力、知识迁移能力、鉴赏能力、表达能力",
       "abilityInferred": true,
       "id": "l2-book-16",
-      "index": 63,
+      "index": 71,
       "levelIndex": 14,
       "bookTypes": [
         "novel"
@@ -964,7 +1060,7 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "认读能力、理解能力、检索能力、逻辑能力、知识迁移能力、概括能力、鉴赏能力、表达能力",
       "abilityInferred": true,
       "id": "l2-book-17",
-      "index": 64,
+      "index": 72,
       "levelIndex": 15,
       "bookTypes": [
         "red",
@@ -979,7 +1075,7 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "检索能力、知识迁移能力、理解能力、概括能力、鉴赏能力、表达能力、写作能力",
       "abilityInferred": true,
       "id": "l2-book-18",
-      "index": 65,
+      "index": 73,
       "levelIndex": 16,
       "bookTypes": [
         "red",
@@ -994,7 +1090,7 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "概括能力、表达能力、知识迁移能力、理解能力、鉴赏能力、写作能力",
       "abilityInferred": true,
       "id": "l2-book-19",
-      "index": 66,
+      "index": 74,
       "levelIndex": 17,
       "bookTypes": [
         "science",
@@ -1009,7 +1105,7 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "检索能力、理解能力、概括能力、鉴赏能力、表达能力、写作能力、知识迁移能力",
       "abilityInferred": true,
       "id": "l2-book-20",
-      "index": 67,
+      "index": 75,
       "levelIndex": 18,
       "bookTypes": [
         "science"
@@ -1023,7 +1119,7 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "认读能力、理解能力、概括能力、鉴赏能力、表达能力、写作能力、知识迁移能力",
       "abilityInferred": true,
       "id": "l2-book-21",
-      "index": 68,
+      "index": 76,
       "levelIndex": 19,
       "bookTypes": [
         "picture",
@@ -1038,7 +1134,7 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "认读能力、理解能力、概括能力、鉴赏能力、表达能力、写作能力、知识迁移能力",
       "abilityInferred": true,
       "id": "l2-book-22",
-      "index": 69,
+      "index": 77,
       "levelIndex": 20,
       "bookTypes": [
         "culture",
@@ -1053,7 +1149,7 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "认读能力、理解能力、概括能力、鉴赏能力、表达能力、写作能力、知识迁移能力",
       "abilityInferred": true,
       "id": "l2-book-23",
-      "index": 70,
+      "index": 78,
       "levelIndex": 21,
       "bookTypes": [
         "culture",
@@ -1068,7 +1164,7 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "认读能力、逻辑能力、概括能力、理解能力、表达能力、迁移应用能力",
       "abilityInferred": false,
       "id": "l2-book-local-620967a956",
-      "index": 71,
+      "index": 79,
       "levelIndex": 22,
       "bookTypes": [],
       "knowledgeTopics": null
@@ -1081,7 +1177,7 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "",
       "abilityInferred": false,
       "id": "l2-book-local-a5823d01c1",
-      "index": 72,
+      "index": 80,
       "levelIndex": 23,
       "bookTypes": []
     },
@@ -1092,7 +1188,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "",
       "abilityGoals": "",
       "id": "l2-book-31",
-      "index": 73,
+      "index": 81,
       "levelIndex": 24,
       "bookTypes": [
         "science",
@@ -1107,7 +1203,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "",
       "abilityGoals": "",
       "id": "l2-book-32",
-      "index": 74,
+      "index": 82,
       "levelIndex": 25,
       "bookTypes": [
         "science",
@@ -1122,7 +1218,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "",
       "abilityGoals": "",
       "id": "l2-book-24",
-      "index": 75,
+      "index": 83,
       "levelIndex": 26,
       "bookTypes": [
         "fairy",
@@ -1137,7 +1233,7 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "概括能力、鉴赏能力、写作能力、知识迁移能力、理解能力、表达能力",
       "abilityInferred": true,
       "id": "l2-book-25",
-      "index": 76,
+      "index": 84,
       "levelIndex": 27,
       "bookTypes": [
         "novel"
@@ -1151,7 +1247,7 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "概括能力、鉴赏能力、写作能力、知识迁移能力、理解能力、表达能力",
       "abilityInferred": true,
       "id": "l2-book-26",
-      "index": 77,
+      "index": 85,
       "levelIndex": 28,
       "bookTypes": [
         "fairy",
@@ -1166,7 +1262,7 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "鉴赏能力、写作能力、知识迁移能力、理解能力、概括能力、表达能力",
       "abilityInferred": true,
       "id": "l2-book-27",
-      "index": 78,
+      "index": 86,
       "levelIndex": 29,
       "bookTypes": [
         "novel"
@@ -1179,7 +1275,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "",
       "abilityGoals": "",
       "id": "l2-book-28",
-      "index": 79,
+      "index": 87,
       "levelIndex": 30,
       "bookTypes": [
         "novel",
@@ -1194,7 +1290,7 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "逻辑能力、鉴赏能力、写作能力、观察能力、知识迁移能力、理解能力、概括能力、表达能力",
       "abilityInferred": true,
       "id": "l2-book-29",
-      "index": 80,
+      "index": 88,
       "levelIndex": 31,
       "bookTypes": [
         "fairy",
@@ -1209,7 +1305,7 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "理解能力、概括能力、写作能力、观察能力、想象力、知识迁移能力、鉴赏能力、表达能力",
       "abilityInferred": true,
       "id": "l2-book-30",
-      "index": 81,
+      "index": 89,
       "levelIndex": 32,
       "bookTypes": [
         "science"
@@ -1223,7 +1319,7 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "",
       "abilityInferred": false,
       "id": "l2-book-fly-redhead",
-      "index": 82,
+      "index": 90,
       "levelIndex": 33,
       "bookTypes": []
     },
@@ -1235,7 +1331,7 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "",
       "abilityInferred": false,
       "id": "l2-book-local-62bb90c1e0",
-      "index": 83,
+      "index": 91,
       "levelIndex": 34,
       "bookTypes": []
     },
@@ -1246,7 +1342,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "",
       "abilityGoals": "",
       "id": "l2-book-34",
-      "index": 84,
+      "index": 92,
       "levelIndex": 35,
       "bookTypes": [
         "fairy",
@@ -1262,7 +1358,7 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "理解能力、概括能力、逻辑能力、鉴赏能力、写作能力、观察能力、知识迁移能力、表达能力",
       "abilityInferred": true,
       "id": "l2-book-33",
-      "index": 85,
+      "index": 93,
       "levelIndex": 36,
       "bookTypes": [
         "science",
@@ -1277,7 +1373,7 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "理解能力、概括能力、鉴赏能力、表达能力、写作能力、知识迁移能力",
       "abilityInferred": true,
       "id": "l2-book-43",
-      "index": 86,
+      "index": 94,
       "levelIndex": 37,
       "bookTypes": [
         "science"
@@ -1292,7 +1388,7 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "理解能力、知识迁移能力、概括能力、鉴赏能力、表达能力、写作能力",
       "abilityInferred": true,
       "id": "l2-book-35",
-      "index": 87,
+      "index": 95,
       "levelIndex": 38,
       "bookTypes": [
         "novel"
@@ -1305,7 +1401,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "",
       "abilityGoals": "",
       "id": "l2-book-36",
-      "index": 88,
+      "index": 96,
       "levelIndex": 39,
       "bookTypes": [
         "fairy",
@@ -1320,7 +1416,7 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "",
       "abilityInferred": false,
       "id": "l2-book-giant-pear",
-      "index": 89,
+      "index": 97,
       "levelIndex": 40,
       "bookTypes": []
     },
@@ -1332,7 +1428,7 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "理解能力、知识迁移能力、概括能力、鉴赏能力、表达能力、写作能力",
       "abilityInferred": true,
       "id": "l2-book-38",
-      "index": 90,
+      "index": 98,
       "levelIndex": 41,
       "bookTypes": [
         "novel"
@@ -1346,7 +1442,7 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "理解能力、概括能力、知识迁移能力、鉴赏能力、表达能力、写作能力",
       "abilityInferred": true,
       "id": "l2-book-39",
-      "index": 91,
+      "index": 99,
       "levelIndex": 42,
       "bookTypes": [
         "novel",
@@ -1361,7 +1457,7 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "理解能力、写作能力、想象力、概括能力、鉴赏能力、表达能力、知识迁移能力",
       "abilityInferred": true,
       "id": "l2-book-41",
-      "index": 92,
+      "index": 100,
       "levelIndex": 43,
       "bookTypes": [
         "fairy",
@@ -1376,7 +1472,7 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "理解能力、检索能力、鉴赏能力、写作能力、想象力、概括能力、表达能力、知识迁移能力",
       "abilityInferred": true,
       "id": "l2-book-42",
-      "index": 93,
+      "index": 101,
       "levelIndex": 44,
       "bookTypes": [
         "novel",
@@ -1391,7 +1487,7 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "理解能力、想象力、概括能力、鉴赏能力、表达能力、写作能力、知识迁移能力",
       "abilityInferred": true,
       "id": "l2-book-45",
-      "index": 94,
+      "index": 102,
       "levelIndex": 45,
       "bookTypes": [
         "science",
@@ -1407,7 +1503,7 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "理解能力、概括能力、逻辑能力、写作能力、想象力、知识迁移能力、鉴赏能力、表达能力",
       "abilityInferred": true,
       "id": "l2-book-44",
-      "index": 95,
+      "index": 103,
       "levelIndex": 46,
       "bookTypes": [
         "fairy",
@@ -1422,7 +1518,7 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "",
       "abilityInferred": false,
       "id": "l2-book-grimm-02",
-      "index": 96,
+      "index": 104,
       "levelIndex": 47,
       "bookTypes": [
         "fairy",
@@ -1436,7 +1532,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "",
       "abilityGoals": "",
       "id": "l2-book-37",
-      "index": 97,
+      "index": 105,
       "levelIndex": 48,
       "bookTypes": [
         "novel",
@@ -1451,7 +1547,7 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "",
       "abilityInferred": false,
       "id": "l2-book-local-c847ff6eb3",
-      "index": 98,
+      "index": 106,
       "levelIndex": 49,
       "bookTypes": []
     },
@@ -1462,7 +1558,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "1、感受安徒生笔下经典人物如小美人鱼、皇帝、艾丽莎的人物形象，感知童话具有鲜明的人物形象这一魅力。\n2、学会创编童话：\n（1）能够结合姓名、身份、外貌、品质构思童话主人公；\n（2）能够结合人物、时间、地点三要素，构思出一个童话情境。",
       "abilityGoals": "理解能力、逻辑能力、鉴赏能力、表达能力、检索能力、知识迁移能力",
       "id": "l3-book-01",
-      "index": 99,
+      "index": 107,
       "levelIndex": 1,
       "bookTypes": [
         "fairy",
@@ -1476,7 +1572,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "1、理解 “有新鲜感的词语句子” 的内涵（如用词精准生动、句式独特、表达新颖等），掌握寻找这类词句的方法（如关注富有表现力的动词、形容词，独特的比喻、排比等句式结构等），并能阐述其新鲜感所在。\n2、理解拟人修辞的概念，学习赏析文本中与大自然相关的拟人句（如对花草树木、风雨雷电等的描写），并能结合不同的自然场景，仿写生动贴切的拟人句。\n3、学习评价人物形象，总结人物性格品质。\n4、能通过外貌、性格或爱好描写一位同学，突出其特点。",
       "abilityGoals": "理解能力、鉴赏能力、逻辑能力、概括能力、检索能力、知识迁移能力",
       "id": "l3-book-02",
-      "index": 100,
+      "index": 108,
       "levelIndex": 2,
       "bookTypes": [
         "novel",
@@ -1490,7 +1586,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "1、认识解释词语含义的常用基本方法（如联系上下文语境、结合生活经验等），能运用这些方法准确理解描写秋天的文本中陌生词语的含义。\n2、准确理解比喻修辞的概念，能识别文本中描写秋天的比喻句，明确句中的本体（被比喻的事物）和喻体（用来比喻的事物），深入理解比喻修辞在描写秋天景物时的好处\n3、能准确选取秋天段落中具有代表性的两个方面（如声音、触感等），熟练找出体现这两个方面的关键语句，区分其具体表现形式，并归纳出各方面的特点。\n4、掌握日记的基本格式（日期、星期、天气），并能结合自己的感受，写出真实的生活体验。～",
       "abilityGoals": "认读能力、鉴赏能力、概括能力、表达能力、检索能力、理解能力、知识迁移能力",
       "id": "l3-book-03",
-      "index": 101,
+      "index": 109,
       "levelIndex": 3,
       "bookTypes": [
         "prose",
@@ -1504,7 +1600,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "1、能掌握预测情节的常用方法及依据（依据题目预测、依据插图预测、依据情节规律预测、依据生活经验/常识预测）\n2、巩固并熟练运用“起因-经过-结果”的结构概括故事内容的方法\n3、分析人物形象，能准确总结人物的性格品质，结合具体事件进行说明，说清楚理由",
       "abilityGoals": "理解能力、鉴赏能力、概括能力、逻辑能力、表达能力、检索能力、知识迁移能力",
       "id": "l3-book-04",
-      "index": 102,
+      "index": 110,
       "levelIndex": 4,
       "bookTypes": [
         "fairy",
@@ -1519,7 +1615,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "1、学习掌握常见的观察方法：五感法。能熟练运用视觉、听觉、嗅觉、味觉、触觉五种感官进行观察\n2、学会运用表格对文本内容进行归纳整理，表格可包含观察对象、五感特征、观察时间、观察地点等栏目，使观察结果条理清晰、一目了然。\n3、复习比喻、拟人的修辞手法及作用\n4、学习总结归纳人和动植物的情感，如人对动植物的呵护、关爱，动植物对人的依赖、亲近等，分析这些情感的具体表现和产生原因。\n5、能按顺序描写一种动物、植物或自然现象，突出其特点或变化。运用比喻、拟人等修辞手法，使描写更生动。",
       "abilityGoals": "理解能力、逻辑能力、鉴赏能力、表达能力、检索能力、知识迁移能力",
       "id": "l3-book-05",
-      "index": 103,
+      "index": 111,
       "levelIndex": 5,
       "bookTypes": [
         "science"
@@ -1533,7 +1629,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "1、学会结合具体事件，评价人物特点品质\n2、联系上下文，体会人物内心感受\n3、掌握写景的主要顺序：空间顺序；空间顺序\n4、体会加点词/画线句子的好处\n5、能围绕一个地方（如公园、校园）写景，按顺序描写。运用积累的优美词语，增强表达效果。",
       "abilityGoals": "理解能力、鉴赏能力、检索能力、表达能力、逻辑能力、知识迁移能力",
       "id": "l3-book-06",
-      "index": 104,
+      "index": 112,
       "levelIndex": 6,
       "bookTypes": [
         "novel"
@@ -1548,7 +1644,7 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "理解能力、表达能力、检索能力、概括能力、逻辑能力、鉴赏能力、迁移能力",
       "abilityInferred": false,
       "id": "l3-book-local-008d8f7df8",
-      "index": 105,
+      "index": 113,
       "levelIndex": 7,
       "bookTypes": []
     },
@@ -1559,7 +1655,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "1、认识动作、神态描写的基本概念，通过人物的动作、神态、语言感知人物心情、品质。\n2、联系上下文，结合具体事件评价人物特点品质\n3、联系上下文揣摩人物内心想法，掌握分析内心活动题。\n4、能深入理解文本的上下文语境，理解句子含义。",
       "abilityGoals": "理解能力、概括能力、鉴赏能力、表达能力、逻辑能力、检索能力、知识迁移能力",
       "id": "l3-book-08",
-      "index": 106,
+      "index": 114,
       "levelIndex": 8,
       "bookTypes": [
         "novel",
@@ -1573,7 +1669,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "复习本学期重点学识：\n 1、复习解释词语的方法\n 2、联系具体事件，体会人物品质特点。总结人物形象分析题。\n 3、联系生活写启发，学习掌握感悟类题型。\n 4、理解句子深层含义",
       "abilityGoals": "理解能力、逻辑能力、概括能力、鉴赏能力、表达能力、检索能力、知识迁移能力",
       "id": "l3-book-09",
-      "index": 107,
+      "index": 115,
       "levelIndex": 9,
       "bookTypes": [
         "biography",
@@ -1588,7 +1684,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "1、复习解释词语意思的方法\n2、回顾概念学会判断动作描写，借助关键动词，体现人物情感\n3、分析人物语言行为，感知内心情感变化。复习内心活动题\n4、分析关键词句的含义，体会情感主旨，联系生活谈启发",
       "abilityGoals": "认读能力、理解能力、概括能力、鉴赏能力、逻辑能力、表达能力、知识迁移能力",
       "id": "l3-book-10",
-      "index": 108,
+      "index": 116,
       "levelIndex": 10,
       "bookTypes": [
         "novel",
@@ -1603,7 +1699,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "1、预测情节回顾预测情节题以及分析思路\n2、复习语言描写，通过人物语言体会人物心情、分析人物性格、品质特点\n3、总结人物形象分析思路\n4、三上重点题型讲练",
       "abilityGoals": "理解能力、逻辑能力、鉴赏能力、表达能力、知识迁移能力",
       "id": "l3-book-11",
-      "index": 109,
+      "index": 117,
       "levelIndex": 11,
       "bookTypes": [
         "fairy",
@@ -1618,7 +1714,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "1、复习人物描写（语言、外貌、动作、神态、心理）的概念及作用，能够区别并且判断出句子中出现的人物描写。\n2、学习赏析加点词语及答题思路。\n3、在句子中补充人物语言、动作、神态（让句子“活”起来）",
       "abilityGoals": "理解能力、逻辑能力、鉴赏能力、表达能力、知识迁移能力",
       "id": "l3-book-12",
-      "index": 110,
+      "index": 118,
       "levelIndex": 12,
       "bookTypes": [
         "novel"
@@ -1631,7 +1727,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "1、初步了解说明方法：打比方、列数字、作比较、摹状貌、举例子。\n2、能够使用实验卡记录实验内容，并能把实验经过说清楚。\n3、能够在【状物-植物】作文中生动形象地描摹植物的外观。学会在描写中添加动词、善用修辞手法，描述植物的动态变化过程。",
       "abilityGoals": "理解能力、逻辑能力、鉴赏能力、表达能力、知识迁移能力",
       "id": "l3-book-13",
-      "index": 111,
+      "index": 119,
       "levelIndex": 13,
       "bookTypes": [
         "science"
@@ -1645,7 +1741,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "1、复习人物形象分析\n2、分析寓言的中心思想\n用文中句子总结（比如主要人物说的话）\n（1）通过文章的人、事、果（什么人做了什么事情，结果是什么）总结道理，关注故事的结局\n（2）对比寓言中的不同行为、人物形象\n（3）联系生活，说说和寓言哲理相关的生活事件\n3、学习列童话故事类的写作提纲",
       "abilityGoals": "理解能力、逻辑能力、概括能力、鉴赏能力、表达能力、知识迁移能力",
       "id": "l3-book-14",
-      "index": 112,
+      "index": 120,
       "levelIndex": 14,
       "bookTypes": [
         "fairy",
@@ -1659,7 +1755,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "1、通过动作、语言描写等人物描写分析性格特点，总结人物形象\n2、用“六要素法”简洁地概括段落或全文内容、填写情节导图概括故事。\n3、能结合人物性格、情节发展趋势及生活逻辑，续写接下来发生的事情或故事结局。\n4、感受故事中的神奇想象 ，并能自主发挥想象完成习作《奇妙的想象》",
       "abilityGoals": "认读能力、理解能力、概括能力、逻辑能力、表达能力、检索能力、鉴赏能力、迁移运用",
       "id": "l3-book-17",
-      "index": 113,
+      "index": 121,
       "levelIndex": 15,
       "bookTypes": [
         "novel",
@@ -1675,7 +1771,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "1、通过典型事例、语言、动作、神态人物描写分析人物形象，分析人物情感\n2、能梳理文本中人物或事物连续的动作过程，提取每个动作环节的关键动词或动作描述，理清顺序。\n3、借助关键语句，概括段落\n4、复习比喻修辞的作用及比喻题型的答题思路和模板",
       "abilityGoals": "理解能力、逻辑能力、概括能力、鉴赏能力、表达能力、知识迁移能力",
       "id": "l3-book-18",
-      "index": 114,
+      "index": 122,
       "levelIndex": 16,
       "bookTypes": [
         "novel",
@@ -1690,7 +1786,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "1、赏析比喻、拟人修辞，能准确识别文本中的比喻和拟人句，能分析比喻和拟人修辞在表情达意上的作用，体会其如何使描写更生动形象、富有感染力。\n2、学会在写景中添加景物色彩\n3、感受写景状物文中作者的情感：能结合文中对景物的具体描写，体会作者在过程中蕴含的情感（如喜爱、赞美、思念、忧伤等）\n4、学会状物，动物：抓住外形、动作、生活习性（饮食、行为）\n5、能够自主写作状物（动物）类的作文，能整合资料，介绍一种动物（如大熊猫）的外形、习性等，使表达清晰有序。",
       "abilityGoals": "理解能力、逻辑能力、鉴赏能力、表达能力、知识迁移能力",
       "id": "l3-book-19",
-      "index": 115,
+      "index": 123,
       "levelIndex": 17,
       "bookTypes": [
         "prose",
@@ -1704,7 +1800,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "1、能正确判断文中出现的神态、语言和动作描写，结合具体情境分析这些描写所展现的人物内在品质\n2、正确判断文中出现的比喻、拟人、排比修辞，感受修辞的好处\n3、能清晰梳理故事的脉络，准确提取引发故事的起因、故事发展的主要经过（包括关键事件、人物行为等）以及最终呈现的结果，用连贯、简洁的语言将 “起因 - 经过 - 结果” 串联起来，完整概括故事内容。",
       "abilityGoals": "理解能力、逻辑能力、概括能力、鉴赏能力、表达能力、知识迁移能力",
       "id": "l3-book-20",
-      "index": 116,
+      "index": 124,
       "levelIndex": 18,
       "bookTypes": [
         "novel",
@@ -1719,7 +1815,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "1、感受人物品质，复习分析人物形象的方法。\n2、分析生动优美的语句，复习相关题型，掌握分析的方法。\n3、复习三下阅读重点题型。",
       "abilityGoals": "理解能力、逻辑能力、鉴赏能力、表达能力、知识迁移能力",
       "id": "l3-book-21",
-      "index": 117,
+      "index": 125,
       "levelIndex": 19,
       "bookTypes": [
         "fairy",
@@ -1734,7 +1830,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "1、复习动作描写对塑造人物形象的作用，并学会通过动作分解描述某一步骤的过程；\n2、复习环境描写的作用，以及修辞手法的作用答题思路。",
       "abilityGoals": "理解能力、逻辑能力、概括能力、鉴赏能力、表达能力、检索能力、知识迁移能力",
       "id": "l3-book-23",
-      "index": 118,
+      "index": 126,
       "levelIndex": 20,
       "bookTypes": [
         "novel"
@@ -1747,7 +1843,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "1、分析主要人物形象：孙悟空、唐僧、猪八戒\n通过语言、动作描写（主要是语言）突出人物形象特点；\n2、讲解孙悟空人物形象转变\n3、了解中国民间故事常用的叙事结构：三叠式结构法，理解其概念、应用和好处。\n4、练习按起因-经过-结果概括故事，了解记忆重点情节。",
       "abilityGoals": "理解能力、逻辑能力、概括能力、鉴赏能力、表达能力、检索能力、知识迁移能力",
       "id": "l3-book-24",
-      "index": 119,
+      "index": 127,
       "levelIndex": 21,
       "bookTypes": [
         "classic",
@@ -1761,7 +1857,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "1.复习比喻修辞的特点和作用；\n2.抓住关键语句，多感官想象画面\n2.学会通过环境描写来突出人物形象，并体会塞罕坝种树人的人物形象特点（品质）",
       "abilityGoals": "理解能力、逻辑能力、概括能力、鉴赏能力、表达能力、检索能力、知识迁移能力",
       "id": "l4-book-02",
-      "index": 120,
+      "index": 128,
       "levelIndex": 1,
       "bookTypes": [
         "novel",
@@ -1776,7 +1872,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "1、学习（复习）打比方、摹状貌、列数字、作比较的说明方法及作用。\n2、学习体会说明文词语的准确性\n3、学习提问类题目的解题思路​\n4、认识观察记录的基本格式（包括观察对象、时间、内容等要素），把握常用的观察方法，学习多角度观察事物并理解观察的概念。\n5、根据观察记录掌握观察日记格式，并能自己创作观察日记。（写作）",
       "abilityGoals": "理解能力、鉴赏能力、逻辑能力、概括能力、检索能力、知识迁移能力",
       "id": "l4-book-03",
-      "index": 121,
+      "index": 129,
       "levelIndex": 2,
       "bookTypes": [
         "science",
@@ -1791,7 +1887,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "1、初步根据起因、经过、结果三要素梳理文本，把握主要内容。\n2、能结合人物言行评价人物形象，且能结合细节阐述评价的依据。（学习人物形象题型的答题思路）\n3、掌握理解陌生词语的常用方法（如联系上下文），学会在阅读中灵活运用这些方法推断词语含义\n4、感受神话中神奇的想象，并能展开想象创编与神话人物有关的故事。",
       "abilityGoals": "概括能力、认读能力、理解能力、鉴赏能力、逻辑能力、检索能力、知识迁移能力",
       "id": "l4-book-04",
-      "index": 122,
+      "index": 130,
       "levelIndex": 3,
       "bookTypes": [
         "culture",
@@ -1805,7 +1901,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "1、熟练运用六要素，重点是运用三要素（起因、经过、结果）概括文本，掌握运用段意串联法概括事件。\n2、深入把握动作描写的基本要求、作用（如准确使用动词、体现人物状态等）；能在写作中运用恰当的动作描写刻画人物或展现场景。\n3、掌握从文本中提取关键信息的方法，能依据具体内容概括人、事、物的主要特点。\n4、掌握理解陌生词语的常用方法，学会在阅读中灵活运用这些方法推断词语含义",
       "abilityGoals": "认读能力、概括能力、理解能力、鉴赏能力、逻辑能力、检索能力",
       "id": "l4-book-05",
-      "index": 123,
+      "index": 131,
       "levelIndex": 4,
       "bookTypes": [
         "novel",
@@ -1820,7 +1916,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "1、理解批注的常见类型（如赏析、提问等）和基本要求，能结合文本内容进行有针对性的批注，写出自己的理解与思考。\n2、掌握在文段中感受人物情绪的方法：在文段中提取关键情绪词，能准确体会并阐述人物在不同情境下的心情变化过程。（表格）\n3、学习感悟型题目（启示类）的答题思路，能联系文本主旨和自身生活体验，提炼出具有现实意义的启示并清晰表达。\n4、能够按一定顺序把令人印象深刻的事情写清楚。",
       "abilityGoals": "理解能力、鉴赏能力、认读能力、逻辑能力、检索能力、知识迁移能力",
       "id": "l4-book-06",
-      "index": 124,
+      "index": 132,
       "levelIndex": 5,
       "bookTypes": [
         "novel",
@@ -1835,7 +1931,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "1、积累重要的文言词语、文言句式（被动句、反问句、判断句、设问句）\n2、掌握文言文翻译方法：组词；上下文推测\n3、掌握文言文重要题型：概括启示道理。\n4、能选择一件令自己心跳的事情，说清楚过程和感受，表达真情实感。",
       "abilityGoals": "认读能力、理解能力、鉴赏能力、逻辑能力、概括能力、知识迁移能力",
       "id": "l4-book-09",
-      "index": 125,
+      "index": 133,
       "levelIndex": 6,
       "bookTypes": [
         "culture"
@@ -1849,7 +1945,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "1、了解写作手法【欲扬先抑】的概念以及作用；\n2、积累民族气节相关精神品质词语（如忠贞不屈、刚正不阿等）\n3、复习人物描写及作用，能通过人物描写、结合人物事迹分析其体现的民族气节精神品质。\n4、复习并巩固用起因、经过、结果概括文章内容。 \n5、掌握陈述句改反问句的方法和了解反问修辞的表达效果和答题思路。",
       "abilityGoals": "理解能力、概括能力、鉴赏能力、表达能力、检索能力、知识迁移能力",
       "id": "l4-book-07",
-      "index": 126,
+      "index": 134,
       "levelIndex": 7,
       "bookTypes": [
         "novel",
@@ -1864,7 +1960,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "1、能通过人物的言行举止、主要事件分析人物形象及内在精神品质。\n2、深入理解心理活动的作用，学会结合具体语境体会人物的心理变化并分析原因\n3、学习关键词句理解类的题型答题思路（如结合上下文解释词语、分析句子含义重点）\n4、掌握写信类习作的格式：能熟练掌握书信的标准格式，包括称呼、问候语、正文、祝福语、署名和日期等部分的正确写法及位置；能运用第一人称 “我” 进行书信写作，通过 “我” 的所见、所闻、所感来表达情感、叙述事情，使内容更具真实性和亲切感。",
       "abilityGoals": "概括能力、理解能力、鉴赏能力、逻辑能力、知识迁移能力",
       "id": "l4-book-08",
-      "index": 127,
+      "index": 135,
       "levelIndex": 8,
       "bookTypes": [
         "novel"
@@ -1877,7 +1973,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "1、掌握结合事件和人物描写分析人物形象的方法。                            \n2、掌握概括文本内容的基本方法（如提取关键信息、按三要素概括等）\n3、理解环境描写在文本中的常见作用（如渲染气氛、衬托人物等），能结合具体内容分析环境描写的表达效果。\n4、复习感悟型题目（启示类）的答题思路，能联系文本主旨和自身生活体验，提炼出具有现实意义的启示并清晰表达。\n5、复习批注，能结合文本内容进行有针对性的批注，写出自己的理解与思考。\n6、阶段测（检验学识掌握情况）",
       "abilityGoals": "概括能力、鉴赏能力、理解能力、逻辑能力、检索能力、知识迁移能力",
       "id": "l4-book-10",
-      "index": 128,
+      "index": 136,
       "levelIndex": 9,
       "bookTypes": [
         "novel"
@@ -1891,7 +1987,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "1、人物形象概括类的不同题型汇总复习（直接概括类、细节分析类）\n2、掌握通过细节描写（语言外貌动作神态心理）分析人物的特点、情感、心情变化。\n3、引导学生体会词语的准确表达和句子的生动表达。\n4、读文章，从不同角度提出问题（写法的角度）。\n5、分析关键语句在文中的作用：开头、结尾、过渡句等\n6、关注主要人物和事件，概括文章的主要内容。\n7、积累细节描写好词好段，练习细节描写片段。",
       "abilityGoals": "概括能力、理解能力、鉴赏能力、逻辑能力、知识迁移能力",
       "id": "l4-book-11",
-      "index": 129,
+      "index": 137,
       "levelIndex": 10,
       "bookTypes": [
         "novel"
@@ -1904,7 +2000,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "1、复习比喻句，体会句子的生动表达并能结合文章内容赏析比喻句的作用（情感）。\n2、了解神态描写、心理描写概念及作用，复习判断多种人物描写；能在文本中准确标注不同描写类型，并简要说明每种描写对塑造人物的作用。\n3、掌握读文章想象画面题型的答题思路。\n4、理解句子的深层含义，能掌握深层语句理解的核心方法：第一步 “抓关键词”，找出句中蕴含深意的词语（如情感词、比喻词、反复出现的词）；第二步 “联上下文”，结合段落主旨或事件背景；第三步 “析情感 / 主题\n5、掌握常考阅读题型的解题思路（期末复习）",
       "abilityGoals": "概括能力、认读能力、理解能力、鉴赏能力、逻辑能力、检索能力、知识迁移能力",
       "id": "l4-book-12",
-      "index": 130,
+      "index": 138,
       "levelIndex": 11,
       "bookTypes": [
         "novel"
@@ -1918,7 +2014,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "1、了解科幻小说以及作者刘慈欣的相关知识；\n2、深入学习赏析比喻修辞的题型，重点掌握鉴赏方法：寻找本体和喻体的共同点，分析特点；结合主旨（情感、心情、品质等），分析效果。\n3、学会写出生动的比喻句——能够选择合适喻体、运用博喻形式、巧换喻词；明白好的比喻的特点。\n4、复习人物描写及作用。\n5、掌握使用五感法想象画面的方法。",
       "abilityGoals": "认读能力、理解能力、逻辑能力、概括能力、鉴赏能力、表达能力、检索能力、知识迁移能力",
       "id": "l4-book-13",
-      "index": 131,
+      "index": 139,
       "levelIndex": 12,
       "bookTypes": [
         "scifi",
@@ -1932,7 +2028,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "1、熟练运用分析人物形象的综合方法（结合言行、环境、他人评价等），多角度剖析《水浒传》中典型人物（如林冲、鲁智深等）的形象特征\n2、运用对比分析法分析人物性格差异对其命运走向的影响\n3、了解宋末年的历史背景，结合这一历史背景分析书中人物（如宋江、武松等）的行为动机和主要事件（如智取生辰纲等）的发展\n4、概括并学会多角度评价书中具体事件",
       "abilityGoals": "",
       "id": "l4-book-14",
-      "index": 132,
+      "index": 140,
       "levelIndex": 13,
       "bookTypes": [
         "classic",
@@ -1946,7 +2042,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "1、复习几种常见修辞手法，并能够区分、赏析表达效果（拟人、比喻、排比）\n2、认识借景抒情的手法，分析作者表达的人物情感是什么（围绕乡村、自然、童年、生活，重点分析喜爱、赞美、怀念等情感）\n3、学会在写景中描写景物色彩\n（1）色彩的多样表达\n（2）突出色彩明暗度\n（3）借物喻色\n4、认识动态描写和静态描写的概念，并能够判断并区分动态描写和静态描写\n5、能根据文字描述，展开合理想象，形成画面感",
       "abilityGoals": "认读能力、理解能力、逻辑能力、概括能力、鉴赏能力、表达能力、检索能力、知识迁移能力",
       "id": "l4-book-15",
-      "index": 133,
+      "index": 141,
       "levelIndex": 14,
       "bookTypes": [
         "classic",
@@ -1961,7 +2057,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "1.了解作比较、打比方、举例子、列数字的说明方法及好处\n2.掌握提问策略，学会多角度提问，并且尝试解答\n3.体会说明文中词语的准确性，并掌握相关题型的答题思路\n4.写作：我的奇思妙想",
       "abilityGoals": "理解能力、概括能力、逻辑能力、表达能力、检索能力、鉴赏能力、迁移运用",
       "id": "l4-book-16",
-      "index": 134,
+      "index": 142,
       "levelIndex": 15,
       "bookTypes": [
         "science"
@@ -1974,7 +2070,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "1.通过对文中大量人物描写的深度赏析，复习人物描写手法的鉴定方式，掌握人物描写的作用，分析人物形象、体会人物情感。\n 2.体会作家是如何运用表现手法描写、表达感情的，认识对比、明贬实褒、先抑后扬这三种表现手法，并感受作用。\n 3.写作：我的动物朋友",
       "abilityGoals": "理解能力、概括能力、逻辑能力、表达能力、检索能力、鉴赏能力、迁移运用",
       "id": "l4-book-17",
-      "index": 135,
+      "index": 143,
       "levelIndex": 16,
       "bookTypes": [
         "novel",
@@ -1988,7 +2084,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "1.了解写景文按一定顺序写景物的方法\n（1）空间顺序（上下左右）\n移步换景；定点换景\n（2）时间顺序\n2.复习写景方法：运用修辞、五感法\n3.深入分析人物形象（自然引出对其中人物言行、心理的分析）\n4.概括长文章（或长段落）的主要内容，体会人物心情变化\n5.学习按游览顺序写游记",
       "abilityGoals": "理解能力、概括能力、逻辑能力、表达能力、检索能力、鉴赏能力、迁移运用",
       "id": "l4-book-18",
-      "index": 136,
+      "index": 144,
       "levelIndex": 17,
       "bookTypes": [
         "novel",
@@ -2002,7 +2098,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "1.结合历史故事事件，分析人物形象，感受苏武坚守气节、顽强不懈的精神品质。\n2.简单复习人物形象分析方法，练习句子含义理解。\n3.学习列小标题概括：理解小标题的概念、作用与拟写方法。\n4.初步学习根据情节推进，梳理人物情感态度变化题型的答题方法。",
       "abilityGoals": "理解能力、逻辑能力、检索能力、鉴赏能力、表达能力、知识迁移能力、迁移运用",
       "id": "l4-book-19",
-      "index": 137,
+      "index": 145,
       "levelIndex": 18,
       "bookTypes": [
         "culture",
@@ -2017,7 +2113,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "1.借助注释等方法理解古诗词句大意，练习翻译古诗。\n2.通过李白、杜甫的诗理解诗歌中常见的意象。\n3.学会体会诗歌表达的情感：\n①了解时代背景与创作背景\n②借助注释理解诗意\n③借意象分析情感\n4.了解诗人生平，通过概括事件总结人物精神品质。",
       "abilityGoals": "认读能力、理解能力、概括能力、逻辑能力、表达能力、检索能力、鉴赏能力、迁移运用",
       "id": "l4-book-20",
-      "index": 138,
+      "index": 146,
       "levelIndex": 19,
       "bookTypes": [
         "culture",
@@ -2033,7 +2129,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "1、能准确识别文本中对人物的外貌、语言、动作、神态、心理等描写，并分析这些描写如何直接展现人物的性格、品质和内心世界。\n2、能梳理出文本中与人物相关的具体事件，结合事件中人物的表现，分析其性格特点和精神品质。\n3、认识正面描写、侧面描写，能识别文本中通过其他人物的评价、反应，或环境的烘托等侧面描写来展现人物形象的内容，分析这些侧面描写对突出人物特点的作用。",
       "abilityGoals": "认读能力、理解能力、逻辑能力、概括能力、鉴赏能力、表达能力、检索能力、知识迁移能力",
       "id": "l4-book-25",
-      "index": 139,
+      "index": 147,
       "levelIndex": 20,
       "bookTypes": [
         "novel"
@@ -2046,7 +2142,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "1、能运用小标题概括文本片段：针对一段包含多个事件或层次的文字，梳理出 2-3 个核心层次，拟定对应的小标题。学习概括长文本。\n2、能够理解借景抒情的好处，运用环境描写抒发情感（借景抒情）。",
       "abilityGoals": "认读能力、理解能力、逻辑能力、概括能力、鉴赏能力、表达能力、检索能力、知识迁移能力",
       "id": "l4-book-27",
-      "index": 140,
+      "index": 148,
       "levelIndex": 21,
       "bookTypes": [
         "novel",
@@ -2061,7 +2157,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "1、感知张桂梅人物形象（作为老师的爱岗敬业、爱生如子、作为 “妈妈”关爱孩子、无私奉献） \n2、理解并掌握字词赏析题的答题技巧 \n3、能系统梳理张桂梅的核心事迹（如创办女高、家访助学、养育孤儿、红色育人），按 “主题分类” 整理素材 \n4、将积累的素材与具体作文主题结合，围绕“我敬佩的人”完成主题写作",
       "abilityGoals": "认读能力、理解能力、逻辑能力、概括能力、鉴赏能力、表达能力、检索能力、知识迁移能力",
       "id": "l4-book-28",
-      "index": 141,
+      "index": 149,
       "levelIndex": 22,
       "bookTypes": [
         "biography"
@@ -2075,7 +2171,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "1、修辞手法：通过阅读训练，掌握引用的修辞手法及作用分析;\n2、从析修辞手法、品语言风格、解情感思想三个角度掌握散文类文章的句子赏析方法；\n3、有技巧地写好状物类作文（我的心爱之物）\n4、学习借物喻人的表现手法，尝试运用借物喻人的思路进行状物写作",
       "abilityGoals": "概括能力、鉴赏能力、理解能力、迁移运用、逻辑能力、检索能力",
       "id": "l5-book-01",
-      "index": 142,
+      "index": 150,
       "levelIndex": 1,
       "bookTypes": [
         "science",
@@ -2091,7 +2187,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "1、通过文本分析，熟练应用【赏析人物描写】题目的答题思路和答题语言；\n2、揣摩人物内心活动（复习），积累区分情绪、情感词汇；\n3、训练概括文章内容\n4、以析促写，能够运用动作描写来突出人物情绪情感/性格品质，完成《漫画老师》的创作。",
       "abilityGoals": "理解能力、逻辑能力、概括能力、鉴赏能力、表达能力、检索能力、知识迁移能力",
       "id": "l5-book-02",
-      "index": 143,
+      "index": 151,
       "levelIndex": 2,
       "bookTypes": [
         "novel"
@@ -2105,7 +2201,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "1、复习使用表格概括故事情节，学习使用山形图概括情节\n2、初步认识故事情节的开端、发展、高潮、结局，阅读故事，学会划分情节结构\n3、掌握创造性复述的方法\n①增加细节讲述\n②变换角色，以不同口吻复述\n③变换情节顺序，设置悬念\n4、阶段测（检验学识掌握情况）",
       "abilityGoals": "理解能力、逻辑能力、概括能力、鉴赏能力、表达能力、检索能力、知识迁移能力",
       "id": "l5-book-03",
-      "index": 144,
+      "index": 152,
       "levelIndex": 3,
       "bookTypes": [
         "fairy",
@@ -2120,7 +2216,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "1、复习训练对比修辞手法的作用，体会文章情感\n2、阅读小说，学习结合资料，体会作者情感\n3、从手法和情感两个角度初步感知关键句子的作用\n4、学习分点式和综合式表述，通过小说情节，分析人物形象\n5、写作训练《二十年后的家乡》",
       "abilityGoals": "概括能力、鉴赏能力、理解能力、迁移运用、逻辑能力、检索能力",
       "id": "l5-book-04",
-      "index": 145,
+      "index": 153,
       "levelIndex": 4,
       "bookTypes": [
         "biography",
@@ -2135,7 +2231,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "１、学习判断并分析说明方法的表达效果：分类别、引资料、举例子\n２、复习多种说明方法的表达效果，规范答题语言\n３、训练说明文高频考点：某词能否删除\n４、模仿范例运用多种说明方法说明事物特征",
       "abilityGoals": "认读能力、理解能力、概括能力、鉴赏能力、表达能力、检索能力、知识迁移能力",
       "id": "l5-book-05",
-      "index": 146,
+      "index": 154,
       "levelIndex": 5,
       "bookTypes": [
         "science",
@@ -2149,7 +2245,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "1、掌握场景描写的概念，学会判断场景描写和环境描写的区别\n2、训练概括场景描写的内容，并体会作者描写的场景中蕴含的情感\n3、体会标题的表层义和深层义，学习分析标题的作用\n4、体会“反复”修辞的作用，掌握其表达效果的赏析\n5、写作训练《我想对您说》",
       "abilityGoals": "概括能力、鉴赏能力、理解能力、迁移运用、逻辑能力、检索能力",
       "id": "l5-book-06",
-      "index": 147,
+      "index": 155,
       "levelIndex": 6,
       "bookTypes": [
         "classic"
@@ -2163,7 +2259,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "1、 发现并判断文章中的静态描写、动态描写\n2、 感知不同描写下景物的特点\n3、 掌握从动静描写的角度赏析句子，复习修辞角度赏析句子\n4、 词句段运用：仿写句子，体会动静描写的作用，把画面写具体\n5、 复习写景顺序，学习在写景习作中加入动态描写，把景物变化写具体、写细腻、写鲜活",
       "abilityGoals": "认读能力、理解能力、逻辑能力、概括能力、鉴赏能力、表达能力、检索能力、知识迁移能力",
       "id": "l5-book-07",
-      "index": 148,
+      "index": 156,
       "levelIndex": 7,
       "bookTypes": [
         "prose",
@@ -2177,7 +2273,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "1、 通过文本分析，训练学生梳理信息、总结概括文本的能力，体会人物形象\n2、 复习检索关键句，判断文章结构\n3、 训练分层概括文本内容\n4、 结合人物行为，体会精神品质，积累与苦难之中的乐观态度相关的词汇\n5、 理解关键词句的深层含义，鉴赏其好处\n6、 理解加点词的含义，鉴赏其表达效果\n7、 结合文章内容，理解关键句子，初步赏析其表达效果\n8、 把握文章主旨，结合生活实际，学会提炼紧扣主旨和实际的启示感悟",
       "abilityGoals": "概括能力、鉴赏能力、理解能力、迁移运用、逻辑能力、检索能力",
       "id": "l5-book-08",
-      "index": 149,
+      "index": 157,
       "levelIndex": 8,
       "bookTypes": [
         "biography",
@@ -2192,7 +2288,7 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "概括能力、鉴赏能力、理解能力、表达能力、迁移运用、逻辑能力、检索能力",
       "abilityInferred": false,
       "id": "l5-book-local-1a26bba36f",
-      "index": 150,
+      "index": 158,
       "levelIndex": 9,
       "bookTypes": [],
       "knowledgeTopics": null
@@ -2204,7 +2300,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "1、 复习训练概括情节\n2、 通过分析情节和细节描写，总结概括人物形象，体会人物情感\n3、 赏析关键词句，复习从手法、内容、情感等方面体会词句的作用",
       "abilityGoals": "认读能力、理解能力、概括能力、鉴赏能力、表达能力、检索能力、知识迁移能力",
       "id": "l5-book-09",
-      "index": 151,
+      "index": 159,
       "levelIndex": 10,
       "bookTypes": [
         "novel"
@@ -2217,7 +2313,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "1、 复习训练概括情节内容\n2、 复习训练根据正面描写和人物行为分析小说人物形象\n3、 复习体会场景描写和细节描写中蕴含的人物情感\n4、 赏析关键词句，复习从手法、内容、情感等方面体会关键词句的表达效果\n5、 训练片段写作，通过场景和细节描写来表达情感，积累实用词语、素材",
       "abilityGoals": "概括能力、迁移运用、逻辑能力、检索能力",
       "id": "l5-book-10",
-      "index": 152,
+      "index": 160,
       "levelIndex": 11,
       "bookTypes": [
         "novel",
@@ -2231,7 +2327,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "1、通过拆解例题，训练学生对说明文阅读题的审题理解\n2、阅读文章，总结概括说明对象的特点，明确判断依据\n3、复习对说明方法的判断和赏析，完善答题语言：列数字、作比较、举例子、打比方、分类别\n4、期末复习：总结归纳不同类型阅读理解的审题思路\n 期末复习：根据不同作文类型梳理作文素材，要求背诵记忆",
       "abilityGoals": "概括能力、鉴赏能力、理解能力、认读能力、迁移运用、逻辑能力、检索能力",
       "id": "l5-book-11",
-      "index": 153,
+      "index": 161,
       "levelIndex": 12,
       "bookTypes": [
         "science"
@@ -2244,7 +2340,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "1、把握关键情节，分析书中多样的人物形象，如，坚强勇敢的阿廖沙、慈祥善良的外祖母、暴躁专横的外祖父、乐观淳朴的小茨冈等\n2、梳理书中关键人物与阿廖沙的关系，体悟他们在阿廖沙的人生中起到的不同作用，完成对人物关系的梳理图\n3、通过整本书阅读，分别用一句话概括每章内容，尝试给每一章节取小标题\n4、了解环境描写中的社会环境，以及社会环境描写的作用（目标重点在阅读书籍）",
       "abilityGoals": "认读能力、理解能力、概括能力、鉴赏能力、表达能力、检索能力、知识迁移能力",
       "id": "l5-book-12",
-      "index": 154,
+      "index": 162,
       "levelIndex": 13,
       "bookTypes": [
         "classic"
@@ -2258,7 +2354,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "１.分析关键词句（中心句、直抒胸臆）和带有强烈情感的词语，体会文章思想感情（复习理解关键词的深层含义）\n２.关注蕴含情感的人物描写（细节描写）和景物描写（环境描写），品析语言的表达好处，体会文章思想感情\n３.概括典型事例，复习训练小标题概括起因、结果、结果，借助典型事例，体会文章思想感情\n４.围绕感受，对所见、所闻、所思进行细致描写，完成《那一刻，我长大了》习作",
       "abilityGoals": "概括能力、鉴赏能力、理解能力、表达能力、认读能力、迁移运用、逻辑能力、检索能力",
       "id": "l5-book-13",
-      "index": 155,
+      "index": 163,
       "levelIndex": 14,
       "bookTypes": [
         "classic"
@@ -2271,7 +2367,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "1.梳理重要篇章的内容，训练对故事的起因、经过、结果的概括\n2.学习训练抓住人物语言、动作、神态等描写，感受人物形象，对于复杂的人物形象进行评价\n3..通过诵读、评书等形式感受古代白话文的特点，对于不理解的词语，猜测词语意思\n4.学习“引、概、议、联、结”的方法写读后感",
       "abilityGoals": "认读能力、理解能力、逻辑能力、概括能力、鉴赏能力、表达能力、检索能力、知识迁移能力",
       "id": "l5-book-14",
-      "index": 156,
+      "index": 164,
       "levelIndex": 15,
       "bookTypes": [
         "classic",
@@ -2285,7 +2381,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "1.了解汉字的形成与演进，掌握不同字体的特征，能够判断不同字体\n2.学会阅读多种材料组合的非连续性文本，能通过多种渠道获取信息，领会文本的意思\n3.学会搜集信息，运用简单的研究报告进行汉字研究",
       "abilityGoals": "概括能力、鉴赏能力、理解能力、表达能力、认读能力、迁移运用、逻辑能力、检索能力、问题分析能力、多角度思考能力",
       "id": "l5-book-15",
-      "index": 157,
+      "index": 165,
       "levelIndex": 16,
       "bookTypes": [
         "project",
@@ -2299,7 +2395,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "1.通过阅读文本，学习训练从细节描写(动作、语言、神态等）深入揣摩人物情感、心理变化（表格、流程图）和品质；\n2.以读促写，尝试从多角度具体描绘人物表现，完成习作《他_____了》；\n3.复习训练对关键词句的理解，体会人物内心\n4.复习训练对标题的理解",
       "abilityGoals": "概括能力、鉴赏能力、理解能力、表达能力、认读能力、迁移运用、逻辑能力、检索能力",
       "id": "l5-book-16",
-      "index": 158,
+      "index": 166,
       "levelIndex": 17,
       "bookTypes": [
         "novel",
@@ -2313,7 +2409,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "1.阅读经典篇章，结合典型事例，分析人物特征，同时训练根据人物特征概括相关事例\n 结合典型事例，分析人物特征\n 根据人物特征概括相关事例\n2.训练以批注的形式分析细节描写在体现人物特点上的表达效果\n3.学习通过侧面描写（描写他人反应）和借助对比、衬托的写作手法来体现主要人物的特点（集中写作目标）\n4.通过小说中一波三折的情节设置，感受小说波澜起伏、扣人心弦的魅力",
       "abilityGoals": "认读能力、理解能力、概括能力、鉴赏能力、表达能力、检索能力、知识迁移能力",
       "id": "l5-book-18",
-      "index": 159,
+      "index": 167,
       "levelIndex": 18,
       "bookTypes": [
         "classic"
@@ -2326,7 +2422,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "1.掌握翻译文言句子的方法技巧，结合译文、使用六字诀对相关文言句子进行准确翻译\n2.阅读魏晋名士故事，了解人物的思维过程，绘制思维导图，加深对文章内容的理解\n3.通过分析人物的言行，理解其思维过程，感受主要人物的特点\n4.能体会文本语言的精妙趣味，并初步了解其表达效果（双关）。\n5.写作：合理想象故事情节，将遇险经过和求生方法写具体",
       "abilityGoals": "概括能力、鉴赏能力、理解能力、表达能力 认读能力、迁移运用、逻辑能力、检索能力",
       "id": "l5-book-19",
-      "index": 160,
+      "index": 168,
       "levelIndex": 19,
       "bookTypes": [
         "classic",
@@ -2340,7 +2436,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "1.精准识别并深入赏析静态描写与动态描写的片段，分析其如何营造画面感、烘托氛围、传递作者情感\n2.能对比动静手法的不同运用效果（深化）\n3.掌握句子中动词的赏析方法（变形）",
       "abilityGoals": "概括能力、鉴赏能力、理解能力、表达能力、认读能力、迁移运用、逻辑能力、检索能力",
       "id": "l5-book-20",
-      "index": 161,
+      "index": 169,
       "levelIndex": 20,
       "bookTypes": [
         "prose"
@@ -2354,7 +2450,7 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "",
       "abilityInferred": false,
       "id": "l5-book-local-700147a4ce",
-      "index": 162,
+      "index": 170,
       "levelIndex": 21,
       "bookTypes": [],
       "knowledgeTopics": null
@@ -2366,7 +2462,7 @@ window.LEVEL_LIBRARY = {
       "knowledgeGoals": "",
       "abilityGoals": "",
       "id": "l5-book-23",
-      "index": 163,
+      "index": 171,
       "levelIndex": 22,
       "bookTypes": [
         "classic"
@@ -2380,7 +2476,7 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "理解能力、逻辑能力、概括能力、鉴赏能力、表达能力、检索能力、知识迁移能力",
       "abilityInferred": false,
       "id": "l6-book-local-5ffc2766d7",
-      "index": 164,
+      "index": 172,
       "levelIndex": 1,
       "bookTypes": [],
       "knowledgeTopics": null
@@ -2393,7 +2489,7 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "理解能力、逻辑能力、概括能力、鉴赏能力、表达能力、检索能力、知识迁移能力",
       "abilityInferred": false,
       "id": "l6-book-local-9251d376de",
-      "index": 165,
+      "index": 173,
       "levelIndex": 2,
       "bookTypes": [],
       "knowledgeTopics": null
@@ -2406,7 +2502,7 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "理解能力、逻辑能力、概括能力、鉴赏能力、表达能力、检索能力、知识迁移能力",
       "abilityInferred": false,
       "id": "l6-book-local-160e5d6577",
-      "index": 166,
+      "index": 174,
       "levelIndex": 3,
       "bookTypes": [],
       "knowledgeTopics": null
@@ -2419,7 +2515,7 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "理解能力、概括能力、鉴赏能力、表达能力、检索能力、知识迁移能力",
       "abilityInferred": false,
       "id": "l6-book-local-76a3fbf4bd",
-      "index": 167,
+      "index": 175,
       "levelIndex": 4,
       "bookTypes": [],
       "knowledgeTopics": null
@@ -2432,7 +2528,7 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "概括能力、鉴赏能力、理解能力、表达能力、认读能力、迁移运用、逻辑能力、检索能力",
       "abilityInferred": false,
       "id": "l6-book-local-7bfa0ef2e8",
-      "index": 168,
+      "index": 176,
       "levelIndex": 5,
       "bookTypes": [],
       "knowledgeTopics": null
@@ -2445,7 +2541,7 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "理解能力、逻辑能力、概括能力、鉴赏能力、表达能力、检索能力、知识迁移能力",
       "abilityInferred": false,
       "id": "l6-book-local-aaecc4271c",
-      "index": 169,
+      "index": 177,
       "levelIndex": 6,
       "bookTypes": [],
       "knowledgeTopics": null
@@ -2458,7 +2554,7 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "逻辑能力、理解能力、概括能力、鉴赏能力、表达能力、检索能力、知识迁移能力",
       "abilityInferred": false,
       "id": "l6-book-local-7b5cc2bef8",
-      "index": 170,
+      "index": 178,
       "levelIndex": 7,
       "bookTypes": [],
       "knowledgeTopics": null
@@ -2471,7 +2567,7 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "理解能力、逻辑能力、概括能力、鉴赏能力、表达能力、检索能力、知识迁移能力",
       "abilityInferred": false,
       "id": "l6-book-local-aaf91d9083",
-      "index": 171,
+      "index": 179,
       "levelIndex": 8,
       "bookTypes": [],
       "knowledgeTopics": null
@@ -2484,7 +2580,7 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "检索能力、理解能力、问题分析能力、知识迁移能力、逻辑能力、多⻆度思考能力、鉴赏能力、表达能力、概括能力",
       "abilityInferred": false,
       "id": "l6-book-local-83e838cb14",
-      "index": 172,
+      "index": 180,
       "levelIndex": 9,
       "bookTypes": [],
       "knowledgeTopics": null
@@ -2497,7 +2593,7 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "",
       "abilityInferred": false,
       "id": "l6-book-local-313124ac2e",
-      "index": 173,
+      "index": 181,
       "levelIndex": 10,
       "bookTypes": []
     },
@@ -2509,7 +2605,7 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "理解能力、概括能力、逻辑能力、表达能力、检索能力、鉴赏能力、迁移运用",
       "abilityInferred": false,
       "id": "l3-book-local-5b3559e81a",
-      "index": 174,
+      "index": 182,
       "levelIndex": 22,
       "bookTypes": [],
       "knowledgeTopics": null
@@ -2522,7 +2618,7 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "理解能力、表达能力、概括能力、逻辑能力、鉴赏能力、迁移能力",
       "abilityInferred": false,
       "id": "l3-book-local-b37fd9eb2e",
-      "index": 175,
+      "index": 183,
       "levelIndex": 23,
       "bookTypes": [],
       "knowledgeTopics": null
@@ -2535,7 +2631,7 @@ window.LEVEL_LIBRARY = {
       "abilityGoals": "理解能力、概括能力、逻辑能力、表达能力、检索能力、鉴赏能力、迁移运用",
       "abilityInferred": false,
       "id": "l4-book-local-77c4fbf109",
-      "index": 176,
+      "index": 184,
       "levelIndex": 23,
       "bookTypes": [],
       "knowledgeTopics": null
