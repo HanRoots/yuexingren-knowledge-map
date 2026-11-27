@@ -7,14 +7,17 @@ const legacyLibrary = window.L3_LIBRARY
     }
   : null;
 
-const library = window.LEVEL_LIBRARY || legacyLibrary || { title: "学识目标地图", levels: [], books: [] };
-const books = library.books || [];
-const levels = library.levels?.length
-  ? library.levels
-  : [...new Set(books.map((book) => book.level).filter(Boolean))].map((level) => ({
+const publishedLibrary = window.LEVEL_LIBRARY || legacyLibrary || { title: "学识目标地图", levels: [], books: [] };
+const publishedBooks = publishedLibrary.books || [];
+const publishedLevels = publishedLibrary.levels?.length
+  ? publishedLibrary.levels
+  : [...new Set(publishedBooks.map((book) => book.level).filter(Boolean))].map((level) => ({
       id: level,
-      count: books.filter((book) => book.level === level).length,
+      count: publishedBooks.filter((book) => book.level === level).length,
     }));
+const books = publishedBooks.map((book) => ({ ...book }));
+const levels = [...publishedLevels];
+const library = { ...publishedLibrary, books, levels };
 const LEVEL_FILTERS = ["L1", "L2", "L3", "L4", "L5", "L6"];
 const ACCESS_PASSWORD_HASH = "635b5a00815ee51779764bf0a631f627cee354d1a4de48d4de09b59dd8555290";
 const ACCESS_PASSWORD_FALLBACK = "WVhSMjAyNg==";
@@ -200,6 +203,7 @@ let localEdits = readLocalEdits();
 let localAddedBooks = readLocalAddedBooks();
 let localRemovedBookIds = new Set(readStringArray(LOCAL_REMOVED_BOOKS_STORAGE_KEY));
 let localBookOrder = readStringArray(LOCAL_BOOK_ORDER_STORAGE_KEY);
+let lastPublishedBlobSha = null;
 
 function sanitizeBookEdit(value) {
   if (!value || typeof value !== "object" || Array.isArray(value)) return null;
@@ -604,8 +608,8 @@ function encodeBase64(text) {
   return window.btoa(binary);
 }
 
-function buildDataFileContent() {
-  return `window.LEVEL_LIBRARY = ${JSON.stringify(library, null, 2)};\n`;
+function buildDataFileContent(source) {
+  return `window.LEVEL_LIBRARY = ${JSON.stringify(source, null, 2)};\n`;
 }
 
 function githubErrorMessage(status, responseMessage) {
@@ -634,17 +638,24 @@ async function githubRequest(url, token, options = {}) {
 
 async function publishToGitHub(token, message) {
   const apiUrl = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPOSITORY}/contents/${GITHUB_DATA_PATH}`;
-  const currentFile = await githubRequest(`${apiUrl}?ref=${encodeURIComponent(GITHUB_BRANCH)}`, token);
+  const currentFile = await githubRequest(`${apiUrl}?ref=${encodeURIComponent(GITHUB_BRANCH)}`, token, { cache: "no-store" });
+  const sameAsLastPublish = lastPublishedBlobSha && currentFile.sha === lastPublishedBlobSha;
+  const sameAsLoaded = currentFile.encoding === "base64" &&
+    currentFile.content?.replace(/\s/g, "") === encodeBase64(buildDataFileContent(publishedLibrary));
+  if (!sameAsLastPublish && !sameAsLoaded) {
+    throw new Error("线上书单已更新。请刷新页面，核对保留在本地的草稿后再发布。");
+  }
   const result = await githubRequest(apiUrl, token, {
     method: "PUT",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
       message,
-      content: encodeBase64(buildDataFileContent()),
+      content: encodeBase64(buildDataFileContent(library)),
       sha: currentFile.sha,
       branch: GITHUB_BRANCH,
     }),
   });
+  lastPublishedBlobSha = result.content?.sha || null;
   return result.commit;
 }
 
@@ -714,7 +725,8 @@ function getBookTypes(book) {
 }
 
 function getLevelBooks() {
-  return state.level === "all" ? books : books.filter((book) => book.level === state.level);
+  const visibleBooks = state.editMode ? books : publishedBooks;
+  return state.level === "all" ? visibleBooks : visibleBooks.filter((book) => book.level === state.level);
 }
 
 function buildTopicStats(sourceBooks) {
@@ -808,11 +820,13 @@ function initAccessGate() {
 }
 
 function renderHeroStats() {
+  const visibleBooks = state.editMode ? books : publishedBooks;
+  const visibleLevels = state.editMode ? levels : publishedLevels;
   const stats = [
-    [library.total || books.length, "书目总数"],
-    [levels.length, "覆盖级别"],
-    [buildTopicStats(books).length, "学识主题"],
-    [buildTypeStats(books).length, "书籍类型"],
+    [visibleBooks.length, "书目总数"],
+    [visibleLevels.length, "覆盖级别"],
+    [buildTopicStats(visibleBooks).length, "学识主题"],
+    [buildTypeStats(visibleBooks).length, "书籍类型"],
   ];
 
   els.heroStats.replaceChildren(
@@ -1136,9 +1150,9 @@ function renderBookCard(book) {
   const title = createNode("div", "book-title");
   title.append(createNode("span", "", `${book.level} · No.${String(book.levelIndex).padStart(2, "0")}`));
   title.append(createNode("h3", "", book.title));
-  if (localAddedBooks.some((item) => item.id === book.id)) {
+  if (state.editMode && localAddedBooks.some((item) => item.id === book.id)) {
     title.append(createNode("small", "local-edit-note", "本地新增"));
-  } else if (localEdits[book.id]) {
+  } else if (state.editMode && localEdits[book.id]) {
     title.append(createNode("small", "local-edit-note", "已本地修改"));
   }
   title.append(renderTypePills(book));
@@ -1261,7 +1275,8 @@ els.typeSelect.addEventListener("change", (event) => {
 els.editModeButton?.addEventListener("click", () => {
   state.editMode = !state.editMode;
   state.editingBookId = null;
-  setEditStatus(state.editMode ? "请选择一本书开始编辑。" : "");
+  setEditStatus(state.editMode && hasLocalChanges() ? "正在编辑本地草稿。" : "");
+  renderHeroStats();
   render();
 });
 

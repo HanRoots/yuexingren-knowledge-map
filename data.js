@@ -1166,20 +1166,28 @@ window.LEVEL_LIBRARY = {
       "id": "l2-book-local-620967a956",
       "index": 79,
       "levelIndex": 22,
-      "bookTypes": [],
+      "bookTypes": [
+        "novel",
+        "fairy",
+        "culture"
+      ],
       "knowledgeTopics": null
     },
     {
       "level": "L2",
       "title": "《大闹天宫》",
-      "valueGoals": "",
+      "valueGoals": "通过孙悟空大闹天宫的经典情节，感受其追求自由、机智勇敢和不畏强权的精神，同时引导学生思考力量、规则与责任的关系。",
       "knowledgeGoals": "",
       "abilityGoals": "",
       "abilityInferred": false,
       "id": "l2-book-local-a5823d01c1",
       "index": 80,
       "levelIndex": 23,
-      "bookTypes": []
+      "bookTypes": [
+        "fairy",
+        "culture",
+        "classic"
+      ]
     },
     {
       "level": "L2",
@@ -1326,14 +1334,16 @@ window.LEVEL_LIBRARY = {
     {
       "level": "L2",
       "title": "《大角王》",
-      "valueGoals": "",
-      "knowledgeGoals": "",
-      "abilityGoals": "",
-      "abilityInferred": false,
+      "valueGoals": "通过动物角色面对挑战、守护自我的故事，感受勇敢、坚韧和担当，理解成长需要面对困难并学会承担责任。",
+      "knowledgeGoals": "阅读：赏析“动作描写”的片段，感知其对于体现动物性格特点的作用；\n写作：学习将一件事情写生动有趣，并尝试写出体现动物性格的事件片段；",
+      "abilityGoals": "理解能力、鉴赏能力、写作能力、观察能力、知识迁移能力、概括能力、表达能力",
+      "abilityInferred": true,
       "id": "l2-book-local-62bb90c1e0",
       "index": 91,
       "levelIndex": 34,
-      "bookTypes": []
+      "bookTypes": [
+        "novel"
+      ]
     },
     {
       "level": "L2",
@@ -1542,14 +1552,16 @@ window.LEVEL_LIBRARY = {
     {
       "level": "L2",
       "title": "《我的第一套中国历史启蒙书》（备选）",
-      "valueGoals": "",
-      "knowledgeGoals": "",
-      "abilityGoals": "",
-      "abilityInferred": false,
+      "valueGoals": "了解中国历史，建立民族自信",
+      "knowledgeGoals": "基础：历史大事件、历史人物、历史框架\n阅读：通过事件进行人物评价、初步的辩证思维、起因经过结果\n写作（口语+写话）：概括历史事件，评价历史人物\n1.了解中国的重要历史事件及历史人物；\n2.能够初步了解如何辨证看待历史事件及历史人物；\n3.掌握概括历史事件的基本方法；",
+      "abilityGoals": "概括能力、表达能力、写作能力、知识迁移能力、理解能力、鉴赏能力",
+      "abilityInferred": true,
       "id": "l2-book-local-c847ff6eb3",
       "index": 106,
       "levelIndex": 49,
-      "bookTypes": []
+      "bookTypes": [
+        "culture"
+      ]
     },
     {
       "level": "L3",
@@ -2445,14 +2457,16 @@ window.LEVEL_LIBRARY = {
     {
       "level": "L5",
       "title": "《骆驼祥子》",
-      "valueGoals": "",
-      "knowledgeGoals": "",
-      "abilityGoals": "",
+      "valueGoals": "感受作者对时代之下底层劳动人民悲惨命运的同情，以及对当时恶劣社会制度的批判。",
+      "knowledgeGoals": "1.复习概括情节主要内容、分析修辞手法\n2.复习分析人物形象（第二单元）\n3.复习通过描写体会人物内心（第四单元）\n4.复习描写人物的基本方法（第五单元）\n5.复习分析人物的思维过程（第六单元）",
+      "abilityGoals": "认读能力、理解能力、逻辑能力、概括能力、鉴赏能力、表达能力、检索能力、知识迁移能力",
       "abilityInferred": false,
       "id": "l5-book-local-700147a4ce",
       "index": 170,
       "levelIndex": 21,
-      "bookTypes": [],
+      "bookTypes": [
+        "classic"
+      ],
       "knowledgeTopics": null
     },
     {
@@ -2607,7 +2621,10 @@ window.LEVEL_LIBRARY = {
       "id": "l3-book-local-5b3559e81a",
       "index": 182,
       "levelIndex": 22,
-      "bookTypes": [],
+      "bookTypes": [
+        "novel",
+        "science"
+      ],
       "knowledgeTopics": null
     },
     {
